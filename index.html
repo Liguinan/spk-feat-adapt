@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Speaker-adaptive audio-visual speech separation and recognition</title>
+  <title>Towards Zero-Shot Speaker-Adaptive Audio-Visual Multichannel Speech Separation and Recognition</title>
 <style type="text/css">
 <!--  body {-->
 <!--  margin: 0  auto；-->
@@ -46,9 +46,17 @@
 </head>
 <div style="border: none; width:80%; margin: 0 auto;">
 <body>
-    <h2 align="center">Speaker-adaptive audio-visual speech separation and recognition</h2>
+    <h2 align="center">Towards Zero-Shot Speaker-Adaptive Audio-Visual Multichannel Speech Separation and Recognition</h2>
     <p style="line-height:100%" align="center"><b>Authors:</b> xxx</p>
-    <p style="line-height:100%" align="justify"> <b>Abstract: </b>xxx</p>
+    <p style="line-height:100%" align="justify"> <b>Abstract: </b>This paper proposes zero-shot, enrolment-free speaker adaptation approaches for multichannel speech separation and recognition systems. 
+Speaker features are on-the-fly learned from overlapped mixture speech input using: a) cross-utterance speaker features smoothing; and b) joint optimization of speaker features and speech separation systems. 
+Experiments are conducted on the mixture overlapped speech data constructed using the LRS3-TED and replayed LRS2 datasets.
+Our zero-shot speaker adaptation approaches consistently outperform the speaker-independent (SI) baselines using mask-based MVDR speech separation and WavLM features empowered Conformer ASR on speech enhancement metrics including SISNR, PESQ and STOI, with or without incorporating video modality.
+Statistically significant ASR word error rate (WER) reductions of up to 2.2%, 2.8% and 0.8% absolute (15.7%, 28.3% and 9.5% relative) are obtained on the LRS3 dev, test and LRS2 eval datasets, respectively. 
+Empirical analyses suggest our zero-shot approaches effectively break the link between speaker-level data quantity and performance gains from adaptation.
+T-SNE visualization shows that our approaches produce more homogenous and consistent speaker features than standard x-vector and ECAPA-TDNN. 
+Further analyses reveal that these improvements are strongly correlated with the increase of inter-speaker discrimination measured using cosine similarity. 
+Speaker adaptation inference time speedup ratios up to 27.3 times is achieved over offline, enrolment-based adaptation.</p>
     <a href="#sectionI">I. xxx</a><br>
     <a href="#sectionII">II. xxx</a><br>
     <a href="#sectionIII">III. Experimental Setup and Results</a><br>
