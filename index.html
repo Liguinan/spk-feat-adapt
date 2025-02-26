@@ -44,7 +44,7 @@
   }
 </style>
 </head>
-<div style="border: none; width:80%; margin: 0 auto;">
+<div style="border: none; width:50%; margin: 0 auto;">
 <body>
     <h2 align="center">Towards Zero-Shot Speaker-Adaptive Audio-Visual Multichannel Speech Separation and Recognition</h2>
     <p style="line-height:100%" align="center"><b>Authors:</b> xxx</p>
@@ -57,37 +57,37 @@ Empirical analyses suggest our zero-shot approaches effectively break the link b
 T-SNE visualization shows that our approaches produce more homogenous and consistent speaker features than standard x-vector and ECAPA-TDNN. 
 Further analyses reveal that these improvements are strongly correlated with the increase of inter-speaker discrimination measured using cosine similarity. 
 Speaker adaptation inference time speedup ratios up to 27.3 times is achieved over offline, enrolment-based adaptation.</p>
-    <a href="#sectionI">I. speaker-adaptive audio-visual multichannel speech separation</a><br>
+    <a href="#sectionI">I. Speaker-Adaptive Audio-Visual Multichannel Speech Separation</a><br>
     <a href="#sectionII">II. xxx</a><br>
     <a href="#sectionIII">III. Experimental Setup and Results</a><br>
     <a href="#sectionIV">IV. Reference</a>
-    <h3> <a name="sectionI"> I. speaker-adaptive audio-visual multichannel speech separation</a> </h3>
+    <h3> <a name="sectionI"> I. Speaker-Adaptive Audio-Visual Multichannel Speech Separation</a> </h3>
     <div style="border: none; width:60%; margin: 0 auto;">
-    <img border="0" src="sep.png" alt="speaker-adaptive speech enhancement front-end" height="10%">
+    <img border="0" src="sep.png" alt="Speaker-Adaptive Audio-Visual Multichannel Speech Separation" height="10%">
     </div>
     <ul>
         <li> Speech separation backbone</li>
         <li> Enrolment-based speaker adaptation.</li>
         <li> Enrolment-free speaker adaptation </li>
     </ul>
-    <h3> <a name="sectionII">II. enrolment-free speaker adaptation of multichannel speech separation and recognition </a> </h3>
+    <h3> <a name="sectionII">II. Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition </a> </h3>
     <div style="border: none; width:70%; margin: 0 auto;">
-    <img border="0" src="asr.png" alt="architectures of speech enhancement front-end" height="20%">
+    <img border="0" src="asr.png" alt="Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition" height="20%">
     </div>
     <p style="line-height:100%" align="justify"> <b> Four types of downstream ASR back-ends :</b> </p>
     <ul>
-        <li> The standard Conformer ASR model; </li>
-        <li> Fine-tuned WavLM and Whisper foundation models; </li>
-        <li> Fine-tuned WavLM features empowered Conformer model; </li>
-        <li> Speaker-adaptive Conformer ASR back-end that uses the same zero-shot enrolment-free adaptation approach ; </li>
+        <li> (a) The standard Conformer ASR back-end; </li>
+        <li> (b) The standalone domain fine-tuned WavLM and Whisper foundation models based ASR back-ends; </li>
+        <li> (c) The domain fine-tuned WavLM features empowered Conformer ASR ; </li>
+        <li> (d) The Conformer ASR back-end empowered by zero-shot enrolment-free speaker adaptation; </li>
     </ul>
     <h3> <a name="sectionIII">III. Experimental Setup and Results</a></h3>
     <div style="border: none; width:100%; margin: 0 auto;">
     <h4> A. Experimental setup </h4>
         <ul>
-            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multichannel mixture speech using the LRS3-TED dataset [3] with 10354, 3122, 3136 and 5284 utterances respectively for training (111.47 hours, 4886 speakers), validation (3.15 hours, 157 speakers), dev (3.14 hours, 158 speakers) and test (3.36 hours, 412 speakers). </li>
-            <li> 1200 (0.5 hours) utterances are recorded by replaying two loudspeakers simultaneously to generate a 15-channel mixture speech in a meeting room [1], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
-            <li> Espnet style Conformer AED ASR model [4] contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
+            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multichannel mixture speech using the LRS3-TED dataset [6] with 10354, 3122, 3136 and 5284 utterances respectively for training (111.47 hours, 4886 speakers), validation (3.15 hours, 157 speakers), dev (3.14 hours, 158 speakers) and test (3.36 hours, 412 speakers). </li>
+            <li> A replayed eval dataset containing 1200 (0.5 hours, 340 speakers) utterances is recorded by replaying two loudspeakers simultaneously to generate a 15-channel mixture speech in a meeting room [1], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
+            <li> Espnet style Conformer AED ASR model [1] contains 12 encoder and 6 decoder layers, Whisper-medium[7] and WavLM-large[8] are used. </li>
         </ul>
 <!--    <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 mixture speech </h4>-->
 <!--    <table border="1">-->
@@ -1458,11 +1458,14 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
 <!--    </table>-->
 <!--    </div>-->
 <h3><a name="sectionIV">IV. Reference</a></h3>
-<p> [1] G. Li et al., “Joint speaker features learning for audio-visual multichannel speech separation and recognition,” in INTERSPEECH, 2024. </p>
-<p> [2] K. ˇZmol´ıkov´a et al., “Speakerbeam: Speaker aware neural network for target speaker extraction in speech mixtures,” IEEE J-STSP, 2019.</p>
-<p> [3] C. Xu et al., “Spex: Multi-scale time domain speaker extraction network,” TASLP, 2020. </p>
-<p> [4] S. E. Eskimez et al., “Personalized speech enhancement: New models and comprehensive evaluation,”
-in ICASSP, 2022.</p>
+    <p> [1] G. Li et al., “Audio-visual end-to-end multi-channel speech separation, dereverberation and recognition,” TASLP, 2023. </p>
+    <p> [2] G. Li et al., “Joint speaker features learning for audio-visual multichannel speech separation and recognition,” in INTERSPEECH, 2024. </p>
+    <p> [3] K. ˇZmol´ıkov´a et al., “Speakerbeam: Speaker aware neural network for target speaker extraction in speech mixtures,” IEEE J-STSP, 2019.</p>
+    <p> [4] C. Xu et al., “Spex: Multi-scale time domain speaker extraction network,” TASLP, 2020. </p>
+    <p> [5] S. E. Eskimez et al., “Personalized speech enhancement: New models and comprehensive evaluation,” in ICASSP, 2022.</p>
+    <p> [6] T. Afouras et al., “Lrs3-ted: a large-scale dataset for visual speech recognition,” arXiv preprint arXiv:1809.00496, 2018. </p>
+    <p> [7] S. Chen et al., “Wavlm: Large-scale self-supervised pre-training for full stack speech processing,” IEEE J-STSP, 2022. </p>
+    <p> [8] A. Radford et al., “Robust speech recognition via large-scale weak supervision,” in ICML, 2023.</p>
 
 </body>
 </div>
