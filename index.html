@@ -44,7 +44,7 @@
   }
 </style>
 </head>
-<div style="border: none; width:50%; margin: 0 auto;">
+<div style="border: none; width:65%; margin: 0 auto;">
 <body>
     <h2 align="center">Towards Zero-Shot Speaker-Adaptive Audio-Visual Multichannel Speech Separation and Recognition</h2>
     <p style="line-height:100%" align="center"><b>Authors:</b> xxx</p>
@@ -58,7 +58,7 @@ T-SNE visualization shows that our approaches produce more homogenous and consis
 Further analyses reveal that these improvements are strongly correlated with the increase of inter-speaker discrimination measured using cosine similarity. 
 Speaker adaptation inference time speedup ratios up to 27.3 times is achieved over offline, enrolment-based adaptation.</p>
     <a href="#sectionI">I. Speaker-Adaptive Audio-Visual Multichannel Speech Separation</a><br>
-    <a href="#sectionII">II. xxx</a><br>
+    <a href="#sectionII">II. Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition</a><br>
     <a href="#sectionIII">III. Experimental Setup and Results</a><br>
     <a href="#sectionIV">IV. Reference</a>
     <h3> <a name="sectionI"> I. Speaker-Adaptive Audio-Visual Multichannel Speech Separation</a> </h3>
@@ -66,9 +66,10 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
     <img border="0" src="sep.png" alt="Speaker-Adaptive Audio-Visual Multichannel Speech Separation" height="10%">
     </div>
     <ul>
-        <li> Speech separation backbone</li>
-        <li> Enrolment-based speaker adaptation.</li>
-        <li> Enrolment-free speaker adaptation </li>
+        <li> (a) Audio-visual multichannel speech separation backbone implemented using TCNs and mask-based MVDR beamforming. </li>
+        <li> (b) Enrolment-based speaker adaptation, which uses offline recording of sufficient quantities of speaker-level clean speech data.</li>
+        <li> (c) Enrolment-free speaker adaptation, which directly learns homogenous speaker features on the fly from mixed speech input.</li>
+        <li> (d) The extracted speaker features are applied to the backbone speech separation model using the purpose-built Speaker Feature Fusion Block based on either (I) Input Bias or (II) Activation Scaling. “
     </ul>
     <h3> <a name="sectionII">II. Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition </a> </h3>
     <div style="border: none; width:70%; margin: 0 auto;">
