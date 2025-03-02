@@ -1,0 +1,411 @@
+inference_job_num: 6, job:4
+2024-10-22 10:32:55 [28 - INFO ] lrs2_spk2dct num is 4098, first item is ('5535415699068794046', '0')
+2024-10-22 10:32:56 [43 - INFO ] mode:replay
+2024-10-22 10:32:56 [44 - INFO ] all_wav_num: 1200
+2024-10-22 10:32:56 [52 - INFO ] all_spk_cnt: 340
+2024-10-22 10:32:56 [59 - INFO ] this spk list cnt : 56
+2024-10-22 10:32:56 [66 - INFO ] this wav num: 176, inference_job_num=6, job=4
+/project_bdda7/bdda/gnli/projects/TASLP_23_24/sep_adapt/02-enroll_free/02-act_scaling/6-spk_enc_online/3-ecapa_tdnn_dim256_offline_moving_avg_formal_new_J_epoch_update_spk_feat/pt_fusion.py:13: UserWarning: nn.init.xavier_normal is now deprecated in favor of nn.init.xavier_normal_.
+  nn.init.xavier_normal(self.L)
+2024-10-22 10:32:59 [44 - INFO ] Load checkpoint from ./summary_0lipemb-LPS+IPD+AF-SISNR+SISNR_NOISE/model_mvdr-BS=32-Add_Visual=False-Location=TCN_AUDIO-TCN_inner_block_num=0-use_AuxiliaryNet=True-best5/bak.uTGT-LPS_IPD_AF-b32-BN-fd1-fixTrue-f0-cosTrue-sinFalse-best-79.pt.tar, epoch 79
+/project_bdda7/bdda/gnli/projects/TASLP_23_24/sep_adapt/02-enroll_free/02-act_scaling/6-spk_enc_online/3-ecapa_tdnn_dim256_offline_moving_avg_formal_new_J_epoch_update_spk_feat/pt_avnet_mvdr.py:462: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  T_sk = wav_len[i] // HOP_SIZE - 1
+2024-10-22 10:33:09 [117 - INFO ] rev1-6378795663657663776-00003:1/nspk:2,ad:75.0 snr1: -4.26, pesq: 2.11, stoi: 0.748, srmr: 0.00
+2024-10-22 10:33:10 [117 - INFO ] rev1-6378795663657663776-00004:2/nspk:2,ad:75.0 snr1: -17.82, pesq: 2.10, stoi: 0.682, srmr: 0.00
+2024-10-22 10:33:10 [117 - INFO ] rev1-6378795663657663776-00006:3/nspk:2,ad:75.0 snr1: -25.32, pesq: 2.38, stoi: 0.755, srmr: 0.00
+2024-10-22 10:33:11 [117 - INFO ] rev1-6388772443189516866-00002:4/nspk:2,ad:75.0 snr1: -12.96, pesq: 2.35, stoi: 0.629, srmr: 0.00
+2024-10-22 10:33:12 [117 - INFO ] rev1-6348780284709539256-00026:5/nspk:2,ad:75.0 snr1: -20.37, pesq: 2.27, stoi: 0.690, srmr: 0.00
+2024-10-22 10:33:12 [117 - INFO ] rev1-6348780284709539256-00019:6/nspk:2,ad:75.0 snr1: -11.00, pesq: 2.03, stoi: 0.655, srmr: 0.00
+2024-10-22 10:33:13 [117 - INFO ] rev1-6348780284709539256-00003:7/nspk:2,ad:75.0 snr1: -13.96, pesq: 1.97, stoi: 0.534, srmr: 0.00
+2024-10-22 10:33:14 [117 - INFO ] rev1-6348780284709539256-00016:8/nspk:2,ad:75.0 snr1: -23.04, pesq: 2.33, stoi: 0.726, srmr: 0.00
+2024-10-22 10:33:15 [117 - INFO ] rev1-6351037719520253414-00003:9/nspk:2,ad:75.0 snr1: -31.36, pesq: 2.06, stoi: 0.652, srmr: 0.00
+2024-10-22 10:33:16 [117 - INFO ] rev1-6351037719520253414-00001:10/nspk:2,ad:75.0 snr1: -14.97, pesq: 2.39, stoi: 0.708, srmr: 0.00
+2024-10-22 10:33:16 [117 - INFO ] rev1-6340500446756333781-00031:11/nspk:2,ad:75.0 snr1: -14.47, pesq: 1.86, stoi: 0.696, srmr: 0.00
+2024-10-22 10:33:17 [117 - INFO ] rev1-6340500446756333781-00007:12/nspk:2,ad:75.0 snr1: -13.86, pesq: 2.40, stoi: 0.765, srmr: 0.00
+2024-10-22 10:33:18 [117 - INFO ] rev1-6340500446756333781-00034:13/nspk:2,ad:75.0 snr1: -35.96, pesq: 2.04, stoi: 0.626, srmr: 0.00
+2024-10-22 10:33:19 [117 - INFO ] rev1-6340500446756333781-00058:14/nspk:2,ad:75.0 snr1: -15.94, pesq: 2.39, stoi: 0.734, srmr: 0.00
+2024-10-22 10:33:20 [117 - INFO ] rev1-6340500446756333781-00059:15/nspk:2,ad:75.0 snr1: -13.46, pesq: 2.39, stoi: 0.803, srmr: 0.00
+2024-10-22 10:33:21 [117 - INFO ] rev1-6350295549171504559-00004:16/nspk:2,ad:75.0 snr1: -17.84, pesq: 2.13, stoi: 0.537, srmr: 0.00
+2024-10-22 10:33:22 [117 - INFO ] rev1-6350295549171504559-00006:17/nspk:2,ad:75.0 snr1: -24.27, pesq: 2.10, stoi: 0.726, srmr: 0.00
+2024-10-22 10:33:23 [117 - INFO ] rev1-6350295549171504559-00016:18/nspk:2,ad:75.0 snr1: -11.17, pesq: 1.97, stoi: 0.740, srmr: 0.00
+2024-10-22 10:33:23 [117 - INFO ] rev1-6350295549171504559-00001:19/nspk:2,ad:75.0 snr1: -21.42, pesq: 2.11, stoi: 0.674, srmr: 0.00
+2024-10-22 10:33:24 [117 - INFO ] rev1-6356201988197034394-00007:20/nspk:2,ad:75.0 snr1: -12.69, pesq: 2.55, stoi: 0.657, srmr: 0.00
+2024-10-22 10:33:25 [117 - INFO ] rev1-6356201988197034394-00031:21/nspk:2,ad:75.0 snr1: -14.85, pesq: 2.12, stoi: 0.620, srmr: 0.00
+2024-10-22 10:33:26 [117 - INFO ] rev1-6356201988197034394-00034:22/nspk:2,ad:75.0 snr1: -36.70, pesq: 1.39, stoi: 0.654, srmr: 0.00
+2024-10-22 10:33:26 [117 - INFO ] rev1-6356201988197034394-00044:23/nspk:2,ad:75.0 snr1: -8.10, pesq: 2.74, stoi: 0.756, srmr: 0.00
+2024-10-22 10:33:27 [117 - INFO ] rev1-6356201988197034394-00018:24/nspk:2,ad:75.0 snr1: -27.71, pesq: 2.07, stoi: 0.573, srmr: 0.00
+2024-10-22 10:33:27 [117 - INFO ] rev1-6356201988197034394-00026:25/nspk:2,ad:75.0 snr1: -11.53, pesq: 2.46, stoi: 0.665, srmr: 0.00
+2024-10-22 10:33:28 [117 - INFO ] rev1-6355459817848285433-00004:26/nspk:2,ad:75.0 snr1: -10.21, pesq: 2.50, stoi: 0.768, srmr: 0.00
+2024-10-22 10:33:29 [117 - INFO ] rev1-6355459817848285433-00007:27/nspk:2,ad:75.0 snr1: -14.81, pesq: 2.48, stoi: 0.767, srmr: 0.00
+2024-10-22 10:33:30 [117 - INFO ] rev1-6352533656629519062-00002:28/nspk:2,ad:75.0 snr1: -36.50, pesq: 2.11, stoi: 0.607, srmr: 0.00
+2024-10-22 10:33:30 [117 - INFO ] rev1-6352533656629519062-00013:29/nspk:2,ad:75.0 snr1: -12.84, pesq: 2.12, stoi: 0.737, srmr: 0.00
+2024-10-22 10:33:31 [117 - INFO ] rev1-6352533656629519062-00006:30/nspk:2,ad:75.0 snr1: -10.37, pesq: 2.46, stoi: 0.812, srmr: 0.00
+2024-10-22 10:33:32 [117 - INFO ] rev1-6358111530656837102-00002:31/nspk:2,ad:75.0 snr1: -4.69, pesq: 1.66, stoi: 0.649, srmr: 0.00
+2024-10-22 10:33:33 [117 - INFO ] rev1-6356232911961499649-00017:32/nspk:2,ad:75.0 snr1: -17.71, pesq: 2.05, stoi: 0.715, srmr: 0.00
+2024-10-22 10:33:33 [117 - INFO ] rev1-6356232911961499649-00026:33/nspk:2,ad:30.0 snr1: -12.95, pesq: 1.98, stoi: 0.605, srmr: 0.00
+2024-10-22 10:33:34 [117 - INFO ] rev1-6388726057542659435-00015:34/nspk:2,ad:30.0 snr1: -11.90, pesq: 2.13, stoi: 0.661, srmr: 0.00
+2024-10-22 10:33:35 [117 - INFO ] rev1-6388726057542659435-00028:35/nspk:2,ad:30.0 snr1: -4.67, pesq: 2.58, stoi: 0.816, srmr: 0.00
+2024-10-22 10:33:36 [117 - INFO ] rev1-6364025700623369025-00022:36/nspk:2,ad:30.0 snr1: -17.07, pesq: 2.17, stoi: 0.589, srmr: 0.00
+2024-10-22 10:33:36 [117 - INFO ] rev1-6364025700623369025-00016:37/nspk:2,ad:30.0 snr1: -15.22, pesq: 2.27, stoi: 0.742, srmr: 0.00
+2024-10-22 10:33:37 [117 - INFO ] rev1-6380021017827118123-00015:38/nspk:2,ad:30.0 snr1: -31.11, pesq: 1.60, stoi: 0.598, srmr: 0.00
+2024-10-22 10:33:38 [117 - INFO ] rev1-6338645020884458400-00032:39/nspk:2,ad:30.0 snr1: -7.47, pesq: 2.33, stoi: 0.799, srmr: 0.00
+2024-10-22 10:33:39 [117 - INFO ] rev1-6338645020884458400-00071:40/nspk:2,ad:30.0 snr1: -11.89, pesq: 2.29, stoi: 0.786, srmr: 0.00
+2024-10-22 10:33:40 [117 - INFO ] rev1-6338645020884458400-00046:41/nspk:2,ad:30.0 snr1: -9.32, pesq: 2.58, stoi: 0.769, srmr: 0.00
+2024-10-22 10:33:40 [117 - INFO ] rev1-6338645020884458400-00057:42/nspk:2,ad:30.0 snr1: -2.92, pesq: 2.27, stoi: 0.817, srmr: 0.00
+2024-10-22 10:33:41 [117 - INFO ] rev1-6338645020884458400-00016:43/nspk:2,ad:30.0 snr1: -5.45, pesq: 2.69, stoi: 0.760, srmr: 0.00
+2024-10-22 10:33:42 [117 - INFO ] rev1-6350152526760616781-00009:44/nspk:2,ad:30.0 snr1: -14.32, pesq: 2.30, stoi: 0.721, srmr: 0.00
+2024-10-22 10:33:43 [117 - INFO ] rev1-6350152526760616781-00052:45/nspk:2,ad:30.0 snr1: -32.92, pesq: 2.19, stoi: 0.735, srmr: 0.00
+2024-10-22 10:33:43 [117 - INFO ] rev1-6350152526760616781-00013:46/nspk:2,ad:30.0 snr1: -53.53, pesq: 2.65, stoi: 0.732, srmr: 0.00
+2024-10-22 10:33:43 [117 - INFO ] rev1-6350152526760616781-00067:47/nspk:2,ad:30.0 snr1: -25.29, pesq: 2.77, stoi: 0.793, srmr: 0.00
+2024-10-22 10:33:44 [117 - INFO ] rev1-6350152526760616781-00059:48/nspk:2,ad:30.0 snr1: -18.66, pesq: 1.87, stoi: 0.548, srmr: 0.00
+2024-10-22 10:33:45 [117 - INFO ] rev1-6350152526760616781-00008:49/nspk:2,ad:30.0 snr1: -24.03, pesq: 2.04, stoi: 0.614, srmr: 0.00
+2024-10-22 10:33:46 [117 - INFO ] rev1-6350152526760616781-00016:50/nspk:2,ad:30.0 snr1: -18.40, pesq: 2.02, stoi: 0.504, srmr: 0.00
+2024-10-22 10:33:46 [117 - INFO ] rev1-6361428104402746195-00007:51/nspk:2,ad:30.0 snr1: -30.12, pesq: 2.07, stoi: 0.548, srmr: 0.00
+2024-10-22 10:33:47 [117 - INFO ] rev1-6360685934053997353-00007:52/nspk:2,ad:30.0 snr1: -9.14, pesq: 2.48, stoi: 0.785, srmr: 0.00
+2024-10-22 10:33:48 [117 - INFO ] rev1-6337902850535709539-00074:53/nspk:2,ad:30.0 snr1: -11.14, pesq: 2.21, stoi: 0.775, srmr: 0.00
+2024-10-22 10:33:49 [117 - INFO ] rev1-6337902850535709539-00065:54/nspk:2,ad:30.0 snr1: -9.63, pesq: 2.19, stoi: 0.630, srmr: 0.00
+2024-10-22 10:33:49 [117 - INFO ] rev1-6337902850535709539-00077:55/nspk:2,ad:30.0 snr1: -25.12, pesq: 2.35, stoi: 0.697, srmr: 0.00
+2024-10-22 10:33:50 [117 - INFO ] rev1-6337902850535709539-00015:56/nspk:2,ad:30.0 snr1: -17.04, pesq: 2.30, stoi: 0.770, srmr: 0.00
+2024-10-22 10:33:50 [117 - INFO ] rev1-6337902850535709539-00038:57/nspk:2,ad:30.0 snr1: -14.23, pesq: 2.02, stoi: 0.805, srmr: 0.00
+2024-10-22 10:33:51 [117 - INFO ] rev1-6337902850535709539-00068:58/nspk:2,ad:30.0 snr1: -8.41, pesq: 2.23, stoi: 0.648, srmr: 0.00
+2024-10-22 10:33:52 [117 - INFO ] rev1-6337902850535709539-00027:59/nspk:2,ad:30.0 snr1: -33.06, pesq: 2.17, stoi: 0.659, srmr: 0.00
+2024-10-22 10:33:53 [117 - INFO ] rev1-6347338464188272871-00011:60/nspk:2,ad:30.0 snr1: -27.91, pesq: 1.63, stoi: 0.456, srmr: 0.00
+2024-10-22 10:33:54 [117 - INFO ] rev1-6355115790967873574-00006:61/nspk:2,ad:30.0 snr1: -16.95, pesq: 2.41, stoi: 0.766, srmr: 0.00
+2024-10-22 10:33:54 [117 - INFO ] rev1-6355115790967873574-00020:62/nspk:2,ad:30.0 snr1: -18.65, pesq: 2.21, stoi: 0.657, srmr: 0.00
+2024-10-22 10:33:55 [117 - INFO ] rev1-6355115790967873574-00035:63/nspk:2,ad:30.0 snr1: -24.10, pesq: 2.20, stoi: 0.574, srmr: 0.00
+2024-10-22 10:33:56 [117 - INFO ] rev1-6355115790967873574-00021:64/nspk:2,ad:30.0 snr1: -17.36, pesq: 2.18, stoi: 0.775, srmr: 0.00
+2024-10-22 10:33:56 [117 - INFO ] rev1-6355115790967873574-00012:65/nspk:2,ad:30.0 snr1: -20.94, pesq: 2.57, stoi: 0.718, srmr: 0.00
+2024-10-22 10:33:57 [117 - INFO ] rev1-6355115790967873574-00016:66/nspk:2,ad:30.0 snr1: -12.41, pesq: 2.25, stoi: 0.654, srmr: 0.00
+2024-10-22 10:33:57 [117 - INFO ] rev1-6355115790967873574-00022:67/nspk:2,ad:30.0 snr1: -24.96, pesq: 2.41, stoi: 0.727, srmr: 0.00
+2024-10-22 10:33:58 [117 - INFO ] rev1-6355115790967873574-00029:68/nspk:2,ad:30.0 snr1: -17.00, pesq: 2.41, stoi: 0.725, srmr: 0.00
+2024-10-22 10:33:59 [117 - INFO ] rev1-6341381774045411442-00010:69/nspk:2,ad:30.0 snr1: -27.87, pesq: 2.20, stoi: 0.722, srmr: 0.00
+2024-10-22 10:34:00 [117 - INFO ] rev1-6362096830810797583-00021:70/nspk:2,ad:30.0 snr1: -32.44, pesq: 2.20, stoi: 0.613, srmr: 0.00
+2024-10-22 10:34:01 [117 - INFO ] rev1-6362096830810797583-00018:71/nspk:2,ad:30.0 snr1: -31.57, pesq: 1.83, stoi: 0.554, srmr: 0.00
+2024-10-22 10:34:01 [117 - INFO ] rev1-6382247528873432347-00020:72/nspk:2,ad:30.0 snr1: -26.86, pesq: 2.34, stoi: 0.713, srmr: 0.00
+2024-10-22 10:34:02 [117 - INFO ] rev1-6382247528873432347-00016:73/nspk:2,ad:30.0 snr1: -40.96, pesq: 2.12, stoi: 0.704, srmr: 0.00
+2024-10-22 10:34:03 [117 - INFO ] rev1-6352893145392128503-00014:74/nspk:2,ad:30.0 snr1: -19.29, pesq: 2.12, stoi: 0.617, srmr: 0.00
+2024-10-22 10:34:04 [117 - INFO ] rev1-6352893145392128503-00013:75/nspk:2,ad:30.0 snr1: -21.36, pesq: 1.95, stoi: 0.637, srmr: 0.00
+2024-10-22 10:34:04 [117 - INFO ] rev1-6352893145392128503-00017:76/nspk:2,ad:30.0 snr1: -36.96, pesq: 2.10, stoi: 0.674, srmr: 0.00
+2024-10-22 10:34:05 [117 - INFO ] rev1-6352893145392128503-00020:77/nspk:2,ad:30.0 snr1: -18.50, pesq: 1.89, stoi: 0.638, srmr: 0.00
+2024-10-22 10:34:06 [117 - INFO ] rev1-6352893145392128503-00036:78/nspk:2,ad:30.0 snr1: -26.70, pesq: 2.01, stoi: 0.744, srmr: 0.00
+2024-10-22 10:34:07 [117 - INFO ] rev1-6352893145392128503-00008:79/nspk:2,ad:30.0 snr1: -18.13, pesq: 2.06, stoi: 0.540, srmr: 0.00
+2024-10-22 10:34:07 [117 - INFO ] rev1-6363306723098082453-00001:80/nspk:2,ad:30.0 snr1: -19.21, pesq: 2.00, stoi: 0.611, srmr: 0.00
+2024-10-22 10:34:08 [117 - INFO ] rev1-6348834401297406331-00023:81/nspk:2,ad:30.0 snr1: -22.68, pesq: 2.38, stoi: 0.781, srmr: 0.00
+2024-10-22 10:34:09 [117 - INFO ] rev1-6348834401297406331-00051:82/nspk:2,ad:30.0 snr1: -58.55, pesq: 2.44, stoi: 0.754, srmr: 0.00
+2024-10-22 10:34:10 [117 - INFO ] rev1-6348834401297406331-00046:83/nspk:2,ad:30.0 snr1: -34.67, pesq: 2.15, stoi: 0.647, srmr: 0.00
+2024-10-22 10:34:11 [117 - INFO ] rev1-6348834401297406331-00002:84/nspk:2,ad:30.0 snr1: -17.44, pesq: 2.00, stoi: 0.534, srmr: 0.00
+2024-10-22 10:34:12 [117 - INFO ] rev1-6348834401297406331-00006:85/nspk:2,ad:30.0 snr1: -28.82, pesq: 1.93, stoi: 0.630, srmr: 0.00
+2024-10-22 10:34:13 [117 - INFO ] rev1-6366944130901006716-00015:86/nspk:2,ad:30.0 snr1: -14.86, pesq: 2.28, stoi: 0.721, srmr: 0.00
+2024-10-22 10:34:13 [117 - INFO ] rev1-6366944130901006716-00005:87/nspk:2,ad:30.0 snr1: -19.79, pesq: 2.12, stoi: 0.737, srmr: 0.00
+2024-10-22 10:34:14 [117 - INFO ] rev1-6366944130901006716-00010:88/nspk:2,ad:30.0 snr1: -19.58, pesq: 1.93, stoi: 0.697, srmr: 0.00
+2024-10-22 10:34:15 [117 - INFO ] rev1-6366944130901006716-00007:89/nspk:2,ad:30.0 snr1: -51.81, pesq: 2.26, stoi: 0.725, srmr: 0.00
+2024-10-22 10:34:16 [117 - INFO ] rev1-6362958830877522951-00003:90/nspk:2,ad:30.0 snr1: -31.32, pesq: 1.90, stoi: 0.686, srmr: 0.00
+2024-10-22 10:34:16 [117 - INFO ] rev1-6362958830877522951-00005:91/nspk:2,ad:30.0 snr1: -17.36, pesq: 2.51, stoi: 0.784, srmr: 0.00
+2024-10-22 10:34:17 [117 - INFO ] rev1-6362958830877522951-00008:92/nspk:2,ad:30.0 snr1: -25.08, pesq: 2.38, stoi: 0.799, srmr: 0.00
+2024-10-22 10:34:17 [117 - INFO ] rev1-6362958830877522951-00007:93/nspk:2,ad:30.0 snr1: -30.30, pesq: 2.26, stoi: 0.714, srmr: 0.00
+2024-10-22 10:34:18 [117 - INFO ] rev1-6358830508182123252-00017:94/nspk:2,ad:30.0 snr1: -30.72, pesq: 1.92, stoi: 0.699, srmr: 0.00
+2024-10-22 10:34:19 [117 - INFO ] rev1-6358830508182123252-00005:95/nspk:2,ad:30.0 snr1: -30.45, pesq: 2.08, stoi: 0.635, srmr: 0.00
+2024-10-22 10:34:19 [117 - INFO ] rev1-6358830508182123252-00029:96/nspk:2,ad:30.0 snr1: -11.59, pesq: 2.04, stoi: 0.625, srmr: 0.00
+2024-10-22 10:34:20 [117 - INFO ] rev1-6363948391212041701-00004:97/nspk:2,ad:30.0 snr1: -35.44, pesq: 1.38, stoi: 0.451, srmr: 0.00
+2024-10-22 10:34:21 [117 - INFO ] rev1-6357006006074844331-00003:98/nspk:2,ad:30.0 snr1: -17.43, pesq: 1.96, stoi: 0.669, srmr: 0.00
+2024-10-22 10:34:21 [117 - INFO ] rev1-6357006006074844331-00015:99/nspk:2,ad:30.0 snr1: -26.40, pesq: 2.11, stoi: 0.695, srmr: 0.00
+2024-10-22 10:34:22 [117 - INFO ] rev1-6357006006074844331-00008:100/nspk:2,ad:30.0 snr1: -18.31, pesq: 2.38, stoi: 0.818, srmr: 0.00
+2024-10-22 10:34:23 [117 - INFO ] rev1-6357006006074844331-00013:101/nspk:2,ad:30.0 snr1: -12.74, pesq: 1.81, stoi: 0.666, srmr: 0.00
+2024-10-22 10:34:24 [117 - INFO ] rev1-6357006006074844331-00011:102/nspk:2,ad:30.0 snr1: -11.46, pesq: 1.59, stoi: 0.565, srmr: 0.00
+2024-10-22 10:34:25 [117 - INFO ] rev1-6354006400915251783-00007:103/nspk:2,ad:30.0 snr1: -24.12, pesq: 2.46, stoi: 0.747, srmr: 0.00
+2024-10-22 10:34:25 [117 - INFO ] rev1-6354006400915251783-00006:104/nspk:2,ad:30.0 snr1: -23.64, pesq: 2.10, stoi: 0.581, srmr: 0.00
+2024-10-22 10:34:26 [117 - INFO ] rev1-6349916733056066377-00018:105/nspk:2,ad:30.0 snr1: -35.61, pesq: 2.27, stoi: 0.573, srmr: 0.00
+2024-10-22 10:34:27 [117 - INFO ] rev1-6333604447265869137-00005:106/nspk:2,ad:30.0 snr1: -26.24, pesq: 2.49, stoi: 0.676, srmr: 0.00
+2024-10-22 10:34:27 [117 - INFO ] rev1-6333604447265869137-00003:107/nspk:2,ad:30.0 snr1: -15.45, pesq: 2.39, stoi: 0.828, srmr: 0.00
+2024-10-22 10:34:28 [117 - INFO ] rev1-6355544858200683461-00002:108/nspk:2,ad:30.0 snr1: -10.38, pesq: 2.07, stoi: 0.745, srmr: 0.00
+2024-10-22 10:34:29 [117 - INFO ] rev1-6392282290463747809-00003:109/nspk:2,ad:30.0 snr1: -8.55, pesq: 1.88, stoi: 0.563, srmr: 0.00
+2024-10-22 10:34:29 [117 - INFO ] rev1-6392282290463747809-00025:110/nspk:2,ad:30.0 snr1: -16.69, pesq: 2.45, stoi: 0.734, srmr: 0.00
+2024-10-22 10:34:30 [117 - INFO ] rev1-6392282290463747809-00018:111/nspk:2,ad:30.0 snr1: -33.43, pesq: 2.55, stoi: 0.753, srmr: 0.00
+2024-10-22 10:34:31 [117 - INFO ] rev1-6349228679295241171-00016:112/nspk:2,ad:30.0 snr1: -27.87, pesq: 2.39, stoi: 0.797, srmr: 0.00
+2024-10-22 10:34:31 [117 - INFO ] rev1-6393267985458244248-00006:113/nspk:2,ad:30.0 snr1: -17.99, pesq: 1.97, stoi: 0.637, srmr: 0.00
+2024-10-22 10:34:32 [117 - INFO ] rev1-6393267985458244248-00017:114/nspk:2,ad:30.0 snr1: -17.41, pesq: 2.30, stoi: 0.781, srmr: 0.00
+2024-10-22 10:34:33 [117 - INFO ] rev1-6363210086333922442-00011:115/nspk:2,ad:30.0 snr1: -40.06, pesq: 2.42, stoi: 0.613, srmr: 0.00
+2024-10-22 10:34:33 [117 - INFO ] rev1-6388911600129842790-00013:116/nspk:2,ad:30.0 snr1: -14.40, pesq: 2.22, stoi: 0.682, srmr: 0.00
+2024-10-22 10:34:34 [117 - INFO ] rev1-6359580409472005362-00006:117/nspk:2,ad:30.0 snr1: -22.29, pesq: 2.33, stoi: 0.730, srmr: 0.00
+2024-10-22 10:34:35 [117 - INFO ] rev1-6359580409472005362-00011:118/nspk:2,ad:30.0 snr1: -28.30, pesq: 2.01, stoi: 0.586, srmr: 0.00
+2024-10-22 10:34:36 [117 - INFO ] rev1-6359580409472005362-00001:119/nspk:2,ad:30.0 snr1: -8.08, pesq: 2.47, stoi: 0.749, srmr: 0.00
+2024-10-22 10:34:36 [117 - INFO ] rev1-6359580409472005362-00002:120/nspk:2,ad:30.0 snr1: -9.89, pesq: 2.18, stoi: 0.655, srmr: 0.00
+2024-10-22 10:34:37 [117 - INFO ] rev1-6391783644760745881-00012:121/nspk:2,ad:30.0 snr1: -12.60, pesq: 2.71, stoi: 0.749, srmr: 0.00
+2024-10-22 10:34:38 [117 - INFO ] rev1-6384829663342218937-00028:122/nspk:2,ad:30.0 snr1: -14.62, pesq: 2.36, stoi: 0.600, srmr: 0.00
+2024-10-22 10:34:38 [117 - INFO ] rev1-6384829663342218937-00011:123/nspk:2,ad:30.0 snr1: -36.16, pesq: 2.25, stoi: 0.700, srmr: 0.00
+2024-10-22 10:34:39 [117 - INFO ] rev1-6384829663342218937-00039:124/nspk:2,ad:30.0 snr1: -18.67, pesq: 2.22, stoi: 0.546, srmr: 0.00
+2024-10-22 10:34:40 [117 - INFO ] rev1-6384829663342218937-00003:125/nspk:2,ad:30.0 snr1: -11.54, pesq: 1.98, stoi: 0.631, srmr: 0.00
+2024-10-22 10:34:40 [117 - INFO ] rev1-6384829663342218937-00034:126/nspk:2,ad:30.0 snr1: -20.14, pesq: 2.36, stoi: 0.740, srmr: 0.00
+2024-10-22 10:34:41 [117 - INFO ] rev1-6384829663342218937-00026:127/nspk:2,ad:30.0 snr1: -23.12, pesq: 2.16, stoi: 0.619, srmr: 0.00
+2024-10-22 10:34:42 [117 - INFO ] rev1-6384829663342218937-00013:128/nspk:2,ad:30.0 snr1: -14.49, pesq: 2.20, stoi: 0.684, srmr: 0.00
+2024-10-22 10:34:42 [117 - INFO ] rev1-6331559613336179781-00021:129/nspk:2,ad:30.0 snr1: -23.45, pesq: 2.23, stoi: 0.468, srmr: 0.00
+2024-10-22 10:34:43 [117 - INFO ] rev1-6331559613336179781-00020:130/nspk:2,ad:30.0 snr1: -14.63, pesq: 2.28, stoi: 0.742, srmr: 0.00
+2024-10-22 10:34:44 [117 - INFO ] rev1-6331559613336179781-00019:131/nspk:2,ad:30.0 snr1: -17.94, pesq: 2.29, stoi: 0.560, srmr: 0.00
+2024-10-22 10:34:45 [117 - INFO ] rev1-6331559613336179781-00029:132/nspk:2,ad:30.0 snr1: -69.70, pesq: 1.82, stoi: 0.597, srmr: 0.00
+2024-10-22 10:34:45 [117 - INFO ] rev1-6331559613336179781-00027:133/nspk:2,ad:30.0 snr1: -19.15, pesq: 2.68, stoi: 0.707, srmr: 0.00
+2024-10-22 10:34:46 [117 - INFO ] rev1-6331559613336179781-00036:134/nspk:2,ad:30.0 snr1: -28.67, pesq: 2.68, stoi: 0.775, srmr: 0.00
+2024-10-22 10:34:47 [117 - INFO ] rev1-6331559613336179781-00038:135/nspk:2,ad:30.0 snr1: -9.81, pesq: 2.04, stoi: 0.694, srmr: 0.00
+2024-10-22 10:34:47 [117 - INFO ] rev1-6331559613336179781-00039:136/nspk:2,ad:30.0 snr1: -12.14, pesq: 2.15, stoi: 0.529, srmr: 0.00
+2024-10-22 10:34:48 [117 - INFO ] rev1-6334331155732352379-00002:137/nspk:2,ad:30.0 snr1: -22.01, pesq: 2.27, stoi: 0.773, srmr: 0.00
+2024-10-22 10:34:49 [117 - INFO ] rev1-6375923619026758902-00015:138/nspk:2,ad:30.0 snr1: -10.05, pesq: 2.40, stoi: 0.746, srmr: 0.00
+2024-10-22 10:34:49 [117 - INFO ] rev1-6375923619026758902-00014:139/nspk:2,ad:30.0 snr1: -25.09, pesq: 2.12, stoi: 0.529, srmr: 0.00
+2024-10-22 10:34:50 [117 - INFO ] rev1-6375923619026758902-00020:140/nspk:2,ad:30.0 snr1: -14.84, pesq: 2.34, stoi: 0.738, srmr: 0.00
+2024-10-22 10:34:51 [117 - INFO ] rev1-6370331571607430336-00009:141/nspk:2,ad:30.0 snr1: -10.18, pesq: 2.10, stoi: 0.744, srmr: 0.00
+2024-10-22 10:34:52 [117 - INFO ] rev1-6370331571607430336-00019:142/nspk:2,ad:30.0 snr1: -14.94, pesq: 2.26, stoi: 0.649, srmr: 0.00
+2024-10-22 10:34:52 [117 - INFO ] rev1-6370331571607430336-00020:143/nspk:2,ad:30.0 snr1: -16.22, pesq: 1.98, stoi: 0.687, srmr: 0.00
+2024-10-22 10:34:53 [117 - INFO ] rev1-6370331571607430336-00033:144/nspk:2,ad:30.0 snr1: -22.26, pesq: 1.95, stoi: 0.705, srmr: 0.00
+2024-10-22 10:34:54 [117 - INFO ] rev1-6370331571607430336-00003:145/nspk:2,ad:30.0 snr1: -14.99, pesq: 2.32, stoi: 0.474, srmr: 0.00
+2024-10-22 10:34:54 [117 - INFO ] rev1-6370331571607430336-00016:146/nspk:2,ad:30.0 snr1: -23.12, pesq: 2.13, stoi: 0.473, srmr: 0.00
+2024-10-22 10:34:55 [117 - INFO ] rev1-6364396785797743449-00020:147/nspk:2,ad:30.0 snr1: -18.40, pesq: 1.70, stoi: 0.566, srmr: 0.00
+2024-10-22 10:34:56 [117 - INFO ] rev1-6334934169140712754-00013:148/nspk:2,ad:30.0 snr1: -10.93, pesq: 1.99, stoi: 0.684, srmr: 0.00
+2024-10-22 10:34:56 [117 - INFO ] rev1-6334934169140712754-00002:149/nspk:2,ad:30.0 snr1: -14.09, pesq: 2.19, stoi: 0.681, srmr: 0.00
+2024-10-22 10:34:57 [117 - INFO ] rev1-6334934169140712754-00082:150/nspk:2,ad:30.0 snr1: -5.35, pesq: 2.59, stoi: 0.767, srmr: 0.00
+2024-10-22 10:34:58 [117 - INFO ] rev1-6334934169140712754-00073:151/nspk:2,ad:30.0 snr1: -10.84, pesq: 2.11, stoi: 0.600, srmr: 0.00
+2024-10-22 10:34:58 [117 - INFO ] rev1-6334934169140712754-00001:152/nspk:2,ad:30.0 snr1: -12.86, pesq: 2.10, stoi: 0.696, srmr: 0.00
+2024-10-22 10:34:59 [117 - INFO ] rev1-6334934169140712754-00070:153/nspk:2,ad:30.0 snr1: -17.11, pesq: 1.61, stoi: 0.640, srmr: 0.00
+2024-10-22 10:35:00 [117 - INFO ] rev1-6334934169140712754-00059:154/nspk:2,ad:30.0 snr1: -8.11, pesq: 2.17, stoi: 0.710, srmr: 0.00
+2024-10-22 10:35:01 [117 - INFO ] rev1-6334934169140712754-00068:155/nspk:2,ad:30.0 snr1: -4.15, pesq: 2.66, stoi: 0.779, srmr: 0.00
+2024-10-22 10:35:02 [117 - INFO ] rev1-6358428499243281970-00022:156/nspk:2,ad:30.0 snr1: -17.75, pesq: 2.19, stoi: 0.725, srmr: 0.00
+2024-10-22 10:35:02 [117 - INFO ] rev1-6358428499243281970-00032:157/nspk:2,ad:30.0 snr1: -13.01, pesq: 2.16, stoi: 0.450, srmr: 0.00
+2024-10-22 10:35:03 [117 - INFO ] rev1-6358428499243281970-00024:158/nspk:2,ad:30.0 snr1: -8.76, pesq: 2.49, stoi: 0.649, srmr: 0.00
+2024-10-22 10:35:04 [117 - INFO ] rev1-6358428499243281970-00026:159/nspk:2,ad:30.0 snr1: -5.71, pesq: 2.19, stoi: 0.741, srmr: 0.00
+2024-10-22 10:35:05 [117 - INFO ] rev1-6358428499243281970-00028:160/nspk:2,ad:30.0 snr1: -36.52, pesq: 0.97, stoi: 0.092, srmr: 0.00
+2024-10-22 10:35:05 [117 - INFO ] rev1-6352157417494386368-00027:161/nspk:2,ad:30.0 snr1: -8.95, pesq: 2.25, stoi: 0.753, srmr: 0.00
+2024-10-22 10:35:06 [117 - INFO ] rev1-6352157417494386368-00030:162/nspk:2,ad:30.0 snr1: -10.93, pesq: 2.35, stoi: 0.656, srmr: 0.00
+2024-10-22 10:35:06 [117 - INFO ] rev1-6352157417494386368-00051:163/nspk:2,ad:30.0 snr1: -17.52, pesq: 1.91, stoi: 0.540, srmr: 0.00
+2024-10-22 10:35:07 [117 - INFO ] rev1-6352157417494386368-00043:164/nspk:2,ad:30.0 snr1: -13.15, pesq: 2.34, stoi: 0.816, srmr: 0.00
+2024-10-22 10:35:07 [117 - INFO ] rev1-6352157417494386368-00050:165/nspk:2,ad:30.0 snr1: -21.85, pesq: 1.76, stoi: 0.510, srmr: 0.00
+2024-10-22 10:35:08 [117 - INFO ] rev1-6330311066473698535-00022:166/nspk:2,ad:30.0 snr1: -26.33, pesq: 2.24, stoi: 0.509, srmr: 0.00
+2024-10-22 10:35:09 [117 - INFO ] rev1-6330311066473698535-00011:167/nspk:2,ad:30.0 snr1: -7.27, pesq: 2.35, stoi: 0.710, srmr: 0.00
+2024-10-22 10:35:09 [117 - INFO ] rev1-6330311066473698535-00018:168/nspk:2,ad:30.0 snr1: -23.17, pesq: 2.19, stoi: 0.758, srmr: 0.00
+2024-10-22 10:35:10 [117 - INFO ] rev1-6330311066473698535-00025:169/nspk:2,ad:30.0 snr1: -30.13, pesq: 2.80, stoi: 0.802, srmr: 0.00
+2024-10-22 10:35:10 [117 - INFO ] rev1-6361799189577120616-00001:170/nspk:2,ad:30.0 snr1: -38.84, pesq: 1.80, stoi: 0.640, srmr: 0.00
+2024-10-22 10:35:11 [117 - INFO ] rev1-6361799189577120616-00005:171/nspk:2,ad:30.0 snr1: -11.89, pesq: 2.12, stoi: 0.790, srmr: 0.00
+2024-10-22 10:35:12 [117 - INFO ] rev1-6356530553195113872-00001:172/nspk:2,ad:30.0 snr1: -7.60, pesq: 2.42, stoi: 0.685, srmr: 0.00
+2024-10-22 10:35:13 [117 - INFO ] rev1-6344002563089494087-00012:173/nspk:2,ad:30.0 snr1: -8.99, pesq: 2.47, stoi: 0.753, srmr: 0.00
+2024-10-22 10:35:13 [117 - INFO ] rev1-6344002563089494087-00006:174/nspk:2,ad:30.0 snr1: -11.16, pesq: 2.01, stoi: 0.615, srmr: 0.00
+2024-10-22 10:35:14 [117 - INFO ] rev1-6344002563089494087-00016:175/nspk:2,ad:30.0 snr1: -10.04, pesq: 2.02, stoi: 0.620, srmr: 0.00
+2024-10-22 10:35:14 [117 - INFO ] rev1-6344002563089494087-00015:176/nspk:2,ad:30.0 snr1: -3.96, pesq: 2.20, stoi: 0.669, srmr: 0.00
+/project_bdda5/bdda/gnli/mysoftware/anaconda3/envs/Enh/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/project_bdda5/bdda/gnli/mysoftware/anaconda3/envs/Enh/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+model name is bak.uTGT-LPS_IPD_AF-b32-BN-fd1-fixTrue-f0-cosTrue-sinFalse-best-79.pt.tar
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+no add visual
+Performance of bak.uTGT-LPS_IPD_AF-b32-BN-fd1-fixTrue-f0-cosTrue-sinFalse-best-79.pt.tar
+SISNR
+
+	all: -19.547553827180305 (176/528, 33.333333333333336%)
+	0-15: nan (0/528, 0.0%)
+	15-45: -19.987633471318336 (144/528, 27.272727272727273%)
+	45-90: -17.56719542855916 (32/528, 6.0606060606060606%)
+	90-180: nan (0/528, 0.0%)
+	0-0.33: -18.230407622329505 (65/528, 12.31060606060606%)
+	0.33-0.66: -18.652754718357432 (60/528, 11.363636363636363%)
+	0.66-0.99: -22.278974412369994 (51/528, 9.659090909090908%)
+PESQ
+
+	all: 2.1888369277796964 (176/528, 33.333333333333336%)
+	0-15: nan (0/528, 0.0%)
+	15-45: 2.188720566117101 (144/528, 27.272727272727273%)
+	45-90: 2.1893605552613735 (32/528, 6.0606060606060606%)
+	90-180: nan (0/528, 0.0%)
+	0-0.33: 2.255098144824688 (65/528, 12.31060606060606%)
+	0.33-0.66: 2.2181382815043134 (60/528, 11.363636363636363%)
+	0.66-0.99: 2.0699141761835884 (51/528, 9.659090909090908%)
+SRMR
+
+	all: nan (0/528, 0.0%)
+	0-15: nan (0/528, 0.0%)
+	15-45: nan (0/528, 0.0%)
+	45-90: nan (0/528, 0.0%)
+	90-180: nan (0/528, 0.0%)
+	0-0.33: nan (0/528, 0.0%)
+	0.33-0.66: nan (0/528, 0.0%)
+	0.66-0.99: nan (0/528, 0.0%)
+STOI
+
+	all: 0.6744705100379661 (176/528, 33.333333333333336%)
+	0-15: nan (0/528, 0.0%)
+	15-45: 0.6711651301815927 (144/528, 27.272727272727273%)
+	45-90: 0.6893447193916464 (32/528, 6.0606060606060606%)
+	90-180: nan (0/528, 0.0%)
+	0-0.33: 0.7248845265556022 (65/528, 12.31060606060606%)
+	0.33-0.66: 0.6837560457659877 (60/528, 11.363636363636363%)
+	0.66-0.99: 0.5992931920511492 (51/528, 9.659090909090908%)
+model_type-uTGT-diag_loading_ratio-1e-5

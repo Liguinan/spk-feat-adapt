@@ -5,23 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Towards Zero-Shot Speaker-Adaptive Audio-Visual Multichannel Speech Separation and Recognition</title>
 <style type="text/css">
-<!--  body {-->
-<!--  margin: 0  auto；-->
-<!--  padding:10px 30px;-->
-<!--  background: #fff;-->
-<!--  color: #111;-->
-<!--  font-size: 15px;-->
-<!--  font-family: "Times New Roman", serif;-->
-<!--  font-weight: 400;-->
-<!--  line-height: 1.8;-->
-<!--  -webkit-font-smoothing: antialiased;-->
-<!--  }-->
   audio {
   width: 75%;
   height:30px;
   }
   img {
   width:100%;
+  max-width: 100%; /* 确保适应容器 */
+  height: auto; /* 高度自动调整 */
+  }
+  td {
+    vertical-align: top; /* 垂直方向上对齐到顶部 */
+    text-align: center; /* 水平居中 */
   }
   video {
   width:75%;
@@ -42,9 +37,33 @@
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   }
+  .small-font {
+    font-size: 13px; /* 设置字体大小 */
+  }
+  .red-text {
+    color: red; /* 设置文本颜色为红色 */
+  }
+  .blue-text {
+    color: blue; /* 设置文本颜色为蓝色 */
+ }
+ .underline-text {
+    text-decoration: underline; /* 添加下划线 */
+}
+.indented-list {
+    padding-left: 50px; /* 左侧缩进 */
+    padding-right: 50px; /* 右侧缩进 */
+}
+.indented-list-title {
+    padding-left: 30px; /* 左侧缩进 */
+    padding-right: 60px; /* 右侧缩进 */
+}
+.italic-text {
+    font-style: italic; /* 设置文本为斜体 */
+}
+}
 </style>
 </head>
-<div style="border: none; width:70%; margin: 0 auto;">
+<div style="border: none; width:75%; margin: 0 auto;">
 <body>
     <h2 align="center">Towards Zero-Shot Speaker-Adaptive Audio-Visual Multichannel Speech Separation and Recognition</h2>
     <p style="line-height:100%" align="center"><b>Authors:</b> xxx</p>
@@ -58,1417 +77,1087 @@ T-SNE visualization shows that our approaches produce more homogenous and consis
 Further analyses reveal that these improvements are strongly correlated with the increase of inter-speaker discrimination measured using cosine similarity. 
 Speaker adaptation inference time speedup ratios up to 27.3 times is achieved over offline, enrolment-based adaptation.</p>
     <a href="#sectionI">I. Speaker-Adaptive Audio-Visual Multichannel Speech Separation</a><br>
-    <a href="#sectionII">II. Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition</a><br>
+    <a href="#sectionII">II. Zero-shot Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition</a><br>
     <a href="#sectionIII">III. Experimental Setup and Results</a><br>
     <a href="#sectionIV">IV. Reference</a>
     <h3> <a name="sectionI"> I. Speaker-Adaptive Audio-Visual Multichannel Speech Separation</a> </h3>
     <div style="border: none; width:60%; margin: 0 auto;">
     <img border="0" src="sep.png" alt="Speaker-Adaptive Audio-Visual Multichannel Speech Separation" height="10%">
     </div>
-    <ul>
-        <li> (a) Audio-visual multichannel speech separation backbone implemented using TCNs and mask-based MVDR beamforming. </li>
-        <li> (b) Enrolment-based speaker adaptation, which uses offline recording of sufficient quantities of speaker-level clean speech data.</li>
-        <li> (c) Enrolment-free speaker adaptation, which directly learns homogenous speaker features on the fly from mixed speech input.</li>
-        <li> (d) The extracted speaker features are applied to the backbone speech separation model using the purpose-built Speaker Feature Fusion Block based on either i) Input Bias or ii) Activation Scaling. “
+    <ul class="indented-list">
+        <li> <span class="italic-text"> <span class="red-text"> <b> <span class="underline-text"> (a) Audio-Visual Multichannel Speech Separation Backbone </span></b></span></span>  implemented using temporal convolutional network (TCN) and mask-based minimum variance distortionless response (MVDR) beamforming. </li>
+<!--        <br>-->
+        <li><span class="italic-text"> <span class="red-text"> <b> <span class="underline-text"> (b) Enrolment-Based Speaker Adaptation </span></b></span></span>, which uses offline recording of sufficient quantities of speaker-level clean speech data to obtain a stable, averaged speaker features.</li>
+<!--        <br>-->
+        <li><span class="italic-text"> <span class="red-text"> <b> <span class="underline-text"> (c) Enrolment-Free Speaker Adaptation </span></b></span></span>, which directly learns homogenous speaker features on the fly from mixed speech input using: a) cross-utterance speaker features smoothing; and b) joint speaker features learning with speech separation backbone approaches.</li>
+<!--        <li> (d) The extracted speaker features are applied to the backbone speech separation model using the purpose-built Speaker Feature Fusion Block based on either i) Input Bias or ii) Activation Scaling.</li>-->
+<!--        <br>-->
+<!--        <span class="italic-text"> <span>Note: TCN represents temporal convolutional network; and MVDR represents minimum variance distortionless response. </span></span>-->
     </ul>
-    <h3> <a name="sectionII">II. Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition </a> </h3>
+    <h3> <a name="sectionII">II. Zero-shot Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition </a> </h3>
     <div style="border: none; width:70%; margin: 0 auto;">
-    <img border="0" src="asr.png" alt="Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition" height="20%">
+    <img border="0" src="asr.png" alt="Zero-shot Enrolment-Free Speaker Adaptation of Multichannel Speech Separation and Recognition" height="20%">
     </div>
-    <p style="line-height:100%" align="justify"> <b> Four types of downstream ASR back-ends :</b> </p>
-    <ul>
-        <li> (a) The standard Conformer ASR back-end; </li>
-        <li> (b) The standalone domain fine-tuned WavLM and Whisper foundation models based ASR back-ends; </li>
-        <li> (c) The domain fine-tuned WavLM features empowered Conformer ASR ; </li>
-        <li> (d) The Conformer ASR back-end empowered by zero-shot enrolment-free speaker adaptation; </li>
+    <p class="indented-list-title" style="line-height:100%;" align="justify"> <b> Four types of downstream ASR back-ends :</b> </p>
+    <ul class="indented-list">
+        <li> The standard <b> Conformer </b> ASR back-end; </li>
+        <li> The standalone domain fine-tuned <b> Whisper </b>back-end; </li>
+        <li> The standalone domain fine-tuned <b> WavLM </b> based ASR back-end; </li>
+        <li> The <b>Conformer </b> ASR back-end empowered by fine-tuned <b> WavLM features </b> andx <b> zero-shot enrolment-free speaker adaptation</b> (marked as "<b>Conformer + WavLM Feat. + Spk. Adapt.</b>" for the transcripts display of speech recognition in <a href="#sectionIII-C"> Section III-C </a>); </li>
     </ul>
     <h3> <a name="sectionIII">III. Experimental Setup and Results</a></h3>
     <div style="border: none; width:100%; margin: 0 auto;">
     <h4> A. Experimental setup </h4>
         <ul>
-            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multichannel mixture speech using the LRS3-TED dataset [6] with 10354, 3122, 3136 and 5284 utterances respectively for training (111.47 hours, 4886 speakers), validation (3.15 hours, 157 speakers), dev (3.14 hours, 158 speakers) and test (3.36 hours, 412 speakers). </li>
+            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multichannel mixture speech using the LRS3-TED dataset [4] with 10354, 3122, 3136 and 5284 utterances respectively for training (111.47 hours, 4886 speakers), validation (3.15 hours, 157 speakers), dev (3.14 hours, 158 speakers) and test (3.36 hours, 412 speakers). </li>
             <li> A replayed eval dataset containing 1200 (0.5 hours, 340 speakers) utterances is recorded by replaying two loudspeakers simultaneously to generate a 15-channel mixture speech in a meeting room [1], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
-            <li> Espnet style Conformer AED ASR model [1] contains 12 encoder and 6 decoder layers, Whisper-medium[7] and WavLM-large[8] are used. </li>
+            <li> Espnet style Conformer AED ASR model [1], Whisper-medium [5] and WavLM-large [6] are used. </li>
         </ul>
-    <h4> B. Performance of speaker-adaptive speech separation against varying amounts of speaker-level data. </h4>
-<!--    <table border="1">-->
-<!--    	<tr>-->
-<!--        	<th rowspan="2" colspan="2"></th>-->
-<!--        	<th colspan="4"> Four ranges of the angle difference between the target and interfering speakers relative to the microphone array </th>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>[0°-15°)</th>-->
-<!--            <th>[15°-45°)</th>-->
-<!--            <th>[45°-90°)</th>-->
-<!--            <th>[90°-180°)</th>-->
-<!--        </tr>-->
-<!--           <tr>-->
-<!--            <th colspan="2"> Target speaker video</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="test/clean/transm5-6331559613336179781-00019.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="test/clean/transm5-6331559613336179781-00027.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src=test/clean/transm5-6331559613336179781-00029.mp4 controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src=test/clean/transm5-6332062124509813446-00018.mp4 controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th colspan="2">Mixture <br> (overlapped-reverberant-noisy) </th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/0-mc/mixture/00019.png" alt>-->
-<!--                <audio src="simulated/0-15/0-mc/mixture/00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/0-mc/mixture/00027.png" alt>-->
-<!--                <audio src="simulated/15-45/0-mc/mixture/00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/0-mc/mixture/00029.png" alt>-->
-<!--                <audio src="simulated/45-90/0-mc/mixture/00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/0-mc/mixture/00018.png" alt>-->
-<!--                <audio src="simulated/90-180/0-mc/mixture/00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th colspan="2">Reverberant-only</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/0-mc/rvb-only/00019.png" alt>-->
-<!--                <audio src="simulated/0-15/0-mc/rvb-only/00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--              <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/0-mc/rvb-only/00027.png" alt>-->
-<!--                <audio src="simulated/15-45/0-mc/rvb-only/00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/0-mc/rvb-only/00029.png" alt>-->
-<!--                <audio src="simulated/45-90/0-mc/rvb-only/00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/0-mc/rvb-only/00018.png" alt>-->
-<!--                <audio src="simulated/90-180/0-mc/rvb-only/00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th colspan="2">Clean</th>-->
-<!--             <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/0-mc/clean/00019.png" alt>-->
-<!--                <audio src="simulated/0-15/0-mc/clean/00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--              <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/0-mc/clean/00027.png" alt>-->
-<!--                <audio src="simulated/15-45/0-mc/clean/00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/0-mc/clean/00029.png" alt>-->
-<!--                <audio src="simulated/45-90/0-mc/clean/00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/0-mc/clean/00018.png" alt>-->
-<!--                <audio src="simulated/90-180/0-mc/clean/00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2" width="10%">[1] Audio-only <br>Mask-based MVDR</th>-->
-<!--            <th width="6%">pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/1-ao-mvdr-only/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/1-ao-mvdr-only/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/1-ao-mvdr-only/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/1-ao-mvdr-only/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/1-ao-mvdr-only/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/1-ao-mvdr-only/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/1-ao-mvdr-only/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/1-ao-mvdr-only/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/1-ao-mvdr-only/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/1-ao-mvdr-only/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/1-ao-mvdr-only/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/1-ao-mvdr-only/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/1-ao-mvdr-only/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/1-ao-mvdr-only/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/1-ao-mvdr-only/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/1-ao-mvdr-only/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[2] Audio-visual <br> Mask-based MVDR</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/2-av-mvdr-only/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/2-av-mvdr-only/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/2-av-mvdr-only/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/2-av-mvdr-only/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/2-av-mvdr-only/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/2-av-mvdr-only/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/2-av-mvdr-only/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/2-av-mvdr-only/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/2-av-mvdr-only/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/2-av-mvdr-only/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/2-av-mvdr-only/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/2-av-mvdr-only/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/2-av-mvdr-only/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/2-av-mvdr-only/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/2-av-mvdr-only/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/2-av-mvdr-only/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[3] Audio-only <br> Mask-based MVDR <br> -> DNN-WPE</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-ao-mvdr-dwpe/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/3-ao-mvdr-dwpe/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/3-ao-mvdr-dwpe/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/3-ao-mvdr-dwpe/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/3-ao-mvdr-dwpe/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/3-ao-mvdr-dwpe/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/3-ao-mvdr-dwpe/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/3-ao-mvdr-dwpe/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/3-ao-mvdr-dwpe/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/3-ao-mvdr-dwpe/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/3-ao-mvdr-dwpe/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/3-ao-mvdr-dwpe/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/3-ao-mvdr-dwpe/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/3-ao-mvdr-dwpe/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/3-ao-mvdr-dwpe/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/3-ao-mvdr-dwpe/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[4] Audio-visual <br> Mask-based MVDR <br> -> DNN-WPE</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/4-av-mvdr-dwpe/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/4-av-mvdr-dwpe/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/4-av-mvdr-dwpe/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/4-av-mvdr-dwpe/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/4-av-mvdr-dwpe/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/4-av-mvdr-dwpe/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/4-av-mvdr-dwpe/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/4-av-mvdr-dwpe/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/4-av-mvdr-dwpe/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/4-av-mvdr-dwpe/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/4-av-mvdr-dwpe/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/4-av-mvdr-dwpe/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/4-av-mvdr-dwpe/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/4-av-mvdr-dwpe/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/4-av-mvdr-dwpe/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/4-av-mvdr-dwpe/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--       <tr>-->
-<!--            <th rowspan="2">[5] Audio-only <br> Mask-based MVDR <br> -> SpecM</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/5-ao-mvdr-specm/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/5-ao-mvdr-specm/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/5-ao-mvdr-specm/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/5-ao-mvdr-specm/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/5-ao-mvdr-specm/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/5-ao-mvdr-specm/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/5-ao-mvdr-specm/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/5-ao-mvdr-specm/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/5-ao-mvdr-specm/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/5-ao-mvdr-specm/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/5-ao-mvdr-specm/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/5-ao-mvdr-specm/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/5-ao-mvdr-specm/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/5-ao-mvdr-specm/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/5-ao-mvdr-specm/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/5-ao-mvdr-specm/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[6] Audio-visual <br> Mask-based MVDR <br> -> SpecM</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/6-av-mvdr-specm/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/6-av-mvdr-specm/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/6-av-mvdr-specm/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/6-av-mvdr-specm/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/6-av-mvdr-specm/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/6-av-mvdr-specm/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/6-av-mvdr-specm/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/6-av-mvdr-specm/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/6-av-mvdr-specm/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/6-av-mvdr-specm/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/6-av-mvdr-specm/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/6-av-mvdr-specm/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/6-av-mvdr-specm/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/6-av-mvdr-specm/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/6-av-mvdr-specm/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/6-av-mvdr-specm/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--       <tr>-->
-<!--            <th rowspan="2">[7] Audio-only <br> DNN-WPE -> <br> Mask-based MVDR </th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/7-ao-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/7-ao-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/7-ao-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/7-ao-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/7-ao-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/7-ao-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/7-ao-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/7-ao-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/7-ao-dwpe-mvdr/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/7-ao-dwpe-mvdr/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/7-ao-dwpe-mvdr/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/7-ao-dwpe-mvdr/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/7-ao-dwpe-mvdr/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/7-ao-dwpe-mvdr/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/7-ao-dwpe-mvdr/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/7-ao-dwpe-mvdr/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[8] Audio-visual <br> DNN-WPE -> <br> Mask-based MVDR</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/8-av-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/8-av-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/8-av-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/8-av-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/8-av-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/8-av-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/8-av-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/8-av-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/8-av-dwpe-mvdr/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/8-av-dwpe-mvdr/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/8-av-dwpe-mvdr/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/8-av-dwpe-mvdr/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/8-av-dwpe-mvdr/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/8-av-dwpe-mvdr/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/8-av-dwpe-mvdr/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/8-av-dwpe-mvdr/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[9] Audio-only <br> SpecM -> <br> Mask-based MVDR </th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/9-ao-specm-mvdr/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/9-ao-specm-mvdr/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/9-ao-specm-mvdr/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/9-ao-specm-mvdr/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/9-ao-specm-mvdr/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/9-ao-specm-mvdr/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/9-ao-specm-mvdr/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/9-ao-specm-mvdr/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/9-ao-specm-mvdr/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/9-ao-specm-mvdr/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/9-ao-specm-mvdr/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/9-ao-specm-mvdr/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/9-ao-specm-mvdr/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/9-ao-specm-mvdr/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/9-ao-specm-mvdr/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/9-ao-specm-mvdr/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[10] Audio-visual <br> SpecM -> <br> Mask-based MVDR</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/10-av-specm-mvdr/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/10-av-specm-mvdr/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/10-av-specm-mvdr/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/10-av-specm-mvdr/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/10-av-specm-mvdr/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/10-av-specm-mvdr/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/10-av-specm-mvdr/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/10-av-specm-mvdr/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/10-av-specm-mvdr/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/10-av-specm-mvdr/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/10-av-specm-mvdr/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/10-av-specm-mvdr/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/10-av-specm-mvdr/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/10-av-specm-mvdr/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/10-av-specm-mvdr/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/10-av-specm-mvdr/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[11] Audio-only <br> Mask-based WPD </th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/11-ao-wpd/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/11-ao-wpd/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/11-ao-wpd/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/11-ao-wpd/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/11-ao-wpd/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/11-ao-wpd/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/11-ao-wpd/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/11-ao-wpd/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/11-ao-wpd/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/11-ao-wpd/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/11-ao-wpd/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/11-ao-wpd/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/11-ao-wpd/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/11-ao-wpd/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/11-ao-wpd/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/11-ao-wpd/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[12] Audio-visual <br> Mask-based WPD</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/12-av-wpd/pipelined/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/12-av-wpd/pipelined/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/12-av-wpd/pipelined/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/12-av-wpd/pipelined/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/12-av-wpd/pipelined/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/12-av-wpd/pipelined/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/12-av-wpd/pipelined/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/12-av-wpd/pipelined/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/0-15/12-av-wpd/joint2/rev1-6331559613336179781-00019.png" alt>-->
-<!--                <audio src="simulated/0-15/12-av-wpd/joint2/rev1-6331559613336179781-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/15-45/12-av-wpd/joint2/rev2-6331559613336179781-00027.png" alt>-->
-<!--                <audio src="simulated/15-45/12-av-wpd/joint2/rev2-6331559613336179781-00027.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/45-90/12-av-wpd/joint2/rev3-6331559613336179781-00029.png" alt>-->
-<!--                <audio src="simulated/45-90/12-av-wpd/joint2/rev3-6331559613336179781-00029.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="simulated/90-180/12-av-wpd/joint2/rev4-6332062124509813446-00018.png" alt>-->
-<!--                <audio src="simulated/90-180/12-av-wpd/joint2/rev4-6332062124509813446-00018.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--    </table>-->
+        <h4> B. Performance of speaker-adaptive audio-only speech separation against varying amounts of speaker-level data (e.g, a single utterance ('1utt.'), 10%, 25%, ...) using (a) <a href="#ECAPA-TDNN"> ECAPA-TDNN </a> speaker features that is obtained by an offline, averaging operation for enrolment-based adaptation or learned on the fly from mixed speech input for enrolment-free adaptation on the LRS3 simulated dataset; These same operations are applied to (b) <a href="#x-vector"> x-vector </a> based speaker adaptation. </h4>
+    <table border="1">
+    	<tr>
+        	<th rowspan="2" colspan="2"> </th>
+            <th colspan="3">(a) <a name="ECAPA-TDNN"></a> ECAPA-TDNN speaker features based adaptation systems</th>
+        </tr>
+        <tr>
+            <th>Speaker_id: CS9f7Qq4YZc</th>
+            <th>Speaker_id: FM5SDGprLpc</th>
+            <th>Speaker_id: PY9DcIMGxMs</th>
+        </tr>
+        <tr>
+            <th colspan="2">[1] Overlapped-noisy speech </th>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+<!--                <br>-->
+<!--                <span> RTF: xxx  </span>-->
+<!--                <br>-->
+<!--                <span>Trans.: You still have hundreds of people who went in to see our expert  </span>-->
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/mixture/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">[2] Target clean speech</th>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+              <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">[3] SI baseline</th>
+            <td style="text-align:center">
+                <img src="SI/dev/ECAPA/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="SI/dev/ECAPA/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+              <td style="text-align:center">
+                <img src="SI/dev/ECAPA/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="SI/dev/ECAPA/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/dev/ECAPA/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="SI/dev/ECAPA/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="6">[4] Enrolment-based Systems </th>
+            <th>1utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/1utt/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/1utt/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/1utt/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/1utt/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/1utt/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/1utt/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th>10% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/10/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/10/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/10/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/10/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/10/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/10/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>25% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/25/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/25/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/25/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/25/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/25/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/25/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>50% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/50/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/50/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/50/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/50/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/50/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/50/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>75% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/75/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/75/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/75/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/75/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/75/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/75/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>100% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/100/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/100/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/100/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/100/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/ECAPA/dev/100/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-based/ECAPA/dev/100/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th colspan="2">[5] Enrolment-Free <br> System</th>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-free/ECAPA/dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+    </table>
+    <div style="height: 20px;"></div> <!-- 空行 -->
+    <table border="1">
+    	<tr>
+        	<th rowspan="2" colspan="2"></th>
+            <th colspan="3"> (b) <a name="x-vector"> x-vector speaker features based adaptation systems </a> </th>
+        </tr>
+        <tr>
+            <th>Speaker_id: 2JSZ66uMRwc</th>
+            <th>Speaker_id: C6mNITMY7e0</th>
+            <th>Speaker_id: LnQYJa9SaR0</th>
+        </tr>
+        <tr>
+            <th colspan="2">[1] Overlapped-noisy speech </th>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/xvector/mixture/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="mixture_clean/dev/xvector/mixture/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+<!--                <br>-->
+<!--                <span> RTF: xxx  </span>-->
+<!--                <br>-->
+<!--                <span>Trans.: You still have hundreds of people who went in to see our expert  </span>-->
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/xvector/mixture/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="mixture_clean/dev/xvector/mixture/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/xvector/mixture/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="mixture_clean/dev/xvector/mixture/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">[2] Target clean speech</th>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/xvector/rvb-only/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="mixture_clean/dev/xvector/rvb-only/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+              <td style="text-align:center">
+                <img src="mixture_clean/dev/xvector/rvb-only/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="mixture_clean/dev/xvector/rvb-only/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/xvector/rvb-only/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="mixture_clean/dev/xvector/rvb-only/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        <tr>
+            <th colspan="2">[3] SI baseline</th>
+            <td style="text-align:center">
+                <img src="SI/dev/xvector/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="SI/dev/xvector/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+              <td style="text-align:center">
+                <img src="SI/dev/xvector/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="SI/dev/xvector/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/dev/xvector/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="SI/dev/xvector/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="6"> [4] Enrolment-based Systems </th>
+            <th>1utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/1utt/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="Enrolment-based/xvector/dev/1utt/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/1utt/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="Enrolment-based/xvector/dev/1utt/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/1utt/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="Enrolment-based/xvector/dev/1utt/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+         <tr>
+            <th>10% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/10/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="Enrolment-based/xvector/dev/10/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/10/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="Enrolment-based/xvector/dev/10/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/10/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="Enrolment-based/xvector/dev/10/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>25% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/25/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="Enrolment-based/xvector/dev/25/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/25/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="Enrolment-based/xvector/dev/25/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/25/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="Enrolment-based/xvector/dev/25/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>50% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/50/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="Enrolment-based/xvector/dev/50/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/50/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="Enrolment-based/xvector/dev/50/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/50/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="Enrolment-based/xvector/dev/50/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>75% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/75/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="Enrolment-based/xvector/dev/75/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/75/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="Enrolment-based/xvector/dev/75/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/75/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="Enrolment-based/xvector/dev/75/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>100% utt.</th>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/100/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="Enrolment-based/xvector/dev/100/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/100/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="Enrolment-based/xvector/dev/100/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-based/xvector/dev/100/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="Enrolment-based/xvector/dev/100/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">[5] Enrolment-Free <br> System</th>
+            <td style="text-align:center">
+                <img src="Enrolment-free/xvector/dev/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.png" alt>
+                <audio src="Enrolment-free/xvector/dev/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-free/xvector/dev/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
+                <audio src="Enrolment-free/xvector/dev/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-free/xvector/dev/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
+                <audio src="Enrolment-free/xvector/dev/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+    </table>
     </div>
-    <h4> C. Evaluation of speaker-adaptive speech separation output on different types of ASR back-ends using simulated LRS3 and replayed LRS2 mixture speech. </h4>
-<!--    <div style="border: none; width:80%; margin: 0 auto;">-->
-<!--    <table border="1">-->
-<!--    	<tr>-->
-<!--        	<th rowspan="2" colspan="2"></th>-->
-<!--        	<th colspan="4"> Three ranges of the angle difference between the target and interfering speakers relative to the microphone array </th>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>[0°-15°)</th>-->
-<!--            <th>[15°-45°)</th>-->
-<!--            <th>[45°-90°)</th>-->
-<!--        </tr>-->
-<!--           <tr>-->
-<!--            <th colspan="2"> Target speaker video</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="replayed/0-15/0-mc/clean/00019_H264.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="replayed/15-45/0-mc/clean/00036_H264.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <video src="replayed/45-90/0-mc/clean/00008_H264.mp4" controls="controls">-->
-<!--                    your browser does not support the video tag-->
-<!--                </video>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th colspan="2">Mixture <br> (overlapped-reverberant-noisy) </th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/0-mc/mixture/6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/0-mc/mixture/6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/0-mc/mixture/6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/0-mc/mixture/6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/0-mc/mixture/6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/0-mc/mixture/6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th colspan="2">Clean</th>-->
-<!--             <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/0-mc/clean/00019.png" alt>-->
-<!--                <audio src="replayed/0-15/0-mc/clean/00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--              <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/0-mc/clean/00036.png" alt>-->
-<!--                <audio src="replayed/15-45/0-mc/clean/00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/0-mc/clean/00008.png" alt>-->
-<!--                <audio src="replayed/45-90/0-mc/clean/00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2" width="15%">[1] Audio-only <br>Mask-based MVDR</th>-->
-<!--            <th width="7%">pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/1-ao-mvdr-only/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/1-ao-mvdr-only/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/1-ao-mvdr-only/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/1-ao-mvdr-only/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/1-ao-mvdr-only/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/1-ao-mvdr-only/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/1-ao-mvdr-only/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/1-ao-mvdr-only/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/1-ao-mvdr-only/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/1-ao-mvdr-only/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/1-ao-mvdr-only/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/1-ao-mvdr-only/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[2] Audio-visual <br> Mask-based MVDR</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/2-av-mvdr-only/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/2-av-mvdr-only/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/2-av-mvdr-only/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/2-av-mvdr-only/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/2-av-mvdr-only/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/2-av-mvdr-only/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/2-av-mvdr-only/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/2-av-mvdr-only/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/2-av-mvdr-only/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/2-av-mvdr-only/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/2-av-mvdr-only/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/2-av-mvdr-only/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[3] Audio-only <br> Mask-based MVDR <br> -> DNN-WPE</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/3-ao-mvdr-dwpe/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/3-ao-mvdr-dwpe/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/3-ao-mvdr-dwpe/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/3-ao-mvdr-dwpe/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/3-ao-mvdr-dwpe/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/3-ao-mvdr-dwpe/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/3-ao-mvdr-dwpe/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/3-ao-mvdr-dwpe/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/3-ao-mvdr-dwpe/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/3-ao-mvdr-dwpe/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/3-ao-mvdr-dwpe/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/3-ao-mvdr-dwpe/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[4] Audio-visual <br> Mask-based MVDR <br> -> DNN-WPE</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/4-av-mvdr-dwpe/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/4-av-mvdr-dwpe/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/4-av-mvdr-dwpe/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/4-av-mvdr-dwpe/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/4-av-mvdr-dwpe/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/4-av-mvdr-dwpe/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/4-av-mvdr-dwpe/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/4-av-mvdr-dwpe/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/4-av-mvdr-dwpe/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/4-av-mvdr-dwpe/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/4-av-mvdr-dwpe/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/4-av-mvdr-dwpe/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--       <tr>-->
-<!--            <th rowspan="2">[5] Audio-only <br> Mask-based MVDR <br> -> SpecM</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/5-ao-mvdr-specm/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/5-ao-mvdr-specm/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/5-ao-mvdr-specm/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/5-ao-mvdr-specm/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/5-ao-mvdr-specm/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/5-ao-mvdr-specm/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/5-ao-mvdr-specm/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/5-ao-mvdr-specm/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/5-ao-mvdr-specm/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/5-ao-mvdr-specm/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/5-ao-mvdr-specm/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/5-ao-mvdr-specm/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[6] Audio-visual <br> Mask-based MVDR <br> -> SpecM</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/6-av-mvdr-specm/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/6-av-mvdr-specm/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/6-av-mvdr-specm/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/6-av-mvdr-specm/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/6-av-mvdr-specm/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/6-av-mvdr-specm/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/6-av-mvdr-specm/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/6-av-mvdr-specm/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/6-av-mvdr-specm/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/6-av-mvdr-specm/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/6-av-mvdr-specm/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/6-av-mvdr-specm/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--       <tr>-->
-<!--            <th rowspan="2">[7] Audio-only <br> DNN-WPE -> <br> Mask-based MVDR </th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/7-ao-dwpe-mvdr/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/7-ao-dwpe-mvdr/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/7-ao-dwpe-mvdr/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/7-ao-dwpe-mvdr/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/7-ao-dwpe-mvdr/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/7-ao-dwpe-mvdr/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/7-ao-dwpe-mvdr/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/7-ao-dwpe-mvdr/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/7-ao-dwpe-mvdr/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/7-ao-dwpe-mvdr/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/7-ao-dwpe-mvdr/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/7-ao-dwpe-mvdr/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[8] Audio-visual <br> DNN-WPE -> <br> Mask-based MVDR</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/8-av-dwpe-mvdr/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/8-av-dwpe-mvdr/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/8-av-dwpe-mvdr/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/8-av-dwpe-mvdr/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/8-av-dwpe-mvdr/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/8-av-dwpe-mvdr/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/8-av-dwpe-mvdr/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/8-av-dwpe-mvdr/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/8-av-dwpe-mvdr/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/8-av-dwpe-mvdr/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/8-av-dwpe-mvdr/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/8-av-dwpe-mvdr/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[9] Audio-only <br> SpecM -> <br> Mask-based MVDR </th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/9-ao-specm-mvdr/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/9-ao-specm-mvdr/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/9-ao-specm-mvdr/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/9-ao-specm-mvdr/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/9-ao-specm-mvdr/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/9-ao-specm-mvdr/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/9-ao-specm-mvdr/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/9-ao-specm-mvdr/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/9-ao-specm-mvdr/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/9-ao-specm-mvdr/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/9-ao-specm-mvdr/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/9-ao-specm-mvdr/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[10] Audio-visual <br> SpecM -> <br> Mask-based MVDR</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/10-av-specm-mvdr/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/10-av-specm-mvdr/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/10-av-specm-mvdr/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/10-av-specm-mvdr/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/10-av-specm-mvdr/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/10-av-specm-mvdr/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/10-av-specm-mvdr/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/10-av-specm-mvdr/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/10-av-specm-mvdr/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/10-av-specm-mvdr/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/10-av-specm-mvdr/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/10-av-specm-mvdr/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[11] Audio-only <br> Mask-based WPD </th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/11-ao-wpd/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/11-ao-wpd/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/11-ao-wpd/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/11-ao-wpd/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/11-ao-wpd/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/11-ao-wpd/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/11-ao-wpd/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/11-ao-wpd/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/11-ao-wpd/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/11-ao-wpd/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/11-ao-wpd/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/11-ao-wpd/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th rowspan="2">[12] Audio-visual <br> Mask-based WPD</th>-->
-<!--            <th>pipelined</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/12-av-wpd/pipelined/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/12-av-wpd/pipelined/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/12-av-wpd/pipelined/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/12-av-wpd/pipelined/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/12-av-wpd/pipelined/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/12-av-wpd/pipelined/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--         <tr>-->
-<!--            <th>joint <br> fine-tuned</th>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/0-15/12-av-wpd/joint2/rev1-6352498867394358158-00019.png" alt>-->
-<!--                <audio src="replayed/0-15/12-av-wpd/joint2/rev1-6352498867394358158-00019.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/15-45/12-av-wpd/joint2/rev1-6352893145392128503-00036.png" alt>-->
-<!--                <audio src="replayed/15-45/12-av-wpd/joint2/rev1-6352893145392128503-00036.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--            <td style="text-align:center">-->
-<!--                <img src="replayed/45-90/12-av-wpd/joint2/rev1-6392525815109495392-00008.png" alt>-->
-<!--                <audio src="replayed/45-90/12-av-wpd/joint2/rev1-6392525815109495392-00008.wav" controls="controls">-->
-<!--                    Your browser does not support the audio element.-->
-<!--                </audio>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--    </table>-->
-<!--    </div>-->
+    <h4> <a name="sectionIII-C"> C. </a> Evaluation of zero-shot enrolment-free speaker-adaptive audio-visual speech separation and four types of ASR back-ends using (a) <a href="#Simulated">simulated LRS3 </a>  and (b) <a href="#Replayed">  replayed LRS2 </a> mixture speech. </h4>
+    <div>
+    <table border="1">
+    	<tr>
+        	<th rowspan="2" colspan="2"></th>
+        	<th colspan="4"> (a) <a name="Simulated"> Simulated LRS3 dataset</a> </th>
+
+        </tr>
+        <tr>
+            <th>Speaker_id: CS9f7Qq4YZc</th>
+            <th>Speaker_id: FM5SDGprLpc</th>
+            <th>Speaker_id: PY9DcIMGxMs</th>
+        </tr>
+         <tr>
+            <th colspan="2">Target speaker video</th>
+            <td style="text-align:center">
+                <video src="mixture_clean/dev/ECAPA/clean/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597_trans.mp4" controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+              <td style="text-align:center">
+                <video src="mixture_clean/dev/ECAPA/clean/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298_trans.mp4" controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src="mixture_clean/dev/ECAPA/clean/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457_trans.mp4" controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+        </tr>
+         <tr>
+            <th colspan="2">Target clean speech</th>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b> Ground Truth: </b> <br> <span class="underline-text">light pollution plagues every modern city and town </span> </span>
+            </td>
+              <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b> Ground Truth: </b> <br> <span class="underline-text">i win after doing my ted </span> </span>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b> Ground Truth: </b> <br> <span class="underline-text">make it contingent on the addict behaving the way they want and </span> </span>
+            </td>
+        </tr>
+         <tr>
+            <th colspan="2">Overlapped-noisy speech </th>
+<!--            <th rowspan="2">Overlapped-noisy speech </th>-->
+<!--            <th>Audio <br> Only </th>-->
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+<!--                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> a language of <span class="red-text">one of </span>the try in this country to me </span></span>-->
+                 <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> a language of one of the try in this country to me </span>(WER=150%) </span>
+
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> language is of the try this country  </span> (WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> alan o oneo te n thi country e es </span> (WER=112.5%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> the language is some of the tribes that this country needs </span>(WER=137.5%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> i will camp be doing what i had to </span>(WER=116.7%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> when doing what my ted </span> (WER= 66.7%) </span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text">  i wen an figuring my ted </span> (WER= 66.7%) </span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> or win after doing what i  ted </span>(WER=50%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/dev/ECAPA/mixture/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> make it two things of the addict that has in the way long way and </span>(WER=66.7%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text">  make it contin to that behavion the way and </span>(WER=58.3%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> make it continuo o tatot it behavion the way te wa and</span>(WER=66.7%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> make it contingent and that not behazing the way they like and </span>(WER=41.7%)</span>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">SI baselines </th>
+            <th>Audio <br> Only </th>
+            <td style="text-align:center">
+                <img src="SI/dev/ECAPA/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="SI/dev/ECAPA/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text">well i producing that very modern sitting in town </span> (WER=87.5%) </span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> light creation takes every modern city in town </span> (WER=37.5%) </span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> language s n plab on every modern ciity an town </span> (WER=87.5%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> language is the play on every modern city in town  </span> (WER=75%) </span>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/dev/ECAPA/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="SI/dev/ECAPA/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> we don't decide where nature places new particles </span>(WER=133.3%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> i don't decide where nature places new particles </span>(WER=133.3%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> we don't decide where nature places new particles </span>(WER=116.7%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> we don't decide where nature places new particles </span>(WER=133.3%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/dev/ECAPA/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="SI/dev/ECAPA/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> make it contangent of the addict behaving the way they want and  </span>(WER=16.7%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> make it contingent of the addict behaving the way they want and  </span>(WER=8.3%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> make it contingent on addict behaving the way they want and </span>(WER=8.3%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> make it contingent on the adict behaving the way they want and </span>(WER=8.3%)</span>
+            </td>
+        </tr>
+         <tr>
+            <th>Audio </br> Visual </th>
+             <td style="text-align:center">
+             <img src="SI/av-dev/ECAPA/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="SI/av-dev/ECAPA/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                 <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> like producing plagues every modern city in town  </span>(WER=37.5%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> light creation plagues every modern city in town  </span>(WER=25.0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> life polution plagues every modern city and town </span>(WER=25%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> like pollution plagues every modern city and town  </span>(WER=12.5%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/av-dev/ECAPA/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="SI/av-dev/ECAPA/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                 <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> i will after doing right ted   </span>(WER=33.3%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> i win after doing my ted </span> (WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> i win after doing my ted </span> (WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> i win after doing my ted  </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/av-dev/ECAPA/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="SI/av-dev/ECAPA/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                  <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> make it contaging on the addict behaving the way they want and   </span>(WER=8.3%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> make it contingent on the addict behaving the way they want and  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> make it contingent on the addict behaving the way they want and</span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> make it contingent on the addict behaviing the way they want and  </span>(WER=8.3%)</span>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">Speaker </br> Adaptive </br> Systems </th>
+            <th>Audio <br> Only </th>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> like cleasing plays every modern city in town </span> (WER=50%) </span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> light creation plays an every modern city in town  </span> (WER=50%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> lihe pollution plagues every modern city and town </span> (WER=12.5%) </span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> like pollution plagues every modern city and town  </span>(WER=12.5%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+              <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> i went after doing what i  ted  </span>(WER=50%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> i win after doing my ted  </span> (WER=0%) </span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> i win after doing my ted </span>(WER=0%) </span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> i win after doing my ted  </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+               <img src="Enrolment-free/ECAPA/dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-free/ECAPA/dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> make it contingent of the addict behaving the way they want and   </span>(WER=8.3%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> make it contingent of the addict behavior in the world at war  </span>(WER=50%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> make it contingent on th addict behaving the way they want and </span>(WER=8.3%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text">make it contingent on the addict behaving the way they want and  </span>(WER=0%)</span>
+            </td>
+        </tr>
+         <tr>
+            <th>Audio </br> Visual </th>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/av-dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.png" alt>
+                <audio src="Enrolment-free/ECAPA/av-dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+               <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> like producing plagues every modern sitting in town    </span> (WER=50%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> light pollution creates every modern city in town  </span>(WER=25%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> lite polution plagues every modern city and town </span>(WER=25%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text">like pollution plagues every modern city and town </span>(WER=12.5%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/av-dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
+                <audio src="Enrolment-free/ECAPA/av-dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> i win after doing right ted   </span>(WER=16.7%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> i win after doing what i had  </span>(WER=33.3%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> i win after doing my ted </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> i win after doing my ted </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+               <img src="Enrolment-free/ECAPA/av-dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
+                <audio src="Enrolment-free/ECAPA/av-dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+               <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> make it contanging on the addict behaving the way they want and  </span>(WER=8.3%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> make it contingent on the addict behaving the way they want lg  </span>(WER=8.3%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> make it contingent on the addict behaving the way they want and  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> make it contingent on the addict behaving the way they want and  </span> (WER=0%)</span>
+            </td>
+        </tr>
+    </table>
+    <div style="height: 20px;"></div> <!-- 空行 -->
+    <table border="1">
+    	<tr>
+        	<th rowspan="2" colspan="2"></th>
+            <th colspan="4"> (b) <a name="Replayed"> Replayed LRS2 dataset </a> </th>
+        </tr>
+        <tr>
+            <th>Speaker_id: 6343252661930009508</th>
+            <th>Speaker_id: 6354369755148493407</th>
+            <th>Speaker_id: 6367813861908922495</th>
+        </tr>
+        <tr>
+            <th colspan="2">Target speaker video</th>
+            <td style="text-align:center">
+                <video src="mixture_clean/eval/clean/00020_trans.mp4" controls="controls">
+                    Your browser does not support the audio element.
+                </video>
+
+            </td>
+              <td style="text-align:center">
+                <video src="mixture_clean/eval/clean/00048_trans.mp4" controls="controls">
+                    Your browser does not support the audio element.
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src="mixture_clean/eval/clean/00004_trans.mp4" controls="controls">
+                    Your browser does not support the audio element.
+                </video>
+
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">Target clean speech</th>
+            <td style="text-align:center">
+                <img src="mixture_clean/eval/rvb-only/6343252661930009508-00020.png" alt>
+                <audio src="mixture_clean/eval/rvb-only/6343252661930009508-00020.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                 <br>
+                <span class="small-font"> <b> Ground Truth: </b> <br> <span class="underline-text">for the first time  </span> </span>
+            </td>
+              <td style="text-align:center">
+                <img src="mixture_clean/eval/rvb-only/6354369755148493407-00048.png" alt>
+                <audio src="mixture_clean/eval/rvb-only/6354369755148493407-00048.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                  <br>
+                <span class="small-font"> <b> Ground Truth: </b> <br> <span class="underline-text">with that in mind  </span> </span>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/eval/rvb-only/6367813861908922495-00004.png" alt>
+                <audio src="mixture_clean/eval/rvb-only/6367813861908922495-00004.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                 <br>
+                <span class="small-font"> <b> Ground Truth: </b> <br> <span class="underline-text">in this country </span> </span>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">Overlapped-noisy speech </th>
+            <td style="text-align:center">
+                <img src="mixture_clean/eval/mixture/6343252661930009508-00020.png" alt>
+                <audio src="mixture_clean/eval/mixture/6343252661930009508-00020.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> first time now </span> (WER=75%) </span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> as first time </span> (WER=50%) </span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> as you meo </span>(WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> for the first time now </span>(WER=25%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/eval/mixture/6354369755148493407-00048.png" alt>
+                <audio src="mixture_clean/eval/mixture/6354369755148493407-00048.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> and  </span>(WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> is that in  </span> (WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> with that in mind we sh  </span>(WER=50%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> with that in mind we </span>(WER=25%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="mixture_clean/eval/mixture/6367813861908922495-00004.png" alt>
+                <audio src="mixture_clean/eval/mixture/6367813861908922495-00004.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                 <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> in science of share </span>(WER=100%) </span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> is very science </span>(WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> very expensive sho  </span>(WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> there is counties here  </span>(WER=133.3%)</span>
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="2">SI baselines </th>
+            <th>Audio <br> Only </th>
+            <td style="text-align:center">
+                <img src="SI/eval/rev1-6343252661930009508-00020.png" alt>
+                <audio src="SI/eval/rev1-6343252661930009508-00020.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> for the first time  </span> (WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> for the first time   </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/eval/rev1-6354369755148493407-00048.png" alt>
+                <audio src="SI/eval/rev1-6354369755148493407-00048.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> we don't want it </span>(WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> with that in mind  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> with that pro  </span>(WER=50%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> we've that profit </span>(WER=75%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/eval/rev1-6367813861908922495-00004.png" alt>
+                <audio src="SI/eval/rev1-6367813861908922495-00004.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> the real time is  </span>(WER=133.3%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> in this kind of  </span>(WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> mebe is cienc ition  </span>(WER=133.3%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> maybe science fiction   </span>(WER=100%)</span>
+            </td>
+        </tr>
+         <tr>
+            <th>Audio </br> Visual </th>
+              <td style="text-align:center">
+                <img src="SI/av-eval/rev1-6343252661930009508-00020.png" alt>
+                <audio src="SI/av-eval/rev1-6343252661930009508-00020.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                 <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> for the first time   </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> for the first time   </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> for the first time   </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/av-eval/rev1-6354369755148493407-00048.png" alt>
+                <audio src="SI/av-eval/rev1-6354369755148493407-00048.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                 <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> with that in mind  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> with that in mind </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> with that in mind  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> with that in mind </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="SI/av-eval/rev1-6367813861908922495-00004.png" alt>
+                <audio src="SI/av-eval/rev1-6367813861908922495-00004.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                 <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> there is  </span>(WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> the is country  </span>(WER=67.7%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> there is country  </span>(WER=67.7%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> there is country </span>(WER=67.7%)</span>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">Speaker </br> Adaptive </br> Systems </th>
+            <th>Audio <br> Only </th>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/eval/rev1-6343252661930009508-00020.png" alt>
+                <audio src="Enrolment-free/ECAPA/eval/rev1-6343252661930009508-00020.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                   <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> for the first time </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> for the first time </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/eval/rev1-6354369755148493407-00048.png" alt>
+                <audio src="Enrolment-free/ECAPA/eval/rev1-6354369755148493407-00048.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                  <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> we came round it </span>(WER=100%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> with the  </span> (WER=75%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> we can rite  </span>(WER=100%) </span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text">  we  can make</span>(WER=100%)</span>
+            </td>
+            <td style="text-align:center">
+               <img src="Enrolment-free/ECAPA/eval/rev1-6367813861908922495-00004.png" alt>
+                <audio src="Enrolment-free/ECAPA/eval/rev1-6367813861908922495-00004.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                   <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> in this country </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> in this country  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> in his country </span>(WER=33.3%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> in this country </span>(WER=0%)</span>
+            </td>
+        </tr>
+         <tr>
+            <th>Audio </br> Visual </th>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/av-eval/rev1-6343252661930009508-00020.png" alt>
+                <audio src="Enrolment-free/ECAPA/av-eval/rev1-6343252661930009508-00020.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                 <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> for the first time  </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+                <img src="Enrolment-free/ECAPA/av-eval/rev1-6354369755148493407-00048.png" alt>
+                <audio src="Enrolment-free/ECAPA/av-eval/rev1-6354369755148493407-00048.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> with that in mind  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> with that in mind  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> with that in mind  </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> with that in mind  </span>(WER=0%)</span>
+            </td>
+            <td style="text-align:center">
+               <img src="Enrolment-free/ECAPA/av-eval/rev1-6367813861908922495-00004.png" alt>
+                <audio src="Enrolment-free/ECAPA/av-eval/rev1-6367813861908922495-00004.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <span class="small-font"> <b>Conformer:</b> <br> <span class="underline-text"> in this country </span>(WER=0%)</span>
+                <br>
+                <span class="small-font"> <b>Whisper:</b> <br> <span class="underline-text"> in his country  </span>(WER=33.3%%)</span>
+                <br>
+                <span class="small-font"> <b>WavLM:</b> <br> <span class="underline-text"> in his country </span>(WER=33.3%%)</span>
+                <br>
+                <span class="small-font"> <b>Conformer + WavLM Feat. + Spk. Adapt.:</b> <br> <span class="underline-text"> in this country </span>(WER=0%)</span>
+            </td>
+        </tr>
+    </table>
+    <div style="height: 20px;"></div> <!-- 空行 -->
+</div>
 <h3><a name="sectionIV">IV. Reference</a></h3>
     <p> [1] G. Li et al., “Audio-visual end-to-end multi-channel speech separation, dereverberation and recognition,” TASLP, 2023. </p>
     <p> [2] G. Li et al., “Joint speaker features learning for audio-visual multichannel speech separation and recognition,” in INTERSPEECH, 2024. </p>
     <p> [3] K. Žmolíková et al., “Speakerbeam: Speaker aware neural network for target speaker extraction in speech mixtures,” IEEE J-STSP, 2019.</p>
-    <p> [4] C. Xu et al., “Spex: Multi-scale time domain speaker extraction network,” TASLP, 2020. </p>
-    <p> [5] S. E. Eskimez et al., “Personalized speech enhancement: New models and comprehensive evaluation,” in ICASSP, 2022.</p>
-    <p> [6] T. Afouras et al., “Lrs3-ted: a large-scale dataset for visual speech recognition,” arXiv preprint arXiv:1809.00496, 2018. </p>
-    <p> [7] S. Chen et al., “Wavlm: Large-scale self-supervised pre-training for full stack speech processing,” IEEE J-STSP, 2022. </p>
-    <p> [8] A. Radford et al., “Robust speech recognition via large-scale weak supervision,” in ICML, 2023.</p>
-
+    <p> [4] T. Afouras et al., “Lrs3-ted: a large-scale dataset for visual speech recognition,” arXiv preprint arXiv:1809.00496, 2018. </p>
+    <p> [5] A. Radford et al., “Robust speech recognition via large-scale weak supervision,” in ICML, 2023.</p>
+    <p> [6] S. Chen et al., “Wavlm: Large-scale self-supervised pre-training for full stack speech processing,” IEEE J-STSP, 2022. </p>
 </body>
 </div>
 </html>
+
+
+<!--ffmpeg -i LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.mp4 -c:v libx264 -preset slow -crf 22 -c:a aac LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457_trans.mp4-->
 
