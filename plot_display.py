@@ -5,8 +5,6 @@ import librosa
 import librosa.display
 import matplotlib.pyplot as plt
 
-# name = "simulated/0-15/clean/00011"
-
 
 def print_figure(name):
     y, sr = librosa.load(f"{name}.wav", sr=16000, mono=False)
@@ -19,494 +17,252 @@ def print_figure(name):
     plt.savefig(f"{name}.png")
     # plt.show()
 
-# clean
-# name1 = "test/official_clean/00018"
+#################### ECAPA #################
+# data_type="ECAPA"
+# data_mixture="clean"
+# name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
 # print_figure(name1)
-# name2 = "test/official_clean/00019"
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
 # print_figure(name2)
-# name3 = "test/official_clean/00027"
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
 # print_figure(name3)
-# name4 = "test/official_clean/00029"
-# print_figure(name4)
 
+# data_mixture = "rvb-only"
+# name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
+# print_figure(name1)
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
+# print_figure(name2)
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
+# print_figure(name3)
 
-# mixture
-# name1 = "simulated/0-15/0-mc/mixture/00019"
+# data_mixture = "mixture"
+# name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
 # print_figure(name1)
-# name2 = "simulated/15-45/0-mc/mixture/00027"
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
 # print_figure(name2)
-# name3 = "simulated/45-90/0-mc/mixture/00029"
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
 # print_figure(name3)
-# name4 = "simulated/90-180/0-mc/mixture/00018"
-# print_figure(name4)
 
-# # rvb only
-# name1 = "simulated/0-15/0-mc/rvb-only/00019"
+# name1 = f"Enrolment-free/{data_type}/dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
 # print_figure(name1)
-# name2 = "simulated/15-45/0-mc/rvb-only/00027"
+# name2 = f"Enrolment-free/{data_type}/dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
 # print_figure(name2)
-# name3 = "simulated/45-90/0-mc/rvb-only/00029"
+# name3 = f"Enrolment-free/{data_type}/dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
 # print_figure(name3)
-# name4 = "simulated/90-180/0-mc/rvb-only/00018"
-# print_figure(name4)
 
-# clean
-# name1 = "simulated/0-15/0-mc/clean/00019"
+# name1 = f"Enrolment-free/{data_type}/av-dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
 # print_figure(name1)
-# name2 = "simulated/15-45/0-mc/clean/00027"
+# name2 = f"Enrolment-free/{data_type}/av-dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
 # print_figure(name2)
-# name3 = "simulated/45-90/0-mc/clean/00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/0-mc/clean/00018"
-# print_figure(name4)
-
-
-# # [1] ao-mvdr-only pipelined
-# name1 = "simulated/0-15/1-ao-mvdr-only/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/1-ao-mvdr-only/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/1-ao-mvdr-only/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/1-ao-mvdr-only/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [1] ao-mvdr-only joint2
-# name1 = "simulated/0-15/1-ao-mvdr-only/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/1-ao-mvdr-only/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/1-ao-mvdr-only/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/1-ao-mvdr-only/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-
-# # [2] av-mvdr-only pipelined
-# name1 = "simulated/0-15/2-av-mvdr-only/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/2-av-mvdr-only/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/2-av-mvdr-only/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/2-av-mvdr-only/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [1] av-mvdr-only joint2
-# name1 = "simulated/0-15/2-av-mvdr-only/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/2-av-mvdr-only/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/2-av-mvdr-only/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/2-av-mvdr-only/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-
-
-
-# # [3] ao-mvdr-dwpe pipelined
-# name1 = "simulated/0-15/3-ao-mvdr-dwpe/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/3-ao-mvdr-dwpe/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/3-ao-mvdr-dwpe/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/3-ao-mvdr-dwpe/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [3] ao-mvdr-dwpe joint2
-# name1 = "simulated/0-15/3-ao-mvdr-dwpe/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/3-ao-mvdr-dwpe/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/3-ao-mvdr-dwpe/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/3-ao-mvdr-dwpe/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-
-
-# # [4] av-mvdr-dwpe pipelined
-# name1 = "simulated/0-15/4-av-mvdr-dwpe/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/4-av-mvdr-dwpe/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/4-av-mvdr-dwpe/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/4-av-mvdr-dwpe/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [4] av-mvdr-dwpe joint2
-# name1 = "simulated/0-15/4-av-mvdr-dwpe/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/4-av-mvdr-dwpe/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/4-av-mvdr-dwpe/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/4-av-mvdr-dwpe/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-
-
-# # [5] ao-mvdr-specm pipelined
-# name1 = "simulated/0-15/5-ao-mvdr-specm/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/5-ao-mvdr-specm/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/5-ao-mvdr-specm/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/5-ao-mvdr-specm/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [5] ao-mvdr-specm joint2
-# name1 = "simulated/0-15/5-ao-mvdr-specm/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/5-ao-mvdr-specm/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/5-ao-mvdr-specm/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/5-ao-mvdr-specm/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-#
-#
-# # [6] av-mvdr-specm pipelined
-# name1 = "simulated/0-15/6-av-mvdr-specm/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/6-av-mvdr-specm/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/6-av-mvdr-specm/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/6-av-mvdr-specm/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [6] av-mvdr-specm joint2
-# name1 = "simulated/0-15/6-av-mvdr-specm/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/6-av-mvdr-specm/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/6-av-mvdr-specm/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/6-av-mvdr-specm/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-
-
-# # [7] ao-dwpe-mvdr pipelined
-# name1 = "simulated/0-15/7-ao-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/7-ao-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/7-ao-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/7-ao-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [7] ao-dwpe-mvdr joint2
-# name1 = "simulated/0-15/7-ao-dwpe-mvdr/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/7-ao-dwpe-mvdr/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/7-ao-dwpe-mvdr/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/7-ao-dwpe-mvdr/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-#
-#
-# # [8] av-dwpe-mvdr pipelined
-# name1 = "simulated/0-15/8-av-dwpe-mvdr/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/8-av-dwpe-mvdr/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/8-av-dwpe-mvdr/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/8-av-dwpe-mvdr/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [8] av-dwpe-mvdr joint2
-# name1 = "simulated/0-15/8-av-dwpe-mvdr/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/8-av-dwpe-mvdr/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/8-av-dwpe-mvdr/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/8-av-dwpe-mvdr/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-
-
-# # [9] ao-specm-mvdr pipelined
-# name1 = "simulated/0-15/9-ao-specm-mvdr/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/9-ao-specm-mvdr/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/9-ao-specm-mvdr/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/9-ao-specm-mvdr/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [9] ao-specm-mvdrjoint2
-# name1 = "simulated/0-15/9-ao-specm-mvdr/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/9-ao-specm-mvdr/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/9-ao-specm-mvdr/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/9-ao-specm-mvdr/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-#
-#
-# # [10] av-specm-mvdr pipelined
-# name1 = "simulated/0-15/10-av-specm-mvdr/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/10-av-specm-mvdr/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/10-av-specm-mvdr/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/10-av-specm-mvdr/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [10] av-specm-mvdr joint2
-# name1 = "simulated/0-15/10-av-specm-mvdr/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/10-av-specm-mvdr/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/10-av-specm-mvdr/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/10-av-specm-mvdr/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-
-
-# # [11] ao-wpd pipelined
-# name1 = "simulated/0-15/11-ao-wpd/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/11-ao-wpd/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/11-ao-wpd/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/11-ao-wpd/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [11] ao-wpd joint2
-# name1 = "simulated/0-15/11-ao-wpd/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/11-ao-wpd/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/11-ao-wpd/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/11-ao-wpd/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-#
-#
-# # [12] av-wpd pipelined
-# name1 = "simulated/0-15/12-av-wpd/pipelined/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/12-av-wpd/pipelined/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/12-av-wpd/pipelined/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/12-av-wpd/pipelined/rev4-6332062124509813446-00018"
-# print_figure(name4)
-# # [12] av-wpd joint2
-# name1 = "simulated/0-15/12-av-wpd/joint2/rev1-6331559613336179781-00019"
-# print_figure(name1)
-# name2 = "simulated/15-45/12-av-wpd/joint2/rev2-6331559613336179781-00027"
-# print_figure(name2)
-# name3 = "simulated/45-90/12-av-wpd/joint2/rev3-6331559613336179781-00029"
-# print_figure(name3)
-# name4 = "simulated/90-180/12-av-wpd/joint2/rev4-6332062124509813446-00018"
-# print_figure(name4)
-
-# #################################### Replayed ################################
-# # mixture
-# name1 = "replayed/0-15/0-mc/mixture/6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/0-mc/mixture/6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/0-mc/mixture/6392525815109495392-00008"
+# name3 = f"Enrolment-free/{data_type}/av-dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
 # print_figure(name3)
 #
-# # clean
-# name1 = "replayed/0-15/0-mc/clean/00019"
+# data_quantity = "1utt"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
 # print_figure(name1)
-# name2 = "replayed/15-45/0-mc/clean/00036"
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
 # print_figure(name2)
-# name3 = "replayed/45-90/0-mc/clean/00008"
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
+# print_figure(name3)
+#
+# data_quantity = "10%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
+# print_figure(name3)
+#
+# data_quantity = "25%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
+# print_figure(name3)
+#
+# data_quantity = "50%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
+# print_figure(name3)
+#
+# data_quantity = "75%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
+# print_figure(name3)
+#
+# data_quantity = "100%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
 # print_figure(name3)
 
 
-# # [1] ao-mvdr-only pipelined
-# name1 = "replayed/0-15/1-ao-mvdr-only/pipelined/rev1-6352498867394358158-00019"
+# name1 = f"SI/dev/{data_type}/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
 # print_figure(name1)
-# name2 = "replayed/15-45/1-ao-mvdr-only/pipelined/rev1-6352893145392128503-00036"
+# name2 = f"SI/dev/{data_type}/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
 # print_figure(name2)
-# name3 = "replayed/45-90/1-ao-mvdr-only/pipelined/rev1-6392525815109495392-00008"
+# name3 = f"SI/dev/{data_type}/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
 # print_figure(name3)
-# # [1] ao-mvdr-only joint2
-# name1 = "replayed/0-15/1-ao-mvdr-only/joint2/rev1-6352498867394358158-00019"
+
+# name1 = f"SI/av-dev/{data_type}/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597"
 # print_figure(name1)
-# name2 = "replayed/15-45/1-ao-mvdr-only/joint2/rev1-6352893145392128503-00036"
+# name2 = f"SI/av-dev/{data_type}/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298"
 # print_figure(name2)
-# name3 = "replayed/45-90/1-ao-mvdr-only/joint2/rev1-6392525815109495392-00008"
-# print_figure(name3)
-#
-#
-# # [2] av-mvdr-only pipelined
-# name1 = "replayed/0-15/2-av-mvdr-only/pipelined/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/2-av-mvdr-only/pipelined/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/2-av-mvdr-only/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [2] av-mvdr-only joint2
-# name1 = "replayed/0-15/2-av-mvdr-only/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/2-av-mvdr-only/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/2-av-mvdr-only/joint2/rev1-6392525815109495392-00008"
+# name3 = f"SI/av-dev/{data_type}/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457"
 # print_figure(name3)
 
 
-
-# # [3] ao-mvdr-dwpe pipelined
-# name1 = "replayed/0-15/3-ao-mvdr-dwpe/pipelined/rev1-6352498867394358158-00019"
+#################### xvector #################
+# clean xvector
+# data_type = "xvector"
+# data_mixture = "clean"
+# name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = "replayed/15-45/3-ao-mvdr-dwpe/pipelined/rev1-6352893145392128503-00036"
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
 # print_figure(name2)
-# name3 = "replayed/45-90/3-ao-mvdr-dwpe/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [3] ao-mvdr-dwpe joint2
-# name1 = "replayed/0-15/3-ao-mvdr-dwpe/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/3-ao-mvdr-dwpe/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/3-ao-mvdr-dwpe/joint2/rev1-6392525815109495392-00008"
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name3)
 #
-#
-# # [4] av-mvdr-dwpe pipelined
-# name1 = "replayed/0-15/4-av-mvdr-dwpe/pipelined/rev1-6352498867394358158-00019"
+# data_mixture = "rvb-only"
+# name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = "replayed/15-45/4-av-mvdr-dwpe/pipelined/rev1-6352893145392128503-00036"
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
 # print_figure(name2)
-# name3 = "replayed/45-90/4-av-mvdr-dwpe/pipelined/rev1-6392525815109495392-00008"
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name3)
-# # [4] av-mvdr-dwpe joint2
-# name1 = "replayed/0-15/4-av-mvdr-dwpe/joint2/rev1-6352498867394358158-00019"
+#
+# data_mixture = "mixture"
+# name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = "replayed/15-45/4-av-mvdr-dwpe/joint2/rev1-6352893145392128503-00036"
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
 # print_figure(name2)
-# name3 = "replayed/45-90/4-av-mvdr-dwpe/joint2/rev1-6392525815109495392-00008"
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name3)
 
+# name1 = f"Enrolment-free/{data_type}/dev/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
+# print_figure(name1)
+# name2 = f"Enrolment-free/{data_type}/dev/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# print_figure(name2)
+# name3 = f"Enrolment-free/{data_type}/dev/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# print_figure(name3)
+#
+# data_quantity = "1utt"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# print_figure(name3)
+#
+# data_quantity = "10%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# print_figure(name3)
+#
+# data_quantity = "25%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# print_figure(name3)
+#
+# data_quantity = "50%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# print_figure(name3)
+#
+# data_quantity = "75%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# print_figure(name3)
+#
+# data_quantity = "100%"
+# name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
+# print_figure(name1)
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# print_figure(name2)
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# print_figure(name3)
 
-# # [5] ao-mvdr-specm pipelined
-# name1 = "replayed/0-15/5-ao-mvdr-specm/pipelined/rev1-6352498867394358158-00019"
+# name1 = f"SI/dev/{data_type}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = "replayed/15-45/5-ao-mvdr-specm/pipelined/rev1-6352893145392128503-00036"
+# name2 = f"SI/dev/{data_type}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
 # print_figure(name2)
-# name3 = "replayed/45-90/5-ao-mvdr-specm/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [5] ao-mvdr-specm joint2
-# name1 = "replayed/0-15/5-ao-mvdr-specm/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/5-ao-mvdr-specm/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/5-ao-mvdr-specm/joint2/rev1-6392525815109495392-00008"
-# print_figure(name3)
-#
-#
-# # [6] av-mvdr-specm pipelined
-# name1 = "replayed/0-15/6-av-mvdr-specm/pipelined/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/6-av-mvdr-specm/pipelined/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/6-av-mvdr-specm/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [6] av-mvdr-specm joint2
-# name1 = "replayed/0-15/6-av-mvdr-specm/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/6-av-mvdr-specm/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/6-av-mvdr-specm/joint2/rev1-6392525815109495392-00008"
-# print_figure(name3)
-
-
-# # [7] ao-dwpe-mvdr pipelined
-# name1 = "replayed/0-15/7-ao-dwpe-mvdr/pipelined/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/7-ao-dwpe-mvdr/pipelined/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/7-ao-dwpe-mvdr/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [7] ao-dwpe-mvdr joint2
-# name1 = "replayed/0-15/7-ao-dwpe-mvdr/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/7-ao-dwpe-mvdr/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/7-ao-dwpe-mvdr/joint2/rev1-6392525815109495392-00008"
-# print_figure(name3)
-#
-#
-#
-# # [8] av-dwpe-mvdr pipelined
-# name1 = "replayed/0-15/8-av-dwpe-mvdr/pipelined/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/8-av-dwpe-mvdr/pipelined/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/8-av-dwpe-mvdr/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [8] av-dwpe-mvdr joint2
-# name1 = "replayed/0-15/8-av-dwpe-mvdr/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/8-av-dwpe-mvdr/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/8-av-dwpe-mvdr/joint2/rev1-6392525815109495392-00008"
+# name3 = f"SI/dev/{data_type}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name3)
 
 
-# # [9] ao-specm-mvdr pipelined
-# name1 = "replayed/0-15/9-ao-specm-mvdr/pipelined/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/9-ao-specm-mvdr/pipelined/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/9-ao-specm-mvdr/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [9] ao-specm-mvdrjoint2
-# name1 = "replayed/0-15/9-ao-specm-mvdr/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/9-ao-specm-mvdr/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/9-ao-specm-mvdr/joint2/rev1-6392525815109495392-00008"
-# print_figure(name3)
-#
-#
-# # [10] av-specm-mvdr pipelined
-# name1 = "replayed/0-15/10-av-specm-mvdr/pipelined/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/10-av-specm-mvdr/pipelined/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/10-av-specm-mvdr/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [10] av-specm-mvdr joint2
-# name1 = "replayed/0-15/10-av-specm-mvdr/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/10-av-specm-mvdr/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/10-av-specm-mvdr/joint2/rev1-6392525815109495392-00008"
-# print_figure(name3)
+#################### Replay #################
+# clean xvector
+data_type = "eval"
+data_mixture = "clean"
+name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
+print_figure(name1)
+name2 = f"mixture_clean/{data_type}/{data_mixture}/6354369755148493407-00048"
+print_figure(name2)
+name3 = f"mixture_clean/{data_type}/{data_mixture}/6343252661930009508-00020"
+print_figure(name3)
+
+data_mixture = "rvb-only"
+name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
+print_figure(name1)
+name2 = f"mixture_clean/{data_type}/{data_mixture}/6354369755148493407-00048"
+print_figure(name2)
+name3 = f"mixture_clean/{data_type}/{data_mixture}/6343252661930009508-00020"
+print_figure(name3)
+
+data_mixture = "mixture"
+name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
+print_figure(name1)
+name2 = f"mixture_clean/{data_type}/{data_mixture}/6354369755148493407-00048"
+print_figure(name2)
+name3 = f"mixture_clean/{data_type}/{data_mixture}/6343252661930009508-00020"
+print_figure(name3)
+
+name1 = f"SI/{data_type}/rev1-6367813861908922495-00004"
+print_figure(name1)
+name2 = f"SI/{data_type}/rev1-6354369755148493407-00048"
+print_figure(name2)
+name3 = f"SI/{data_type}/rev1-6343252661930009508-00020"
+print_figure(name3)
+
+name1 = f"SI/av-{data_type}/rev1-6367813861908922495-00004"
+print_figure(name1)
+name2 = f"SI/av-{data_type}/rev1-6354369755148493407-00048"
+print_figure(name2)
+name3 = f"SI/av-{data_type}/rev1-6343252661930009508-00020"
+print_figure(name3)
+
+name1 = f"Enrolment-free/ECAPA/{data_type}/rev1-6367813861908922495-00004"
+print_figure(name1)
+name2 = f"Enrolment-free/ECAPA/{data_type}/rev1-6354369755148493407-00048"
+print_figure(name2)
+name3 = f"Enrolment-free/ECAPA/{data_type}/rev1-6343252661930009508-00020"
+print_figure(name3)
 
 
-# # [11] ao-wpd pipelined
-# name1 = "replayed/0-15/11-ao-wpd/pipelined/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/11-ao-wpd/pipelined/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/11-ao-wpd/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [11] ao-wpd joint2
-# name1 = "replayed/0-15/11-ao-wpd/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/11-ao-wpd/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/11-ao-wpd/joint2/rev1-6392525815109495392-00008"
-# print_figure(name3)
-#
-#
-# # [12] av-wpd pipelined
-# name1 = "replayed/0-15/12-av-wpd/pipelined/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/12-av-wpd/pipelined/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/12-av-wpd/pipelined/rev1-6392525815109495392-00008"
-# print_figure(name3)
-# # [12] av-wpd joint2
-# name1 = "replayed/0-15/12-av-wpd/joint2/rev1-6352498867394358158-00019"
-# print_figure(name1)
-# name2 = "replayed/15-45/12-av-wpd/joint2/rev1-6352893145392128503-00036"
-# print_figure(name2)
-# name3 = "replayed/45-90/12-av-wpd/joint2/rev1-6392525815109495392-00008"
-# print_figure(name3)
+name1 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6367813861908922495-00004"
+print_figure(name1)
+name2 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6354369755148493407-00048"
+print_figure(name2)
+name3 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6343252661930009508-00020"
+print_figure(name3)
