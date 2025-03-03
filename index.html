@@ -103,7 +103,7 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
         <li> The standard <b> Conformer </b> ASR back-end; </li>
         <li> The standalone domain fine-tuned <b> Whisper </b>back-end; </li>
         <li> The standalone domain fine-tuned <b> WavLM </b> based ASR back-end; </li>
-        <li> The <b>Conformer </b> ASR back-end empowered by fine-tuned <b> WavLM features </b> andx <b> zero-shot enrolment-free speaker adaptation</b> (marked as "<b>Conformer + WavLM Feat. + Spk. Adapt.</b>" for the transcripts display of speech recognition in <a href="#sectionIII-C"> Section III-C </a>); </li>
+        <li> The <b>Conformer </b> ASR back-end empowered by fine-tuned <b> WavLM features </b> and <b> zero-shot enrolment-free speaker adaptation</b> (marked as "<b>Conformer + WavLM Feat. + Spk. Adapt.</b>" for the transcripts display of speech recognition in <a href="#sectionIII-C"> Section III-C </a>); </li>
     </ul>
     <h3> <a name="sectionIII">III. Experimental Setup and Results</a></h3>
     <div style="border: none; width:100%; margin: 0 auto;">
@@ -113,7 +113,7 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
             <li> A replayed eval dataset containing 1200 (0.5 hours, 340 speakers) utterances is recorded by replaying two loudspeakers simultaneously to generate a 15-channel mixture speech in a meeting room [1], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
             <li> Espnet style Conformer AED ASR model [1], Whisper-medium [5] and WavLM-large [6] are used. </li>
         </ul>
-        <h4> B. Performance of speaker-adaptive audio-only speech separation against varying amounts of speaker-level data (e.g, a single utterance ('1utt.'), 10%, 25%, ...) using (a) <a href="#ECAPA-TDNN"> ECAPA-TDNN </a> speaker features that is obtained by an offline, averaging operation for enrolment-based adaptation or learned on the fly from mixed speech input for enrolment-free adaptation on the LRS3 simulated dataset; These same operations are applied to (b) <a href="#x-vector"> x-vector </a> based speaker adaptation. </h4>
+        <h4> B. Performance (SISNR, PESQ, STOI) of speaker-adaptive audio-only speech separation against varying amounts of speaker-level data (e.g, a single utterance ('1utt.'), 10%, 25%, ...) using (a) <a href="#ECAPA-TDNN"> ECAPA-TDNN </a> speaker features that is obtained by an offline, averaging operation for enrolment-based adaptation or learned on the fly from mixed speech input for enrolment-free adaptation on the LRS3 simulated dataset; These same operations are applied to (b) <a href="#x-vector"> x-vector </a> based speaker adaptation. </h4>
     <table border="1">
     	<tr>
         	<th rowspan="2" colspan="2"> </th>
@@ -568,7 +568,7 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
         </tr>
     </table>
     </div>
-    <h4> <a name="sectionIII-C"> C. </a> Evaluation of zero-shot enrolment-free speaker-adaptive audio-visual speech separation and four types of ASR back-ends using (a) <a href="#Simulated">simulated LRS3 </a>  and (b) <a href="#Replayed">  replayed LRS2 </a> mixture speech. </h4>
+    <h4> <a name="sectionIII-C"> C. </a> Performance (WER) of zero-shot enrolment-free speaker-adaptive audio-visual speech separation and four types of ASR back-ends using (a) <a href="#Simulated">simulated LRS3 </a>  and (b) <a href="#Replayed">  replayed LRS2 </a> mixture speech. </h4>
     <div>
     <table border="1">
     	<tr>
