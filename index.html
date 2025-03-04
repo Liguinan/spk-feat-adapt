@@ -65,8 +65,8 @@
 </head>
 <div style="border: none; width:75%; margin: 0 auto;">
 <body>
-    <h2 align="center">Towards Zero-Shot Speaker-Adaptive Audio-Visual Multichannel Speech Separation and Recognition</h2>
-    <p style="line-height:100%" align="center"><b>Authors:</b> xxx</p>
+    <h2 align="center">Towards Zero-Shot Speaker-Adaptive Audio-Visual Multichannel <br> Speech Separation and Recognition</h2>
+    <p style="line-height:100%" align="center"><b>Authors:</b> Guinan Li, Jiajun Deng, Mengzhe Geng, Shujie Hu, Youjun Chen, Haoning Xu, <br> Huimeng Wang, Zhe Li, Zengrui Jin, Helen Meng, Xunying Liu </p>
     <p style="line-height:100%" align="justify"> <b>Abstract: </b>This paper proposes zero-shot, enrolment-free speaker adaptation approaches for multichannel speech separation and recognition systems. 
 Speaker features are on-the-fly learned from overlapped mixture speech input using: a) cross-utterance speaker features smoothing; and b) joint optimization of speaker features and speech separation systems. 
 Experiments are conducted on the mixture overlapped speech data constructed using the LRS3-TED and replayed LRS2 datasets.
@@ -113,7 +113,7 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
             <li> A replayed eval dataset containing 1200 (0.5 hours, 340 speakers) utterances is recorded by replaying two loudspeakers simultaneously to generate a 15-channel mixture speech in a meeting room [1], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
             <li> Espnet style Conformer AED ASR model [1], Whisper-medium [5] and WavLM-large [6] are used. </li>
         </ul>
-        <h4> B. Performance (SISNR, PESQ, STOI) of speaker-adaptive audio-only speech separation against varying amounts of speaker-level data (e.g, a single utterance ('1utt.'), 10%, 25%, ...) using (a) <a href="#ECAPA-TDNN"> ECAPA-TDNN </a> speaker features that is obtained by an offline, averaging operation for enrolment-based adaptation or learned on the fly from mixed speech input for enrolment-free adaptation on the LRS3 simulated dataset; These same operations are applied to (b) <a href="#x-vector"> x-vector </a> based speaker adaptation. </h4>
+        <h4> B. Performance (SISNR, PESQ and STOI) of speaker-adaptive audio-only speech separation against varying amounts of speaker-level data (e.g, a single utterance ('1utt.'), 10%, 25%, ...) using (a) <a href="#ECAPA-TDNN"> ECAPA-TDNN </a> speaker features that is obtained by an offline, averaging operation for enrolment-based adaptation or learned on the fly from mixed speech input for enrolment-free adaptation on the LRS3 simulated dataset; These same operations are applied to (b) <a href="#x-vector"> x-vector </a> based speaker adaptation. </h4>
     <table border="1">
     	<tr>
         	<th rowspan="2" colspan="2"> </th>
@@ -131,22 +131,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
-<!--                <br>-->
-<!--                <span> RTF: xxx  </span>-->
-<!--                <br>-->
-<!--                <span>Trans.: You still have hundreds of people who went in to see our expert  </span>-->
+                <br>
+                <span class="small-font"> SISNR=-5.83dB </span>
+                <br>
+                <span class="small-font" > PESQ=0.95  </span>
+                <br>
+                <span class="small-font" > STOI=49.3  </span>
             </td>
             <td style="text-align:center">
                 <img src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                  <br>
+                <span class="small-font"> SISNR=-5.53dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.24  </span>
+                <br>
+                <span class="small-font"> STOI=48.0 </span>
             </td>
             <td style="text-align:center">
                 <img src="mixture_clean/dev/ECAPA/mixture/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="mixture_clean/dev/ECAPA/mixture/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=3.73dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.78  </span>
+                <br>
+                <span class="small-font"> STOI=59.3  </span>
             </td>
         </tr>
         <tr>
@@ -156,18 +170,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                 <br>
+                <span class="small-font"> SISNR=20dB </span>
+                <br>
+                <span class="small-font"> PESQ=4.5 </span>
+                <br>
+                <span class="small-font"> STOI=100 </span>
             </td>
               <td style="text-align:center">
                 <img src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                   <br>
+                 <span class="small-font"> SISNR=20dB </span>
+                <br>
+                <span class="small-font"> PESQ=4.5 </span>
+                <br>
+                <span class="small-font"> STOI=100 </span>
             </td>
             <td style="text-align:center">
                 <img src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="mixture_clean/dev/ECAPA/rvb-only/LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=20dB </span>
+                <br>
+                <span class="small-font"> PESQ=4.5 </span>
+                <br>
+                <span class="small-font"> STOI=100 </span>
             </td>
         </tr>
         <tr>
@@ -177,18 +209,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="SI/dev/ECAPA/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                 <br>
+                <span class="small-font"> SISNR=-4.41dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.28 </span>
+                <br>
+                <span class="small-font"> STOI=59.2 </span>
             </td>
               <td style="text-align:center">
                 <img src="SI/dev/ECAPA/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="SI/dev/ECAPA/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=-10.74dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.07 </span>
+                <br>
+                <span class="small-font"> STOI=34.1</span>
             </td>
             <td style="text-align:center">
                 <img src="SI/dev/ECAPA/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="SI/dev/ECAPA/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.51dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.23 </span>
+                <br>
+                <span class="small-font"> STOI=81.9</span>
             </td>
         </tr>
         <tr>
@@ -199,18 +249,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/ECAPA/dev/1utt/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=6.38dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.08 </span>
+                <br>
+                <span class="small-font"> STOI=69.7 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/1utt/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/1utt/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=4.12dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.24 </span>
+                <br>
+                <span class="small-font"> STOI=71.7 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/1utt/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/1utt/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.88dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.49 </span>
+                <br>
+                <span class="small-font"> STOI=87.8 </span>
             </td>
         </tr>
          <tr>
@@ -220,18 +288,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/ECAPA/dev/10/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=6.84dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.1 </span>
+                <br>
+                <span class="small-font"> STOI=71.0 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/10/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/10/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=4.53dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.28 </span>
+                <br>
+                <span class="small-font"> STOI=72.9 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/10/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/10/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=11.23dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.61 </span>
+                <br>
+                <span class="small-font"> STOI=89.3 </span>
             </td>
         </tr>
         <tr>
@@ -241,18 +327,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/ECAPA/dev/25/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=6.93dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.10 </span>
+                <br>
+                <span class="small-font"> STOI=71.5 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/25/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/25/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=4.95dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.30 </span>
+                <br>
+                <span class="small-font"> STOI=73.2 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/25/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/25/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=11.33dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.62 </span>
+                <br>
+                <span class="small-font"> STOI=89.5 </span>
             </td>
         </tr>
         <tr>
@@ -262,18 +366,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/ECAPA/dev/50/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=6.93dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.11 </span>
+                <br>
+                <span class="small-font"> STOI=71.6 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/50/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/50/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=5.02dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.29 </span>
+                <br>
+                <span class="small-font"> STOI=73.2 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/50/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/50/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=11.34dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.61</span>
+                <br>
+                <span class="small-font"> STOI=89.5 </span>
             </td>
         </tr>
         <tr>
@@ -283,18 +405,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/ECAPA/dev/75/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=6.94dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.11 </span>
+                <br>
+                <span class="small-font"> STOI=71.4 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/75/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/75/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=5.03dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.31 </span>
+                <br>
+                <span class="small-font"> STOI=73.4 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/75/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/75/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=11.4dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.61 </span>
+                <br>
+                <span class="small-font"> STOI=89.5 </span>
             </td>
         </tr>
         <tr>
@@ -304,18 +444,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/ECAPA/dev/100/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=6.99dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.11 </span>
+                <br>
+                <span class="small-font"> STOI=71.6 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/100/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/100/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=5.15dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.31 </span>
+                <br>
+                <span class="small-font"> STOI=73.5 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/ECAPA/dev/100/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="Enrolment-based/ECAPA/dev/100/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=11.48dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.61 </span>
+                <br>
+                <span class="small-font"> STOI=89.5 </span>
             </td>
         </tr>
          <tr>
@@ -325,18 +483,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01096-TEDXXXXX-XXXXXX-ih_10000015_0000223_0000597.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=7.05dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.04 </span>
+                <br>
+                <span class="small-font"> STOI=74.4 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.png" alt>
                 <audio src="Enrolment-free/ECAPA/dev/rev1-LRS3XX-01344-TEDXXXXX-XXXXXX-ih_10000021_0000000_0000298.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=6.15dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.28 </span>
+                <br>
+                <span class="small-font"> STOI=76.0 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-free/ECAPA/dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.png" alt>
                 <audio src="Enrolment-free/ECAPA/dev/rev2-LRS3XX-02221-TEDXXXXX-XXXXXX-ih_10000046_0000000_0000457.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=11.52dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.54 </span>
+                <br>
+                <span class="small-font"> STOI=87.9 </span>
             </td>
         </tr>
     </table>
@@ -358,22 +534,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="mixture_clean/dev/xvector/mixture/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
-<!--                <br>-->
-<!--                <span> RTF: xxx  </span>-->
-<!--                <br>-->
-<!--                <span>Trans.: You still have hundreds of people who went in to see our expert  </span>-->
+                <br>
+                <span class="small-font"> SISNR=-2.74dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.08 </span>
+                <br>
+                <span class="small-font"> STOI=54.8 </span>
             </td>
             <td style="text-align:center">
                 <img src="mixture_clean/dev/xvector/mixture/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="mixture_clean/dev/xvector/mixture/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=-4.27dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.80 </span>
+                <br>
+                <span class="small-font"> STOI=72.5 </span>
             </td>
             <td style="text-align:center">
                 <img src="mixture_clean/dev/xvector/mixture/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="mixture_clean/dev/xvector/mixture/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=-3.88dB </span>
+                <br>
+                <span class="small-font"> PESQ=0.12 </span>
+                <br>
+                <span class="small-font"> STOI=28.2 </span>
             </td>
         </tr>
         <tr>
@@ -383,18 +573,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="mixture_clean/dev/xvector/rvb-only/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=20dB </span>
+                <br>
+                <span class="small-font"> PESQ=4.5 </span>
+                <br>
+                <span class="small-font"> STOI=100 </span>
             </td>
               <td style="text-align:center">
                 <img src="mixture_clean/dev/xvector/rvb-only/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="mixture_clean/dev/xvector/rvb-only/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                  <br>
+                <span class="small-font"> SISNR=20dB </span>
+                <br>
+                <span class="small-font"> PESQ=4.5 </span>
+                <br>
+                <span class="small-font"> STOI=100 </span>
             </td>
             <td style="text-align:center">
                 <img src="mixture_clean/dev/xvector/rvb-only/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="mixture_clean/dev/xvector/rvb-only/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=20dB </span>
+                <br>
+                <span class="small-font"> PESQ=4.5 </span>
+                <br>
+                <span class="small-font"> STOI=100 </span>
             </td>
         <tr>
             <th colspan="2">[3] SI baseline</th>
@@ -403,18 +611,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="SI/dev/xvector/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=0.4dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.26 </span>
+                <br>
+                <span class="small-font"> STOI=56.2 </span>
             </td>
               <td style="text-align:center">
                 <img src="SI/dev/xvector/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="SI/dev/xvector/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=4.23dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.50 </span>
+                <br>
+                <span class="small-font"> STOI=85.8 </span>
             </td>
             <td style="text-align:center">
                 <img src="SI/dev/xvector/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="SI/dev/xvector/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=1.82dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.61 </span>
+                <br>
+                <span class="small-font"> STOI=41.3 </span>
             </td>
         </tr>
 
@@ -426,18 +652,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/xvector/dev/1utt/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=2.63dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.59 </span>
+                <br>
+                <span class="small-font"> STOI=75.5 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/1utt/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="Enrolment-based/xvector/dev/1utt/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=7.98dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.58 </span>
+                <br>
+                <span class="small-font"> STOI=89.2 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/1utt/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="Enrolment-based/xvector/dev/1utt/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=2.28dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.36 </span>
+                <br>
+                <span class="small-font"> STOI=37.5 </span>
             </td>
         </tr>
          <tr>
@@ -447,18 +691,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/xvector/dev/10/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=7.12dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.92 </span>
+                <br>
+                <span class="small-font"> STOI=81.8 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/10/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="Enrolment-based/xvector/dev/10/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.05dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.58 </span>
+                <br>
+                <span class="small-font"> STOI=89.4 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/10/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="Enrolment-based/xvector/dev/10/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=2.28dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.36 </span>
+                <br>
+                <span class="small-font"> STOI=37.5 </span>
             </td>
         </tr>
         <tr>
@@ -468,18 +730,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/xvector/dev/25/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.06dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.92 </span>
+                <br>
+                <span class="small-font"> STOI=81.7 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/25/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="Enrolment-based/xvector/dev/25/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.07dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.59 </span>
+                <br>
+                <span class="small-font"> STOI=89.3 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/25/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="Enrolment-based/xvector/dev/25/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=2.28dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.36 </span>
+                <br>
+                <span class="small-font"> STOI=37.5 </span>
             </td>
         </tr>
         <tr>
@@ -489,18 +769,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/xvector/dev/50/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.49dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.86 </span>
+                <br>
+                <span class="small-font"> STOI=81.0 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/50/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="Enrolment-based/xvector/dev/50/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.19dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.59 </span>
+                <br>
+                <span class="small-font"> STOI=89.4 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/50/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="Enrolment-based/xvector/dev/50/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=2.28dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.36 </span>
+                <br>
+                <span class="small-font"> STOI=37.5 </span>
             </td>
         </tr>
         <tr>
@@ -510,18 +808,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/xvector/dev/75/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.59dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.81 </span>
+                <br>
+                <span class="small-font"> STOI=80.4 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/75/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="Enrolment-based/xvector/dev/75/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.21dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.60 </span>
+                <br>
+                <span class="small-font"> STOI=89.4 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/75/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="Enrolment-based/xvector/dev/75/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=2.85dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.39 </span>
+                <br>
+                <span class="small-font"> STOI=39.3 </span>
             </td>
         </tr>
         <tr>
@@ -531,18 +847,36 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-based/xvector/dev/100/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.62dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.81 </span>
+                <br>
+                <span class="small-font"> STOI=80.3 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/100/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="Enrolment-based/xvector/dev/100/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.26dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.59 </span>
+                <br>
+                <span class="small-font"> STOI=89.4 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-based/xvector/dev/100/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="Enrolment-based/xvector/dev/100/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=2.85dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.39 </span>
+                <br>
+                <span class="small-font"> STOI=39.3 </span>
             </td>
         </tr>
         <tr>
@@ -552,23 +886,41 @@ Speaker adaptation inference time speedup ratios up to 27.3 times is achieved ov
                 <audio src="Enrolment-free/xvector/dev/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=10.61dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.98 </span>
+                <br>
+                <span class="small-font"> STOI=82.8 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-free/xvector/dev/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.png" alt>
                 <audio src="Enrolment-free/xvector/dev/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=8.61dB </span>
+                <br>
+                <span class="small-font"> PESQ=2.6 </span>
+                <br>
+                <span class="small-font"> STOI=89.2 </span>
             </td>
             <td style="text-align:center">
                 <img src="Enrolment-free/xvector/dev/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.png" alt>
                 <audio src="Enrolment-free/xvector/dev/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
+                <br>
+                <span class="small-font"> SISNR=6.74dB </span>
+                <br>
+                <span class="small-font"> PESQ=1.82 </span>
+                <br>
+                <span class="small-font"> STOI=46.9 </span>
             </td>
         </tr>
     </table>
     </div>
-    <h4> <a name="sectionIII-C"> C. </a> Performance (WER) of zero-shot enrolment-free speaker-adaptive audio-visual speech separation and four types of ASR back-ends using (a) <a href="#Simulated">simulated LRS3 </a>  and (b) <a href="#Replayed">  replayed LRS2 </a> mixture speech. </h4>
+    <h4> <a name="sectionIII-C"> C. </a> Performance (WER%) of zero-shot enrolment-free speaker-adaptive audio-visual speech separation and four types of ASR back-ends using (a) <a href="#Simulated">simulated LRS3 </a>  and (b) <a href="#Replayed">  replayed LRS2 </a> mixture speech. </h4>
     <div>
     <table border="1">
     	<tr>
