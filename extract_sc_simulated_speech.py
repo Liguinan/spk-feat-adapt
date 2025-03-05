@@ -46,23 +46,3 @@ dataset = "xvector"
 path = f"mixture_clean/dev/{dataset}"
 name = "LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 extract_single_channel_wav(path, name)
-
-#
-# path = "simulated/15-45/0-mc"
-# name = "00027"
-# extract_single_channel_wav(path, name)
-#
-# path = "simulated/45-90/0-mc"
-# name = "00029"
-# extract_single_channel_wav(path, name)
-#
-# path = "simulated/90-180/0-mc"
-# name = "00018"
-# extract_single_channel_wav(path, name)
-
-
-# simulated
-# rev1-6331559613336179781-00019
-# rev2-6331559613336179781-00027
-# rev3-6331559613336179781-00029
-# rev4-6332062124509813446-00018

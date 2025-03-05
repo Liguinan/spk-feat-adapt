@@ -1,1207 +1,0 @@
-Map:   0%|          | 0/1200 [00:00<?, ? examples/s]Map:   0%|          | 1/1200 [00:02<53:40,  2.69s/ examples]Map:   0%|          | 5/1200 [00:02<08:45,  2.27 examples/s]Map:   1%|          | 8/1200 [00:03<05:06,  3.89 examples/s]Map:   1%|          | 12/1200 [00:03<03:04,  6.44 examples/s]Map:   1%|▏         | 16/1200 [00:03<02:10,  9.04 examples/s]Map:   2%|▏         | 19/1200 [00:03<01:48, 10.88 examples/s]Map:   2%|▏         | 22/1200 [00:03<01:36, 12.21 examples/s]Map:   2%|▏         | 25/1200 [00:03<01:36, 12.20 examples/s]Map:   2%|▏         | 28/1200 [00:04<01:21, 14.31 examples/s]Map:   2%|▎         | 30/1200 [00:04<01:22, 14.12 examples/s]Map:   3%|▎         | 33/1200 [00:04<01:14, 15.65 examples/s]Map:   3%|▎         | 36/1200 [00:04<01:07, 17.14 examples/s]Map:   3%|▎         | 38/1200 [00:04<01:09, 16.75 examples/s]Map:   3%|▎         | 41/1200 [00:05<02:16,  8.48 examples/s]Map:   4%|▎         | 43/1200 [00:06<03:17,  5.87 examples/s]Map:   4%|▍         | 46/1200 [00:06<02:28,  7.77 examples/s]Map:   4%|▍         | 50/1200 [00:06<01:50, 10.40 examples/s]Map:   4%|▍         | 52/1200 [00:06<01:42, 11.20 examples/s]Map:   5%|▍         | 55/1200 [00:07<02:36,  7.30 examples/s]Map:   5%|▍         | 57/1200 [00:07<02:14,  8.47 examples/s]Map:   5%|▌         | 60/1200 [00:07<01:50, 10.34 examples/s]Map:   5%|▌         | 63/1200 [00:07<01:37, 11.69 examples/s]Map:   6%|▌         | 66/1200 [00:08<02:26,  7.75 examples/s]Map:   6%|▌         | 69/1200 [00:08<01:57,  9.60 examples/s]Map:   6%|▌         | 72/1200 [00:08<01:36, 11.66 examples/s]Map:   6%|▋         | 76/1200 [00:08<01:18, 14.25 examples/s]Map:   7%|▋         | 80/1200 [00:08<01:09, 16.04 examples/s]Map:   7%|▋         | 84/1200 [00:09<01:02, 17.98 examples/s]Map:   7%|▋         | 87/1200 [00:09<00:59, 18.75 examples/s]Map:   8%|▊         | 91/1200 [00:09<00:56, 19.71 examples/s]Map:   8%|▊         | 95/1200 [00:09<00:57, 19.37 examples/s]Map:   8%|▊         | 99/1200 [00:09<00:53, 20.72 examples/s]Map:   8%|▊         | 102/1200 [00:10<00:55, 19.91 examples/s]Map:   9%|▉         | 106/1200 [00:10<00:52, 20.93 examples/s]Map:   9%|▉         | 109/1200 [00:10<00:54, 19.91 examples/s]Map:   9%|▉         | 112/1200 [00:10<00:53, 20.23 examples/s]Map:  10%|▉         | 115/1200 [00:10<00:53, 20.42 examples/s]Map:  10%|▉         | 118/1200 [00:10<01:00, 17.96 examples/s]Map:  10%|█         | 122/1200 [00:11<00:56, 18.93 examples/s]Map:  10%|█         | 125/1200 [00:11<00:57, 18.73 examples/s]Map:  11%|█         | 128/1200 [00:11<00:55, 19.40 examples/s]Map:  11%|█         | 132/1200 [00:11<00:54, 19.72 examples/s]Map:  11%|█▏        | 136/1200 [00:11<00:51, 20.78 examples/s]Map:  12%|█▏        | 140/1200 [00:11<00:55, 19.16 examples/s]Map:  12%|█▏        | 142/1200 [00:12<00:58, 18.13 examples/s]Map:  12%|█▏        | 145/1200 [00:12<00:57, 18.50 examples/s]Map:  12%|█▏        | 149/1200 [00:12<00:51, 20.41 examples/s]Map:  13%|█▎        | 153/1200 [00:13<01:29, 11.69 examples/s]Map:  13%|█▎        | 156/1200 [00:13<01:26, 12.06 examples/s]Map:  13%|█▎        | 158/1200 [00:13<01:23, 12.50 examples/s]Map:  13%|█▎        | 160/1200 [00:13<01:25, 12.17 examples/s]Map:  14%|█▎        | 164/1200 [00:14<02:11,  7.89 examples/s]Map:  14%|█▍        | 166/1200 [00:14<02:04,  8.33 examples/s]Map:  14%|█▍        | 168/1200 [00:14<01:59,  8.66 examples/s]Map:  14%|█▍        | 171/1200 [00:14<01:39, 10.36 examples/s]Map:  15%|█▍        | 175/1200 [00:15<01:18, 12.99 examples/s]Map:  15%|█▍        | 177/1200 [00:16<03:20,  5.10 examples/s]Map:  15%|█▌        | 181/1200 [00:16<02:20,  7.26 examples/s]Map:  15%|█▌        | 184/1200 [00:16<01:53,  8.94 examples/s]Map:  16%|█▌        | 186/1200 [00:16<01:42,  9.88 examples/s]Map:  16%|█▌        | 188/1200 [00:17<01:39, 10.15 examples/s]Map:  16%|█▌        | 190/1200 [00:17<01:36, 10.44 examples/s]Map:  16%|█▌        | 192/1200 [00:17<01:26, 11.59 examples/s]Map:  16%|█▋        | 195/1200 [00:17<01:17, 13.01 examples/s]Map:  17%|█▋        | 199/1200 [00:17<01:00, 16.59 examples/s]Map:  17%|█▋        | 202/1200 [00:17<00:55, 17.88 examples/s]Map:  17%|█▋        | 206/1200 [00:17<00:51, 19.47 examples/s]Map:  18%|█▊        | 210/1200 [00:18<01:44,  9.44 examples/s]Map:  18%|█▊        | 213/1200 [00:18<01:30, 10.94 examples/s]Map:  18%|█▊        | 216/1200 [00:19<01:17, 12.76 examples/s]Map:  18%|█▊        | 220/1200 [00:19<01:07, 14.52 examples/s]Map:  18%|█▊        | 222/1200 [00:19<01:59,  8.16 examples/s]Map:  19%|█▉        | 225/1200 [00:20<01:38,  9.92 examples/s]Map:  19%|█▉        | 227/1200 [00:20<01:27, 11.13 examples/s]Map:  19%|█▉        | 230/1200 [00:20<01:15, 12.92 examples/s]Map:  19%|█▉        | 233/1200 [00:20<01:10, 13.74 examples/s]Map:  20%|█▉        | 235/1200 [00:20<01:07, 14.33 examples/s]Map:  20%|█▉        | 239/1200 [00:20<00:56, 16.94 examples/s]Map:  20%|██        | 243/1200 [00:21<00:52, 18.10 examples/s]Map:  20%|██        | 245/1200 [00:21<00:55, 17.32 examples/s]Map:  21%|██        | 248/1200 [00:21<00:51, 18.42 examples/s]Map:  21%|██        | 251/1200 [00:21<00:50, 18.93 examples/s]Map:  21%|██        | 253/1200 [00:21<00:49, 19.04 examples/s]Map:  21%|██▏       | 256/1200 [00:21<00:46, 20.18 examples/s]Map:  22%|██▏       | 259/1200 [00:21<00:51, 18.24 examples/s]Map:  22%|██▏       | 261/1200 [00:22<01:53,  8.30 examples/s]Map:  22%|██▏       | 265/1200 [00:22<01:22, 11.35 examples/s]Map:  22%|██▏       | 268/1200 [00:22<01:09, 13.48 examples/s]Map:  23%|██▎       | 272/1200 [00:22<00:55, 16.65 examples/s]Map:  23%|██▎       | 275/1200 [00:23<00:53, 17.29 examples/s]Map:  23%|██▎       | 279/1200 [00:23<00:51, 17.80 examples/s]Map:  24%|██▎       | 283/1200 [00:23<00:47, 19.22 examples/s]Map:  24%|██▍       | 287/1200 [00:23<00:44, 20.65 examples/s]Map:  24%|██▍       | 291/1200 [00:23<00:42, 21.55 examples/s]Map:  24%|██▍       | 294/1200 [00:24<00:45, 19.81 examples/s]Map:  25%|██▍       | 297/1200 [00:24<01:36,  9.40 examples/s]Map:  25%|██▍       | 299/1200 [00:24<01:25, 10.48 examples/s]Map:  25%|██▌       | 301/1200 [00:25<01:22, 10.90 examples/s]Map:  25%|██▌       | 304/1200 [00:25<01:17, 11.61 examples/s]Map:  26%|██▌       | 307/1200 [00:25<01:10, 12.70 examples/s]Map:  26%|██▌       | 310/1200 [00:25<01:06, 13.29 examples/s]Map:  26%|██▌       | 312/1200 [00:25<01:06, 13.30 examples/s]Map:  26%|██▋       | 315/1200 [00:25<00:56, 15.66 examples/s]Map:  26%|██▋       | 317/1200 [00:26<02:08,  6.88 examples/s]Map:  27%|██▋       | 319/1200 [00:26<01:54,  7.66 examples/s]Map:  27%|██▋       | 322/1200 [00:27<01:33,  9.42 examples/s]Map:  27%|██▋       | 324/1200 [00:27<01:29,  9.84 examples/s]Map:  27%|██▋       | 327/1200 [00:27<01:16, 11.35 examples/s]Map:  27%|██▋       | 329/1200 [00:27<01:20, 10.75 examples/s]Map:  28%|██▊       | 331/1200 [00:27<01:29,  9.66 examples/s]Map:  28%|██▊       | 334/1200 [00:28<01:17, 11.24 examples/s]Map:  28%|██▊       | 337/1200 [00:28<01:11, 12.09 examples/s]Map:  28%|██▊       | 339/1200 [00:28<01:30,  9.51 examples/s]Map:  28%|██▊       | 341/1200 [00:28<01:26,  9.96 examples/s]Map:  29%|██▊       | 343/1200 [00:29<01:18, 10.95 examples/s]Map:  29%|██▉       | 345/1200 [00:29<01:14, 11.46 examples/s]Map:  29%|██▉       | 348/1200 [00:30<02:15,  6.29 examples/s]Map:  29%|██▉       | 350/1200 [00:30<01:51,  7.64 examples/s]Map:  29%|██▉       | 352/1200 [00:30<01:41,  8.39 examples/s]Map:  30%|██▉       | 354/1200 [00:30<01:40,  8.39 examples/s]Map:  30%|██▉       | 357/1200 [00:30<01:44,  8.06 examples/s]Map:  30%|███       | 360/1200 [00:31<01:25,  9.84 examples/s]Map:  30%|███       | 362/1200 [00:31<01:28,  9.50 examples/s]Map:  30%|███       | 364/1200 [00:31<01:26,  9.69 examples/s]Map:  31%|███       | 367/1200 [00:31<01:14, 11.11 examples/s]Map:  31%|███       | 369/1200 [00:31<01:14, 11.16 examples/s]Map:  31%|███       | 371/1200 [00:32<01:14, 11.11 examples/s]Map:  31%|███       | 374/1200 [00:32<01:19, 10.45 examples/s]Map:  31%|███▏      | 376/1200 [00:32<01:18, 10.46 examples/s]Map:  32%|███▏      | 378/1200 [00:32<01:15, 10.90 examples/s]Map:  32%|███▏      | 380/1200 [00:32<01:10, 11.56 examples/s]Map:  32%|███▏      | 382/1200 [00:33<01:16, 10.69 examples/s]Map:  32%|███▏      | 384/1200 [00:33<01:14, 10.91 examples/s]Map:  32%|███▏      | 386/1200 [00:33<01:12, 11.19 examples/s]Map:  32%|███▏      | 389/1200 [00:33<01:07, 12.04 examples/s]Map:  33%|███▎      | 391/1200 [00:33<01:14, 10.89 examples/s]Map:  33%|███▎      | 394/1200 [00:34<01:02, 12.81 examples/s]Map:  33%|███▎      | 396/1200 [00:34<01:05, 12.37 examples/s]Map:  33%|███▎      | 398/1200 [00:34<01:15, 10.58 examples/s]Map:  33%|███▎      | 401/1200 [00:34<01:03, 12.50 examples/s]Map:  34%|███▎      | 404/1200 [00:35<01:10, 11.35 examples/s]Map:  34%|███▍      | 407/1200 [00:35<01:00, 13.14 examples/s]Map:  34%|███▍      | 410/1200 [00:35<00:51, 15.25 examples/s]Map:  34%|███▍      | 412/1200 [00:35<00:49, 15.93 examples/s]Map:  35%|███▍      | 415/1200 [00:35<00:46, 17.04 examples/s]Map:  35%|███▍      | 418/1200 [00:35<00:42, 18.32 examples/s]Map:  35%|███▌      | 421/1200 [00:36<01:30,  8.62 examples/s]Map:  35%|███▌      | 423/1200 [00:36<01:19,  9.76 examples/s]Map:  36%|███▌      | 426/1200 [00:36<01:06, 11.61 examples/s]Map:  36%|███▌      | 428/1200 [00:36<01:02, 12.28 examples/s]Map:  36%|███▌      | 432/1200 [00:37<00:52, 14.59 examples/s]Map:  36%|███▋      | 435/1200 [00:37<00:47, 16.18 examples/s]Map:  37%|███▋      | 439/1200 [00:37<00:41, 18.29 examples/s]Map:  37%|███▋      | 443/1200 [00:37<00:43, 17.60 examples/s]Map:  37%|███▋      | 446/1200 [00:37<00:39, 18.88 examples/s]Map:  38%|███▊      | 450/1200 [00:37<00:37, 19.82 examples/s]Map:  38%|███▊      | 454/1200 [00:38<00:36, 20.19 examples/s]Map:  38%|███▊      | 458/1200 [00:38<00:35, 20.86 examples/s]Map:  38%|███▊      | 461/1200 [00:38<00:35, 20.82 examples/s]Map:  39%|███▊      | 464/1200 [00:38<00:37, 19.51 examples/s]Map:  39%|███▉      | 466/1200 [00:38<00:42, 17.28 examples/s]Map:  39%|███▉      | 468/1200 [00:38<00:42, 17.10 examples/s]Map:  39%|███▉      | 471/1200 [00:39<00:45, 16.02 examples/s]Map:  39%|███▉      | 473/1200 [00:39<00:47, 15.17 examples/s]Map:  40%|███▉      | 475/1200 [00:40<01:47,  6.76 examples/s]Map:  40%|███▉      | 478/1200 [00:40<01:21,  8.85 examples/s]Map:  40%|████      | 480/1200 [00:40<01:12,  9.91 examples/s]Map:  40%|████      | 483/1200 [00:40<01:00, 11.94 examples/s]Map:  40%|████      | 485/1200 [00:40<01:02, 11.39 examples/s]Map:  41%|████      | 487/1200 [00:40<01:14,  9.54 examples/s]Map:  41%|████      | 489/1200 [00:42<02:41,  4.40 examples/s]Map:  41%|████      | 491/1200 [00:42<02:10,  5.43 examples/s]Map:  41%|████      | 493/1200 [00:42<01:47,  6.55 examples/s]Map:  41%|████▏     | 495/1200 [00:43<03:13,  3.64 examples/s]Map:  41%|████▏     | 497/1200 [00:43<02:35,  4.53 examples/s]Map:  42%|████▏     | 501/1200 [00:43<01:39,  7.06 examples/s]Map:  42%|████▏     | 503/1200 [00:44<01:25,  8.20 examples/s]Map:  42%|████▏     | 505/1200 [00:44<01:15,  9.19 examples/s]Map:  42%|████▏     | 508/1200 [00:44<00:59, 11.62 examples/s]Map:  43%|████▎     | 512/1200 [00:44<00:48, 14.31 examples/s]Map:  43%|████▎     | 514/1200 [00:44<00:45, 14.98 examples/s]Map:  43%|████▎     | 516/1200 [00:45<02:02,  5.58 examples/s]Map:  43%|████▎     | 518/1200 [00:45<01:42,  6.68 examples/s]Map:  43%|████▎     | 520/1200 [00:46<01:35,  7.10 examples/s]Map:  44%|████▎     | 522/1200 [00:46<01:27,  7.75 examples/s]Map:  44%|████▎     | 524/1200 [00:46<01:16,  8.89 examples/s]Map:  44%|████▍     | 526/1200 [00:46<01:09,  9.70 examples/s]Map:  44%|████▍     | 528/1200 [00:46<01:13,  9.15 examples/s]Map:  44%|████▍     | 530/1200 [00:46<01:08,  9.75 examples/s]Map:  44%|████▍     | 532/1200 [00:47<01:14,  8.95 examples/s]Map:  44%|████▍     | 534/1200 [00:47<01:16,  8.76 examples/s]Map:  45%|████▍     | 536/1200 [00:47<01:12,  9.21 examples/s]Map:  45%|████▍     | 537/1200 [00:47<01:15,  8.74 examples/s]Map:  45%|████▍     | 539/1200 [00:47<01:04, 10.21 examples/s]Map:  45%|████▌     | 541/1200 [00:48<00:54, 12.08 examples/s]Map:  45%|████▌     | 543/1200 [00:48<00:50, 13.05 examples/s]Map:  45%|████▌     | 545/1200 [00:48<00:52, 12.41 examples/s]Map:  46%|████▌     | 548/1200 [00:48<00:49, 13.13 examples/s]Map:  46%|████▌     | 551/1200 [00:48<00:42, 15.39 examples/s]Map:  46%|████▌     | 553/1200 [00:48<00:40, 16.04 examples/s]Map:  46%|████▋     | 555/1200 [00:48<00:39, 16.16 examples/s]Map:  46%|████▋     | 558/1200 [00:49<00:39, 16.24 examples/s]Map:  47%|████▋     | 560/1200 [00:49<00:38, 16.67 examples/s]Map:  47%|████▋     | 562/1200 [00:49<00:36, 17.43 examples/s]Map:  47%|████▋     | 564/1200 [00:49<00:38, 16.56 examples/s]Map:  47%|████▋     | 566/1200 [00:49<00:44, 14.37 examples/s]Map:  47%|████▋     | 568/1200 [00:49<00:46, 13.55 examples/s]Map:  48%|████▊     | 570/1200 [00:49<00:46, 13.56 examples/s]Map:  48%|████▊     | 573/1200 [00:50<00:41, 14.95 examples/s]Map:  48%|████▊     | 575/1200 [00:50<00:45, 13.71 examples/s]Map:  48%|████▊     | 578/1200 [00:50<00:39, 15.57 examples/s]Map:  48%|████▊     | 580/1200 [00:50<00:37, 16.48 examples/s]Map:  49%|████▊     | 583/1200 [00:50<00:37, 16.45 examples/s]Map:  49%|████▉     | 585/1200 [00:50<00:39, 15.52 examples/s]Map:  49%|████▉     | 587/1200 [00:51<00:40, 15.10 examples/s]Map:  49%|████▉     | 589/1200 [00:53<03:19,  3.06 examples/s]Map:  49%|████▉     | 591/1200 [00:53<02:33,  3.96 examples/s]Map:  49%|████▉     | 593/1200 [00:53<01:59,  5.07 examples/s]Map:  50%|████▉     | 596/1200 [00:53<01:24,  7.17 examples/s]Map:  50%|████▉     | 599/1200 [00:53<01:05,  9.21 examples/s]Map:  50%|█████     | 601/1200 [00:53<01:01,  9.70 examples/s]Map:  50%|█████     | 603/1200 [00:53<00:55, 10.85 examples/s]Map:  50%|█████     | 605/1200 [00:54<00:52, 11.29 examples/s]Map:  51%|█████     | 608/1200 [00:54<00:44, 13.19 examples/s]Map:  51%|█████     | 610/1200 [00:54<00:47, 12.41 examples/s]Map:  51%|█████     | 612/1200 [00:55<01:58,  4.95 examples/s]Map:  51%|█████▏    | 616/1200 [00:55<01:18,  7.48 examples/s]Map:  52%|█████▏    | 619/1200 [00:55<01:01,  9.40 examples/s]Map:  52%|█████▏    | 622/1200 [00:55<00:51, 11.22 examples/s]Map:  52%|█████▏    | 624/1200 [00:56<00:54, 10.57 examples/s]Map:  52%|█████▏    | 627/1200 [00:56<00:48, 11.92 examples/s]Map:  52%|█████▏    | 629/1200 [00:56<00:45, 12.67 examples/s]Map:  53%|█████▎    | 631/1200 [00:56<00:47, 11.94 examples/s]Map:  53%|█████▎    | 633/1200 [00:56<00:42, 13.20 examples/s]Map:  53%|█████▎    | 635/1200 [00:56<00:43, 12.92 examples/s]Map:  53%|█████▎    | 637/1200 [00:57<00:52, 10.78 examples/s]Map:  53%|█████▎    | 639/1200 [00:57<00:53, 10.49 examples/s]Map:  54%|█████▎    | 642/1200 [00:57<00:46, 11.91 examples/s]Map:  54%|█████▎    | 644/1200 [00:57<00:44, 12.42 examples/s]Map:  54%|█████▍    | 647/1200 [00:57<00:43, 12.76 examples/s]Map:  54%|█████▍    | 649/1200 [00:58<00:43, 12.71 examples/s]Map:  54%|█████▍    | 652/1200 [00:58<00:40, 13.49 examples/s]Map:  55%|█████▍    | 654/1200 [00:58<00:37, 14.63 examples/s]Map:  55%|█████▍    | 657/1200 [00:58<00:34, 15.59 examples/s]Map:  55%|█████▌    | 660/1200 [00:58<00:31, 16.98 examples/s]Map:  55%|█████▌    | 663/1200 [00:58<00:30, 17.82 examples/s]Map:  56%|█████▌    | 666/1200 [00:59<01:20,  6.66 examples/s]Map:  56%|█████▌    | 669/1200 [01:00<01:07,  7.88 examples/s]Map:  56%|█████▌    | 672/1200 [01:00<00:55,  9.49 examples/s]Map:  56%|█████▌    | 674/1200 [01:00<00:51, 10.24 examples/s]Map:  56%|█████▋    | 676/1200 [01:00<00:50, 10.34 examples/s]Map:  56%|█████▋    | 678/1200 [01:00<00:47, 11.06 examples/s]Map:  57%|█████▋    | 680/1200 [01:00<00:41, 12.40 examples/s]Map:  57%|█████▋    | 682/1200 [01:01<00:40, 12.71 examples/s]Map:  57%|█████▋    | 684/1200 [01:01<01:27,  5.88 examples/s]Map:  57%|█████▋    | 686/1200 [01:01<01:11,  7.18 examples/s]Map:  57%|█████▋    | 688/1200 [01:02<01:04,  7.99 examples/s]Map:  57%|█████▊    | 690/1200 [01:02<00:54,  9.28 examples/s]Map:  58%|█████▊    | 692/1200 [01:02<00:48, 10.38 examples/s]Map:  58%|█████▊    | 695/1200 [01:02<00:43, 11.70 examples/s]Map:  58%|█████▊    | 697/1200 [01:02<00:38, 12.92 examples/s]Map:  58%|█████▊    | 699/1200 [01:02<00:35, 14.14 examples/s]Map:  58%|█████▊    | 701/1200 [01:03<00:34, 14.44 examples/s]Map:  59%|█████▊    | 703/1200 [01:03<00:40, 12.40 examples/s]Map:  59%|█████▉    | 705/1200 [01:04<01:43,  4.77 examples/s]Map:  59%|█████▉    | 707/1200 [01:04<01:24,  5.82 examples/s]Map:  59%|█████▉    | 709/1200 [01:04<01:14,  6.59 examples/s]Map:  59%|█████▉    | 711/1200 [01:04<01:03,  7.72 examples/s]Map:  59%|█████▉    | 713/1200 [01:04<00:53,  9.06 examples/s]Map:  60%|█████▉    | 715/1200 [01:05<00:45, 10.65 examples/s]Map:  60%|█████▉    | 717/1200 [01:05<00:42, 11.43 examples/s]Map:  60%|█████▉    | 719/1200 [01:05<00:39, 12.07 examples/s]Map:  60%|██████    | 722/1200 [01:05<00:36, 13.03 examples/s]Map:  60%|██████    | 724/1200 [01:05<00:35, 13.46 examples/s]Map:  60%|██████    | 726/1200 [01:05<00:33, 14.32 examples/s]Map:  61%|██████    | 729/1200 [01:05<00:28, 16.35 examples/s]Map:  61%|██████    | 732/1200 [01:06<00:32, 14.46 examples/s]Map:  61%|██████    | 734/1200 [01:06<00:33, 13.89 examples/s]Map:  61%|██████▏   | 736/1200 [01:06<00:36, 12.72 examples/s]Map:  62%|██████▏   | 738/1200 [01:06<00:38, 11.99 examples/s]Map:  62%|██████▏   | 740/1200 [01:06<00:41, 10.97 examples/s]Map:  62%|██████▏   | 743/1200 [01:07<00:33, 13.78 examples/s]Map:  62%|██████▏   | 745/1200 [01:07<00:31, 14.23 examples/s]Map:  62%|██████▏   | 747/1200 [01:07<00:30, 14.75 examples/s]Map:  63%|██████▎   | 751/1200 [01:07<00:25, 17.66 examples/s]Map:  63%|██████▎   | 753/1200 [01:07<00:26, 17.03 examples/s]Map:  63%|██████▎   | 755/1200 [01:07<00:26, 17.03 examples/s]Map:  63%|██████▎   | 758/1200 [01:07<00:26, 16.64 examples/s]Map:  63%|██████▎   | 760/1200 [01:08<00:30, 14.60 examples/s]Map:  64%|██████▎   | 764/1200 [01:08<00:25, 17.35 examples/s]Map:  64%|██████▍   | 766/1200 [01:09<01:19,  5.48 examples/s]Map:  64%|██████▍   | 769/1200 [01:09<01:00,  7.11 examples/s]Map:  64%|██████▍   | 771/1200 [01:09<00:52,  8.18 examples/s]Map:  64%|██████▍   | 774/1200 [01:09<00:42, 10.00 examples/s]Map:  65%|██████▍   | 777/1200 [01:10<00:38, 10.98 examples/s]Map:  65%|██████▌   | 780/1200 [01:10<00:32, 12.84 examples/s]Map:  65%|██████▌   | 784/1200 [01:10<00:30, 13.58 examples/s]Map:  66%|██████▌   | 786/1200 [01:10<00:28, 14.44 examples/s]Map:  66%|██████▌   | 788/1200 [01:10<00:30, 13.38 examples/s]Map:  66%|██████▌   | 790/1200 [01:11<00:30, 13.51 examples/s]Map:  66%|██████▌   | 794/1200 [01:11<00:25, 15.98 examples/s]Map:  66%|██████▋   | 796/1200 [01:11<00:25, 15.71 examples/s]Map:  67%|██████▋   | 799/1200 [01:11<00:24, 16.60 examples/s]Map:  67%|██████▋   | 802/1200 [01:11<00:22, 17.90 examples/s]Map:  67%|██████▋   | 805/1200 [01:11<00:22, 17.70 examples/s]Map:  67%|██████▋   | 807/1200 [01:11<00:24, 16.16 examples/s]Map:  67%|██████▋   | 809/1200 [01:12<00:27, 14.29 examples/s]Map:  68%|██████▊   | 811/1200 [01:12<00:26, 14.46 examples/s]Map:  68%|██████▊   | 813/1200 [01:12<00:27, 14.20 examples/s]Map:  68%|██████▊   | 816/1200 [01:12<00:23, 16.37 examples/s]Map:  68%|██████▊   | 819/1200 [01:12<00:22, 17.11 examples/s]Map:  68%|██████▊   | 821/1200 [01:12<00:21, 17.67 examples/s]Map:  69%|██████▊   | 823/1200 [01:12<00:22, 16.90 examples/s]Map:  69%|██████▉   | 826/1200 [01:13<00:20, 18.47 examples/s]Map:  69%|██████▉   | 828/1200 [01:13<00:20, 18.35 examples/s]Map:  69%|██████▉   | 831/1200 [01:14<01:01,  5.97 examples/s]Map:  69%|██████▉   | 833/1200 [01:14<00:57,  6.40 examples/s]Map:  70%|██████▉   | 835/1200 [01:14<00:47,  7.65 examples/s]Map:  70%|██████▉   | 837/1200 [01:14<00:40,  8.86 examples/s]Map:  70%|██████▉   | 839/1200 [01:15<01:26,  4.16 examples/s]Map:  70%|███████   | 841/1200 [01:16<01:11,  5.01 examples/s]Map:  70%|███████   | 843/1200 [01:16<00:58,  6.06 examples/s]Map:  70%|███████   | 845/1200 [01:16<00:50,  7.07 examples/s]Map:  71%|███████   | 847/1200 [01:16<00:45,  7.82 examples/s]Map:  71%|███████   | 849/1200 [01:17<01:37,  3.59 examples/s]Map:  71%|███████   | 851/1200 [01:18<01:15,  4.62 examples/s]Map:  71%|███████   | 853/1200 [01:18<01:01,  5.68 examples/s]Map:  71%|███████▏  | 855/1200 [01:18<00:49,  6.90 examples/s]Map:  72%|███████▏  | 858/1200 [01:18<00:37,  9.22 examples/s]Map:  72%|███████▏  | 862/1200 [01:18<00:27, 12.41 examples/s]Map:  72%|███████▏  | 865/1200 [01:18<00:24, 13.48 examples/s]Map:  72%|███████▏  | 869/1200 [01:19<00:20, 16.17 examples/s]Map:  73%|███████▎  | 871/1200 [01:19<00:20, 16.28 examples/s]Map:  73%|███████▎  | 873/1200 [01:19<00:19, 16.44 examples/s]Map:  73%|███████▎  | 875/1200 [01:19<00:19, 16.88 examples/s]Map:  73%|███████▎  | 877/1200 [01:19<00:19, 16.80 examples/s]Map:  73%|███████▎  | 879/1200 [01:19<00:18, 17.17 examples/s]Map:  74%|███████▎  | 882/1200 [01:19<00:17, 18.42 examples/s]Map:  74%|███████▎  | 884/1200 [01:19<00:17, 18.27 examples/s]Map:  74%|███████▍  | 886/1200 [01:20<00:18, 16.62 examples/s]Map:  74%|███████▍  | 888/1200 [01:20<00:20, 15.56 examples/s]Map:  74%|███████▍  | 891/1200 [01:20<00:17, 17.30 examples/s]Map:  74%|███████▍  | 894/1200 [01:20<00:16, 18.11 examples/s]Map:  75%|███████▍  | 896/1200 [01:20<00:20, 14.70 examples/s]Map:  75%|███████▍  | 899/1200 [01:20<00:20, 14.37 examples/s]Map:  75%|███████▌  | 901/1200 [01:21<00:22, 13.44 examples/s]Map:  75%|███████▌  | 903/1200 [01:21<00:23, 12.69 examples/s]Map:  76%|███████▌  | 906/1200 [01:21<00:20, 14.18 examples/s]Map:  76%|███████▌  | 908/1200 [01:21<00:20, 14.54 examples/s]Map:  76%|███████▌  | 911/1200 [01:21<00:19, 14.72 examples/s]Map:  76%|███████▌  | 913/1200 [01:21<00:19, 14.90 examples/s]Map:  76%|███████▋  | 916/1200 [01:22<00:18, 15.66 examples/s]Map:  76%|███████▋  | 918/1200 [01:23<00:55,  5.12 examples/s]Map:  77%|███████▋  | 920/1200 [01:23<00:47,  5.88 examples/s]Map:  77%|███████▋  | 922/1200 [01:23<00:39,  7.11 examples/s]Map:  77%|███████▋  | 924/1200 [01:23<00:32,  8.40 examples/s]Map:  77%|███████▋  | 927/1200 [01:23<00:26, 10.35 examples/s]Map:  77%|███████▋  | 929/1200 [01:24<00:24, 11.12 examples/s]Map:  78%|███████▊  | 932/1200 [01:24<00:21, 12.69 examples/s]Map:  78%|███████▊  | 935/1200 [01:24<00:19, 13.27 examples/s]Map:  78%|███████▊  | 937/1200 [01:24<00:19, 13.17 examples/s]Map:  78%|███████▊  | 940/1200 [01:24<00:17, 14.81 examples/s]Map:  78%|███████▊  | 942/1200 [01:24<00:16, 15.62 examples/s]Map:  79%|███████▉  | 945/1200 [01:24<00:15, 16.84 examples/s]Map:  79%|███████▉  | 947/1200 [01:25<00:15, 16.24 examples/s]Map:  79%|███████▉  | 951/1200 [01:25<00:14, 17.77 examples/s]Map:  79%|███████▉  | 953/1200 [01:25<00:14, 17.26 examples/s]Map:  80%|███████▉  | 955/1200 [01:25<00:15, 16.20 examples/s]Map:  80%|███████▉  | 957/1200 [01:25<00:15, 15.38 examples/s]Map:  80%|███████▉  | 959/1200 [01:25<00:14, 16.35 examples/s]Map:  80%|████████  | 962/1200 [01:25<00:13, 17.09 examples/s]Map:  80%|████████  | 966/1200 [01:26<00:12, 18.19 examples/s]Map:  81%|████████  | 969/1200 [01:26<00:12, 18.94 examples/s]Map:  81%|████████  | 971/1200 [01:26<00:12, 18.28 examples/s]Map:  81%|████████  | 974/1200 [01:26<00:13, 16.97 examples/s]Map:  81%|████████▏ | 977/1200 [01:26<00:12, 17.73 examples/s]Map:  82%|████████▏ | 981/1200 [01:26<00:11, 19.17 examples/s]Map:  82%|████████▏ | 983/1200 [01:27<00:11, 18.94 examples/s]Map:  82%|████████▏ | 985/1200 [01:27<00:14, 15.27 examples/s]Map:  82%|████████▏ | 987/1200 [01:27<00:13, 15.44 examples/s]Map:  82%|████████▎ | 990/1200 [01:27<00:13, 15.17 examples/s]Map:  83%|████████▎ | 993/1200 [01:27<00:12, 16.12 examples/s]Map:  83%|████████▎ | 997/1200 [01:28<00:11, 17.78 examples/s]Map:  83%|████████▎ | 999/1200 [01:28<00:11, 18.05 examples/s]Map:  83%|████████▎ | 1001/1200 [01:28<00:11, 17.57 examples/s]Map:  84%|████████▎ | 1004/1200 [01:28<00:12, 15.94 examples/s]Map:  84%|████████▍ | 1007/1200 [01:28<00:12, 15.34 examples/s]Map:  84%|████████▍ | 1010/1200 [01:28<00:11, 15.88 examples/s]Map:  84%|████████▍ | 1013/1200 [01:28<00:11, 16.93 examples/s]Map:  85%|████████▍ | 1017/1200 [01:29<00:11, 15.96 examples/s]Map:  85%|████████▌ | 1020/1200 [01:29<00:10, 16.79 examples/s]Map:  85%|████████▌ | 1022/1200 [01:29<00:11, 16.07 examples/s]Map:  85%|████████▌ | 1024/1200 [01:29<00:10, 16.79 examples/s]Map:  86%|████████▌ | 1026/1200 [01:29<00:10, 16.96 examples/s]Map:  86%|████████▌ | 1029/1200 [01:29<00:09, 17.40 examples/s]Map:  86%|████████▌ | 1032/1200 [01:30<00:10, 16.68 examples/s]Map:  86%|████████▌ | 1034/1200 [01:30<00:10, 15.63 examples/s]Map:  86%|████████▋ | 1036/1200 [01:30<00:11, 14.53 examples/s]Map:  86%|████████▋ | 1038/1200 [01:30<00:10, 15.17 examples/s]Map:  87%|████████▋ | 1040/1200 [01:30<00:11, 14.44 examples/s]Map:  87%|████████▋ | 1042/1200 [01:30<00:12, 12.93 examples/s]Map:  87%|████████▋ | 1044/1200 [01:31<00:13, 11.95 examples/s]Map:  87%|████████▋ | 1046/1200 [01:31<00:12, 12.69 examples/s]Map:  87%|████████▋ | 1048/1200 [01:32<00:35,  4.28 examples/s]Map:  87%|████████▋ | 1049/1200 [01:32<00:31,  4.74 examples/s]Map:  88%|████████▊ | 1051/1200 [01:32<00:26,  5.71 examples/s]Map:  88%|████████▊ | 1054/1200 [01:32<00:17,  8.27 examples/s]Map:  88%|████████▊ | 1056/1200 [01:33<00:14,  9.80 examples/s]Map:  88%|████████▊ | 1058/1200 [01:33<00:14, 10.00 examples/s]Map:  88%|████████▊ | 1060/1200 [01:33<00:15,  8.98 examples/s]Map:  89%|████████▊ | 1064/1200 [01:33<00:10, 12.44 examples/s]Map:  89%|████████▉ | 1067/1200 [01:33<00:09, 13.59 examples/s]Map:  89%|████████▉ | 1070/1200 [01:33<00:08, 15.15 examples/s]Map:  89%|████████▉ | 1073/1200 [01:35<00:20,  6.20 examples/s]Map:  90%|████████▉ | 1075/1200 [01:35<00:17,  7.03 examples/s]Map:  90%|████████▉ | 1077/1200 [01:35<00:15,  8.01 examples/s]Map:  90%|████████▉ | 1079/1200 [01:35<00:13,  9.07 examples/s]Map:  90%|█████████ | 1082/1200 [01:35<00:10, 11.23 examples/s]Map:  90%|█████████ | 1084/1200 [01:35<00:09, 11.68 examples/s]Map:  90%|█████████ | 1086/1200 [01:35<00:09, 12.57 examples/s]Map:  91%|█████████ | 1088/1200 [01:36<00:08, 13.79 examples/s]Map:  91%|█████████ | 1090/1200 [01:36<00:07, 13.97 examples/s]Map:  91%|█████████ | 1093/1200 [01:36<00:06, 15.60 examples/s]Map:  91%|█████████▏| 1095/1200 [01:36<00:06, 15.18 examples/s]Map:  91%|█████████▏| 1097/1200 [01:36<00:07, 14.01 examples/s]Map:  92%|█████████▏| 1099/1200 [01:36<00:07, 13.68 examples/s]Map:  92%|█████████▏| 1101/1200 [01:36<00:07, 14.10 examples/s]Map:  92%|█████████▏| 1105/1200 [01:37<00:05, 16.86 examples/s]Map:  92%|█████████▏| 1109/1200 [01:37<00:05, 17.98 examples/s]Map:  93%|█████████▎| 1112/1200 [01:37<00:06, 14.59 examples/s]Map:  93%|█████████▎| 1115/1200 [01:37<00:05, 14.43 examples/s]Map:  93%|█████████▎| 1117/1200 [01:37<00:05, 14.88 examples/s]Map:  93%|█████████▎| 1119/1200 [01:38<00:05, 14.32 examples/s]Map:  93%|█████████▎| 1121/1200 [01:38<00:05, 14.75 examples/s]Map:  94%|█████████▎| 1123/1200 [01:38<00:05, 14.77 examples/s]Map:  94%|█████████▍| 1125/1200 [01:38<00:05, 14.52 examples/s]Map:  94%|█████████▍| 1127/1200 [01:38<00:05, 14.42 examples/s]Map:  94%|█████████▍| 1129/1200 [01:38<00:04, 14.86 examples/s]Map:  94%|█████████▍| 1131/1200 [01:39<00:05, 13.21 examples/s]Map:  94%|█████████▍| 1133/1200 [01:39<00:04, 14.20 examples/s]Map:  95%|█████████▍| 1135/1200 [01:39<00:04, 14.63 examples/s]Map:  95%|█████████▍| 1138/1200 [01:39<00:03, 16.46 examples/s]Map:  95%|█████████▌| 1141/1200 [01:39<00:03, 17.25 examples/s]Map:  95%|█████████▌| 1144/1200 [01:39<00:02, 18.77 examples/s]Map:  96%|█████████▌| 1146/1200 [01:39<00:03, 17.10 examples/s]Map:  96%|█████████▌| 1149/1200 [01:39<00:02, 18.14 examples/s]Map:  96%|█████████▌| 1152/1200 [01:40<00:02, 17.62 examples/s]Map:  96%|█████████▌| 1154/1200 [01:40<00:03, 15.28 examples/s]Map:  96%|█████████▋| 1156/1200 [01:40<00:02, 15.69 examples/s]Map:  96%|█████████▋| 1158/1200 [01:40<00:03, 13.65 examples/s]Map:  97%|█████████▋| 1160/1200 [01:40<00:02, 14.52 examples/s]Map:  97%|█████████▋| 1163/1200 [01:40<00:02, 15.62 examples/s]Map:  97%|█████████▋| 1166/1200 [01:41<00:02, 15.04 examples/s]Map:  97%|█████████▋| 1168/1200 [01:41<00:02, 15.69 examples/s]Map:  98%|█████████▊| 1171/1200 [01:41<00:01, 14.59 examples/s]Map:  98%|█████████▊| 1173/1200 [01:41<00:02, 13.17 examples/s]Map:  98%|█████████▊| 1176/1200 [01:41<00:01, 13.40 examples/s]Map:  98%|█████████▊| 1178/1200 [01:42<00:01, 13.82 examples/s]Map:  98%|█████████▊| 1182/1200 [01:42<00:01, 16.97 examples/s]Map:  99%|█████████▊| 1184/1200 [01:42<00:01, 14.80 examples/s]Map:  99%|█████████▉| 1188/1200 [01:42<00:00, 16.09 examples/s]Map:  99%|█████████▉| 1192/1200 [01:42<00:00, 18.29 examples/s]Map: 100%|█████████▉| 1194/1200 [01:42<00:00, 16.94 examples/s]Map: 100%|█████████▉| 1196/1200 [01:43<00:00,  5.99 examples/s]Map: 100%|█████████▉| 1198/1200 [01:44<00:00,  7.07 examples/s]Map: 100%|██████████| 1200/1200 [01:44<00:00,  8.14 examples/s]Map: 100%|██████████| 1200/1200 [01:44<00:00, 11.51 examples/s]
-text	pred_str
-AND FOR ME THE SURPRISE WAS	AND FOR ME THE SURPRISE WAS
-THEY'RE MOVING AROUND	THEY'RE MOVING AROUND
-AND WE WERE RIGHT	AND WE WERE RIGHT
-AND THE NEXT DAY	AND THE NEXT DAY
-WHEN THERE ISN'T MUCH ELSE IN THE GARDEN	EN THERE ISN'T MUCH ELSE IN THE VE
-SORT OF SECOND HALF OF OCTOBER	SORT OF SECOND HALF OF OCTOBER
-WELL INTO NOVEMBER	WELL INTO NOVEMBER
-WE CAN JUST ABOUT GET AWAY WITH IT NOW	WOE COULD JUST ABOUT GET AWAY WITH IT NOW
-SOMETHING LIKE A GARDEN COMPOST	SOMETHING LIKE A GARDEN COMPOST
-IT'S NOT ALL ABOUT SIZE	IT'S NOT ALL ABOUT SCIENCE
-AND IF YOU WANT WONDERFUL	AND IF YOU WALK WONDERFULLY
-STARTING WITH THE COMPOST	STARTING WITH A COMPOS
-FOR A BRIEF TIME	FOR A BREEF TIME
-IT WILL CHANGE LIVES	IT WILL CHANGE LIES
-WHEN MY HUSBAND AND I ARE NOT AROUND	WHEN MY HUSBAND AND I ARE NOT AROUND
-PLEASE DONATE NOW	PLEASE DONIT NOW
-DON'T FORGET ME	DON'T LBOK BOLD AT
-THESE ARE MY WORDS	THESE ARE MY WORDS
-IT WOULD HAVE BEEN COMPLETELY ALIEN TO THE REST OF LONDON	IT WOULD HAVE BEEN COMPLETELY ALIAN TO THE REST OF LONDON
-BUT I THINK WHAT WE'RE SEEING HERE IS KIND OF THE BLUEPRINT	BUTI THINK WHAT WE'RE SEING HERE IS KIND OF THE BLUEPRINT
-HE WAS SO POPULAR	HE WAS SO POPULAR
-INSTEAD OF BEING SOMEONE'S ARM CANDY	INSTEAD OF BEING SOMEONE'S ARM CANDE
-I EXPECTED YOU TO HAVE A PAST	I EXPECTED YOU TO HAVE A PAST
-SEE HOW MUCH IT COMES TO	SEE HOW MUCH IT COMES TO
-I PAY THE MONEY	I PAY THE MONEY
-OVER THE COURSE OF HIS LIFE	OR THE COURSE OF HIS LIFE
-WHEN IT'S FINISHED	WHEN IT'S FINISHED
-BUT BEFORE I DO	BUT BEFORE I DO
-THIS HOUSE WILL JUST COME TOGETHER AND FLOURISH	THIS HOUSE WILL JUST COME TOGETHER AND FLURISH
-ANY MAN WOULD BE PROUD TO HAVE YOU AS A SON	ANY MAN WOULD BE PROUD TO HAVE YOU AS A SON
-AT THE END OF THE DAY	AT THE END OF THE DAY
-GET THEM INTO THE GARDEN	GET THEM INTO THE GARDEN
-THIS ONE IS TOTALLY OUT OF CONTROL	THIS ONE IS TOTALLY OUT OF CONTROL
-BUT IT COMES AND GOES	BUT HIT COMES AND GOS
-IT'S PART OF THE NATIONAL GARDENS SCHEME	IT'S PART OF THE NATIONAL GARDEN SCHEM
-I THINK IT'S BRILLIANT	I THINK IT'S BRILLIANT
-A ONE BEDROOM FIRST FLOOR FLAT	AONE BEDROOM FIRST FLOR FLAT
-IF IT WAS GOING TO BE INCREASED	IF IT WAS GOING TO BE INCREASED
-BUT IT'S A DECENT SIZE	BUT IT'S A DECENT SIZE
-I'M NOT MASSIVELY HAPPY	I'M NOT MASSIVELY HAPPY
-IF YOU ARE LOOKING ROUND AUCTION PROPERTIES BEFORE THE AUCTION	IF YOU ARE LOOKING AROUND AUCTION PROPERTIES BEFORE THE AUCTION
-IT'S A VERY ATTRACTIVE GUIDE PRICE FOR A SUBSTANTIAL HOUSE SO WELL	IT'S A VERY ATAIVE GUDE PIC FOR A SUBSTANTIAL HOUSE SO WELL
-DID THEY GET IT DONE ON TIME AND FOR THE RIGHT MONEY	DID THEY GET IT DONE ON TIME AND FOR THE RIGHT MONEY
-BUT WHAT A SURPRISE WHEN YOU COME IN	BUT WHAT A SURPRISE WHEN YOU COME IN
-BECAUSE IT'S FANTASTIC	BECAUSE IF IT'S FANTASTIC
-WHAT DO YOU THINK ABOUT THAT	WHAT DO YOU THINK ABOUT THAT
-HE'S LOOKING TO SELL IT	HE'S LOOKING TO SELL IT
-IT'S NOT AS EASY AS IT LOOKS	IT'S NOT AS EASY AS IT LOOKS
-STICK TO WHAT YOU'RE GOOD AT	STICK TO WHAT YOU'RE GOOD AT
-THAT IS IMPORTANT	THAT IS IMPORTANT
-BUT HE DID REALLY WELL	BUT HE DID REALLY WELL
-AND DO WHAT I USED TO DO WHEN I WAS A LITTLE BOY	AND DO WHAT I USED TO DO WHEN I WAS A LITTLE BOY
-I'M STARTING UP A VENUE FOR YANK HOLIDAY MAKERS ON AN ISLAND AT BAHAMAS	I AM STARTING UP A VENUE FOR YANK HOLLIDAY MAKERS ON AN ISLAND AT BEHAMAS
-I COULDN'T READ IT	I COULDN'T READ IT
-EXCEPT AS A LAST RESORT	EXCEPT AS A LAST RESORT
-YOU NEVER KNOW BY THE END OF THE BUILD	YOU AY VER KNOW BY THE END OF THE BUID
-I KNOW IT COMES WITH PLANNING PERMISSION	I KNOW IT COMES WITH PLANNING PERMISSION
-BUT WE'RE GOING TO IMPROVE ON THINGS LIKE THE GREEN ROOF	BUT WE'RE GOING TO IMPROVE ON THINGS LIKE THE GREEN ROOF
-WE'VE GOT A GREAT RELATIONSHIP	WE'VE GOT A GREAT RELATIONSHIP
-WHERE IS THE GAS	WHERE IS THE GAS
-SOME MEMBERS OF THE PUBLIC DON'T QUITE UNDERSTAND LEASEHOLD	SOME MEMBERS OF THE PUBLIC DON'T QUITE UNDERSTAND LEASE HOLD
-IF YOU LIVED IN THE BUILDING	IF YOU LIVED IN THE BUILDING
-WOULD YOU WANT NEW NEIGHBOURS EVERY WEEK OR EVERY FORTNIGHT	WOULD YOU WANT NEW NABOURS EVERY WEEK OR EVERY FORTNIGHT
-BUT I THINK HE'S ALREADY LEARNED SOME REALLY IMPORTANT PROPERTY LESSONS	BUTI THINK HE'S ALREADY LEARNHT SOME REALLY IMPORTANT PROPERTY LESSONS
-CHOOSING A GOOD LOCATION	CHOUSING A GOOD LOCATION
-YOU HAVE TO HOLD YOUR NERVE	YOU HAVE TO HOLD YOUR NERVE
-WHO'S VERY MUCH INTO FAMILY HISTORY	WHOS VERY MUCH INTO FAMILY HISTORY
-WE DON'T WANT TO SPEND MORE THAN	WE DON'T WANT TO SPEND MORETA
-IT CERTAINLY WON'T BE	IT DERTAINITELY WON'T BE
-I THINK SOMETHING DRASTIC NEEDS TO BE DONE	I THINK SOMETHING DRASTIC NEEDS TO BE DONE
-WHAT DO YOU KNOW ABOUT IT	WHAT DO YOU KNOW ABOUT IT
-I'M RIGHT IN SAYING THAT	I'M RIGHT IN FAMO
-TIME HAS PASSED	TIME HADS PASSED
-SO LET'S GO BACK AND FIND OUT	SO LET'S GO BACK AND FIND OUT
-I'M VERY IMPRESSED	MVERY IMPRESSED
-THE BEST BARGAINS	THE BEST BARGAINS
-NOT QUITE AS HIGH	NOT QUITE AS HIGH
-IT'S A PLUS POINT	IT'S A PLUS POINT
-ON THE FACE OF IT	ON THE FACE OF IT
-THE FIRST AND SECOND FLOOR FLATS	THE FIRST AND SECOND FLOR FLATS
-AS A RESULT OF SMOKING	AS A RESULT OF SMOKING
-WE'LL GIVE IT A TRY	WHEN WE GIVN A TRY
-GO TO THE PRESS	GO TO THE BRISH
-LEARNING THE ROPES	NO WON'T
-EIGHT FEET TALL	EIGHT FEET TALL
-AND THE REASON FOR THAT	AND THE REASON FOR THAT
-A LITTLE SAXIFRAGE	A LITTLE SAXOFRAGE
-WHEREVER YOU ARE	WHEREEVER YOU AREON
-IT MAY BE A MINIATURE COMPARED TO THAT	IT MAY BE A MINIATURE COMPARED TO THAT
-I CAN PLANT THEM IN THAT SPOT	I CAN PLANT THEM IN THAT SPOT
-SOMETIMES IT DOESN'T	SOMETIMES IT DOESN'T
-I THINK IT LOOKS GREAT	I THINK IT LOOKS GREAT
-THAT'S QUITE A LARGE LEAF	THAT'S QUITE A LARGE LEAF
-AND IT'S A GREAT WAY TO EAT IT	AND IT'S A GREAT WAY TO EAT IT
-BUT NOW WE HAVE THESE VIRUSES	BUT NOW WE HAVE THESE VIRUSES
-SQUIRREL POX VIRUS	SQUIRAL POCX VIRUS
-CAUSES IT NO HARM	CAUSES IT NO HARM
-BUT NOT FOR ME AS A FARMER	BUT NOT FOR ME AS A FARMER
-IT'S THAT SIMPLE	IT'S THAT A SIMPLE
-THIS REALLY IS A TALE OF TWO CITIES	THIS REALLY IS A TAILE OF TWO CITIES
-IT'S A LONG WAY FROM HOME	IT'S A LONG WAY FROM HOME
-AS YOU ENTER THE REAR PART OF THE SHOP	AS YOU ENTER THE REAR PART OF THE SHOP
-LOTS OF THINGS TO THINK ABOUT	LOTS OF THINGS TO THINK ABOUT
-I'M STILL HAPPY	I'M STILL HAPPY
-YOU MUST HAVE A PERSONAL KEY	YOU MUST HAVE A PERSONAL KEY
-WE WILL OWN IT TOGETHER	WE WILL OWN IT TOGETHER
-IT WILL BE A GREAT INVESTMENT	IT WILL BE A GREAT INVESTMENT
-OR PROPERTIES SHOULD I SAY	OR PROPERTIES SHOULD I SAY
-PRETTY ON THE OUTSIDE	PUT IT ON THE OUTSIDE
-BECAUSE IT WAS OFFICES	BECAUSE IT WAS OFFE SES
-VERY CLOSE BY THE UNIVERSITY	VERY CLOSE BY THE UNIVERSITY
-GROUND FLOOR FLAT	GROUND FLOR FLAM
-I WOULD MARKET THAT	I WOULD MARKET PAER
-ADD ANOTHER TEN ON	AD AN UNDER TE ON
-FOR THIS PROPERTY	FOR THIS PROPERTY
-BUT IN THIS CASE	BUT IN THIS CASE
-ONE BEDROOM APARTMENTS AROUND HERE AT THE MOMENT	ONE BEDROOM APPARTMENT AROUND HERE AT THE MOMENT
-PROBABLY AROUND <unk><unk>	PROBABLY AROUND <unk>
-AND SINCE THE CONVERSION	AND SINCE THE CONVERSION
-REALISTIC VALUE WISE	REALISTIC VANUE WISE
-SHE WAS A FLAWED SHIP	SHE WAS A FLOGD SHIP
-EVEN BEFORE SHE ENTERED THE WATER	EVEN BEFORE SHE ENTERED THE WATER
-VISITING ALMOST ALL PARTS OF THE EMPIRE	VISITING ALMOST ALL PARTS OF THE EMPIRE
-FROM SMALL SHIPS	FROM SMALL SHIPS
-IS IT TRUE SHE WAS	IS IT TRUE SHE WAS
-SOMETIMES IT'S DIFFICULT TO KNOW WHERE	SOMETIMES IT'S DIFFICULT TO KNOW WHERE
-IF YOU INTEND TO BID ON A PLACE	IF O E INTEND TO BID ON THE PLACE
-IT'S HARD TO COME AWAY FROM IT	IT'S HARD TO COME AWAY FROM IT
-IT SEEMS A VERY GOOD LOCATION	IT SEEMS A VERY GOOD LOCATION
-BECAUSE OF THE DEMAND OF THE MARKET	BECAUSE OF THE DEMAND OF THE MARKET
-IT MIGHT BE VIABLE	IT MIGHT BE VINABLE
-THAT'S MY KIND OF LOCATION	THAT'S MY KIND OF LOCATION
-WHAT WAS IT THAT MADE YOU THINK	WHAT WAS IT THAT MADE YOU THINK
-HOW CAN I DO THAT	HOW CAN THI DO THAT
-DESTROYING THE PROPERTY	DESTROYING THE PROPERTY
-PURELY BY CHANCE	PURELY BY CHANCE
-ARE THEY STRUGGLING OR ARE THEY FLUSHED WITH SUCCESS	THEY STRUGLING OR ARE THEY FLUSHED WITH SUCCESS
-HE'S MY BUILDER	HE'S MY BUILDER
-WE PLAYED IN A BAND TOGETHER	WE PLAYED IN A BAND TOGETHER
-TAKING HORTICULTURE TO THE EXTREME	TAKING HORTICULTURE TO THE EXTREM
-THE WHOLE GARDENS ARE EXTRAORDINARY AND	THE WHOLE GARDENS ARE EXTRAORDINARY AND
-LIKE HUNDREDS OF THOUSANDS OF PEOPLE DO EVERY YEAR	LIKE HUNDREDS AN THOUSANDS OF PEOPLE DO EVERY YEAR
-BUT NOW THERE'S MORE PROTECTION	BUT NOW THERE'S MORE PROTECTION
-ABOUT <unk><unk> YEARS AGO	ABOUT <unk> YEARS AGO
-AND A COUPLE OF WEEKS AGO	AND A COUPLE OF WEKS AGO
-ENJOY THE SUMMER	ENJOY THE SUMMER
-ARE THEY RELATIVES OF YOURS	ARE THEY RELLATIVES OF YOURS
-NOT JUST A HOTEL	NOT JUST A HOTELL
-BUT THE WALDORF ASTORIA	BUTTHE WARD OF HISTORIA
-THEY WOULD BE ABLE TO GO BACK	THEY WOULDNT BE ABLE TO GO BACK
-NOT JUST A HOTEL	NOT JUST A HOTELL
-NOT JUST IN THIS TOWN	NOT JUST IN THIS HOME
-EVERY SEPTEMBER THIS PLACE WOULD BE TRANSFORMED INTO WHAT WAS	EVERY SEPTEMBER THIS PLACE WILD BE TRANSFORMED INTO WHAT WAS
-FOR OVER <unk><unk><unk> YEARS	FOR OVER <unk> YEARS
-SO FROM HIS VANTAGE POINT	SO FROM HIS VANTAGE POINT
-THERE IS NO AIR SO THERE IS NO SOUND	THERE IS NO AIRE SO THERE IS NO SOUND
-WITH ONE OF THE ROOMS UPSTAIRS	WITH ONE OF THE ROOMS UPSTAIRS
-WHICH IS ONLY <unk><unk> MINUTES AWAY	WHICH IS ONLY TEN MINUTES AWAY
-THIS IS A SWEET	THIS IS A SWEET
-BEFORE WE ALL GET TOO EXCITED ABOUT THAT PROSPECT	BEFORE WE ALL GET TOO EXCITED ABOUT THAT PROSPECT
-IT CAN BE QUITE EXPENSIVE	IT CAN BE QUITE EXPENSIVE
-IT'S A MULTICULTURAL	IT'S A MULTICULTURAL
-ON THE FACE OF IT	ON THE FACE OF IT
-BUYING A NEW BUILD PROPERTY SHOULD MEAN YOU DON'T HAVE ANY WORK TO DO	BUYING A NEW BUILD PROPERTY SHOULD MEAN YOU DON'T HAVE ANY WORK TO DO
-SOME ISSUES WITH POTENTIAL DAMP	SOME ISUES WITH POTENTIAL DAMP
-A GREAT PLACE FOR HIM TO BE	GREAT PLACE FOR HIM TO BE
-WE HAVE TO PAY FOR THAT	WE HAVE TO PAY FOR THAT
-SO RATHER THAN JUST RELYING ON THIS INFORMATION	SO RATHER THAN JUST RELIYING ON THIS INFORMATION
-ALL OF THE BRAIN IS COMBINING ALL THE DIFFERENT SENSES	ALL OF THE BRAIN IS COMBINING ALL THE DIFERENT SENSES
-WHO DOESN'T HAVE VISION	WHO DOESN'T HAVE VISION
-SO YOU HAVE YOUR BATHROOM IN THIS AREA AND THEN	SO YOU HAVE YOUR BATHROOM IN THIS AREA AND THEN
-WHEN I SEE THAT	WHEN I SEE THAT
-AND I WOULDN'T BE SURPRISED	AND I WOULDN'T BE SURPRISED
-THIS IS VERY SIMILAR	THIS WAS VERY SIMILAR
-OR HAVE THEY ENCOUNTERED PROBLEMS	OR HAVE THEY ENCOUNTERED PROBLANS IT
-AND TURNING UPSTAIRS INTO AN OPEN PLAN AREA IS DEFINITELY THE WAY TO GO	AND TURNING UPSTAIRS INTO AN OPEN PLANT AREA IS DEFINITELY THE WAY TO GO
-TRAVEL THREE MILES FURTHER WEST AND YOU DO GET MORE FOR YOUR MONEY	TRAVEL THREE MILES FURTHER WEST AND YOU DO GET MORE FOR YOUR MONEY HERE
-IF THAT WAS FITTED OUT	IF THAT WAS FITTED OUT
-WILL IT BE A FUN	WILL IT BE A FUN
-FABULOUS PROJECT FOR THEM	FABULOUS PROJECT FOR THEM
-WILL IT BE ABOVE PAR	WILL IT BE ABOVE BAR
-THAT'S AN OPTION	THAT'S AN OPTION
-THAT'S VERY BAD NEWS	THAS VE BAD ES
-AND THAT'S REALLY WELL DONE	AND THAT'S REALLY WELL DONE
-IT TAKES HARD WORK	IT TAKES HARD WORK
-AND THINGS LIKE THAT WE'LL DO OURSELVES	N THINGS LIKE THAT WE'LL DO OURSELVES
-THIS AUCTION LOT HAS IT IN SPADES	THIS AUCTION LOT HADS IT IN SPADE
-IF YOU CAN'T GO UP	IF YOU CAN'T GO UP
-IT'S COSMETICALLY IMPROVED QUITE DRASTICALLY HERE	IT'S COSMETICALLY IMPROVED QUITE DRASTICALY HERE
-ON THE SECOND FLOOR	ON THE SECOND FLOR
-IT'S VERY CLEAN	IT'S VERY CLEAN
-THE APPLIANCES HAVE BEEN DONE NICELY	THE APPLIANCES HAVE BEEN DONE NICELY
-IT COULD BE YOUR PASSPORT TO A SMALL FORTUNE	IT COULD BE YOUR PASPORT TO A SMALL FORTUNE
-IN OTHER WORDS MADE THE BASE	IN OTHER WORDS MADE THE BASE
-GARAGE AND TECHNO FUNK	GARIAGE AND TECNO FUNK
-END OF NOVEMBER	END OF NOVEMBER
-LOOK AT ME AT ALL	LOOK AT ME AT ALL
-BECAUSE I MUST SAY	BECAUSE I MUST SAY
-THE FOLLOWING SPRING	THE FOLOWING SPRING
-OVER THE LAST FEW WEEKS	OVER THE LAST TWO WEEKS
-AND THAT'S ALL ABOUT	AND THAT'S ALL ABOUT
-I TEND TO USE NATURAL BRITISH STONE	I TEND TO USE NATURAL BRITISH STONE
-IF YOU TRAVEL THE WORLD	IF YOU TRAVEL THE WORLD
-HERE IN THIS GREENHOUSE AND THE OTHER ONE	HERE AT THIS GREENHOUSE AND THE OTHER ONE
-AS LONG AS YOU'RE CALM	AS LONG AS YOU'RE CALM
-IS IT ALL GOOD NEWS	IS IT ALL GOOD NEWS
-WHY ARE MANY SUPERMARKETS STOPPING SELLING CAGED EGGS	WHY ARE MANY SUPERMARKETS STOPING SELLING CAGED EGS
-FREE RANGE GOOD	FREE RANGE GOODS
-TO MAKE IT WORK	TO MAKE IT WORK
-TAKING IT ALL IN	TAKING EXTONAL I
-ONE NORTHERN WELSH RULER	ONE NORTHERN WELSH RULER
-FOR THE FIRST TIME	FOR THE FIRST TIME
-FORMALLY ACKNOWLEDGED HIS TITLE AS THE PRINCE OF WALES	FORMARLY ACNOLEGED HIS TITLE AS THE PRINCE OF WALES
-AND HERE ON TOP OF THE EAGLE TOWER	ANDHERE ON TOP OF THE EGLE TOWER
-WHICH IS NOW IN SYRIA	WHICH IS NOW IN SIRIA
-ACCORDING TO LEGEND	ACCORDING TO LEGEND
-IT WAS A BLANK CANVAS	IT WAS A BLANK CANVAS
-IN THE FIRST YEAR ALONE	IN THE FIRST YEAR ALONE
-AS SHE LAY DYING	AS SHE LAY DYING
-THE GARRISON RESPONDED WITH A HAIL OF ARROWS	THE GARISON RESPONDED WITH A HAL OF AROWS
-AND WHEN YOU'RE MOVING THROUGH ENEMY TERRITORY	ANDWHEN YOU'RE MOVING THROUGH ENEMY TERRITORY
-THE GARRISON TRIED TO SURRENDER BEFORE HE COULD TRY OUT HIS NEW TOY	THE GARISON TRIED TO SERRENDER BEFORE HE COULD TRY OUT HIS NEW TOY
-HE ORDERED THEM BACK INSIDE	HE ORDERED THEM BACK INSIDE
-YOU DON'T DESERVE MY GRACE	YOU DON'T DESERVE MY GRACE
-TAKING NO CHANCES	TAKING NO CHANCES
-TEARING IT TO THE GROUND	TEAIRING IT TO THE GROUND
-ACCORDING TO LEGEND	ACCORDING TO LEGEND
-THERE WAS A PORTCULLIS	THERE WAS A PORT COUS
-PEOPLE SAT ON THE STAIRS	PEOPLE SAT ON THE STAIRS
-WHICH IS IDEAL FOR IT	WHICH IS IDEAL FOR IT
-SOMEONE CAME OUT OF A NEIGHBOURING PROPERTY AND SAID	SOMEONE CAME OUT OF A NABOURING PROPERTY AND SAID
-VERY EXPENSIVE SHED	VERY EXPENSIVE SHED
-WITHOUT MY SUNGLASSES	WITHOUT MY SUDERN BUSSES
-EVEN THE FOREPLAY	EVEN THE FULL BLE
-AND THEN WHEN IT CAME TO HIS SIGNATURE	ANDTHEN WHEN IT CAME TO HIS SIGNATURE
-IT'S A BAKING SHOW	IT'S A MAKING SHOW
-SHE'S PUSHED HERSELF	SHE'S PUSHED HERSELF
-IT SOUNDS WRONG	IT SOUNDS WRONG
-WHAT HAVE YOU LEARNED	WHAT HAVE YOU LEARNED
-CHILDREN AND ADULTS ALIKE	CHILDREN AND ADULTS ALIKE
-THAT'S A SHOCKING PERCENTAGE	THAT'S A SHOCKING PERCENTAGE
-I'M JUST HOPEFUL	AM UST AL HOPEFUL
-WE HAVE A LOT LESS ATMOSPHERE ABOVE US	WE HAVE A LOT LESS ATMOSPERE ABOVE US
-NO LONGER WOULD MEASUREMENT BE BASED ON THE HUMAN BODY	NO LONGER WOULD MESURMENT BE BASED ON THE HUMAN BODY
-NO LONGER DEPENDENT ON THE SUN	NO LONGER DEPENDENT ON THE SUN
-WHILE I'M SURROUNDED BY WATER RIGHT NOW	WHILE I'M SURROUNDED BY WATER RIGHT NOW
-THANKS FOR WATCHING	THANKS FOR WATCHING
-OUR CONTINUED PRESSURE	AFTER CONTINUED PRESSURE
-AND INFLAMMATORY PHOTOGRAPH	AN INFLAMITORY PHOTOGRAPH
-INFLAMMATORY OR TERRIBLE IMAGES	INFLAMATORY OR TERIBLE IMAGES
-WE HAVE TO LOOK AT HOW SAUDI ARABIA	WE HAVE TO LOOK AT HOW SOUDI ARABIA
-IN TERMS OF BRITAIN	IN TERMS OF BRITAIN
-TO THE AVERAGE PERSON	TO THE AVERAGE PERSON
-THERE'S A FAIR CHANCE YOU WILL BE	THERE'S A FAIR CHANCE YOU WILL BE
-ABOUT <unk> MILLION	ABOUT T MILLION
-WHEN IT COMES TO THE ISSUE OF EQUAL MARRIAGE	WHEN IT COMES TO THE ISSUE OF EQULE MARRIAGE
-TO ALLOW BAD SURVEILLANCE TO WITHER ON THE VINE	TO ALLOW BAD SURVALANCE TO WHITHER ON THE VINE
-IF YOU DON'T LIKE THE SLOGAN	IF YOU DON'T WAKE THIS SLOGAN
-YOU HAVE A PROBLEM WITH IT	YOU HAVE A PROBLEM WITH IT
-IN ALL SERIOUSNESS	IN ALL SERIOUSNESS
-BUT IT HAS ESTABLISHED THE INFRASTRUCTURE OF A POLICE STATE AND IT COULD BE OPEN TO ABUSE IN THE	BUT IT HAS ESTABLISHED THE INFRASTRUCTURE OF A POLICE STATE AND IT COULD BE OPEN TO ABBUSE IN THE
-I HAVE NOTHING TO HIDE	I HAVE NOTHING TO HIDE
-BETTER STREET LIGHTING CAN HELP	BITTER STREET RLITING CAN HELP
-THE NEXT GENERATION	THE NEXT GENERATION
-I'M NOT JEREMY VINE	I'M NOT JEREMY VINE
-STANDING IN FOR YOUR REGULAR HOST FOR ONE WEEK ONLY	STANDING IN FOR YOUR REGULAR HOST FOR ONE WEEK ONLY
-AND WHAT A PRIVILEGE THAT IS	AND WHAT A PRIVILEGE THAT IS
-IF YOU'RE WATCHING	IF YOU'RE WATCHING
-THAT'S ALL FOR THIS WEEK	THAT'S AL FOR THIS WEEK
-DON'T YOU AGREE	BUT D YOU AGREE
-ACROSS <unk><unk> MILES	ACROSS <unk> MILES
-A FLOATING HOTEL	A FLOTING HOTELL
-BUT BEFORE THAT	BUT BEFORE THAT
-I CAN'T BELIEVE IT	I CAN'T BELIEVE IT
-IN THE FORM OF A DESSERT PLATE	IN THE FORM OF A DESERT PLATE
-REGARDING ONE OF BRITAIN'S MOST NOTED	REGARDING ONE OF BRITIN'S MOST NOTED
-THAT MAKES A GRAND TOTAL OF SIX	THAT MAKES A GRAND TOTALE OF SIX
-IN A MODERN HOUSE	IN A MODERN HOUSE
-WITHOUT FURTHER ADO	WITHOUT FURTHER ADO
-THE PERFECT PINT	THE PERFECT BIT
-ANYTHING COULD HAPPEN	ANYTHING COULD HAPPEN
-THEY'RE ALL ABOUT THE SAME	THEY'RE ALL ABOUT THE SAME
-WE HAVE RUN OUT OF TIME	WE HAVE RUN OUT OF TIME
-LOUISE AND KEVIN	LOUESE AN KEVEN
-NOW THEY ARE GATHERING	NOW THEY ARE GATHERING
-ALL LIFE IN THE ARCTIC	ALL LIFE IN THE AMTIC
-COULD WE ARRANGE THAT	COULD WE ARRANGE THAT
-I WAS FINE YESTERDAY	I WAS FLING YESTERDAY
-LET'S NOT MESS ABOUT	LET'S NOT MESS ABOUT
-WHAT I CAN TELL YOU	WHAT I CAN TELL YOU
-THIS IS SOUTH WELL	THIS IS SOUTHWELL
-THE ROMANS FELT THEIR PRESENCE WAS STRONG ENOUGH HERE	THE ROMANS FELT THEIR PRESENCE WAS STRONG ENOUGH HERE
-TO SAY TO THE KING	TO SAY TO THE KING
-WHEN HE WAS STAYING AT THE PALACE	WHEN HE WAS STAYING AT THE PALLACE
-HOME TO AN ANIMAL THAT IS RIGHT AT THE TOP OF THE FOOD CHAIN	OE TO AN AIMAL THAT I IT AT TE TO OF THE FODCAN
-LITERALLY TWO MINUTES FROM THE AIRPORT	LITERALLY TWO MINUTES FROM THE AIRPORT
-MAYBE MORE OF STEEL AND IRON	MAYBE MORE OF STEAL AND IRNAN
-WHICH MELTS MORE ICE	WHICH MOULNTS MORE ICE
-THINK ABOUT THE MELTING SEA ICE	THINK ABOUT THE MELTING SEA ICE
-AGAIN OPEN TO THE ELEMENTS	AGAIN OPEN TO THE ELEMENTS
-VERY ATTRACTIVE YOUNG WOMAN	VERY ATTRACTIVE YOUNG WOMAN
-AND THAT HAD AN IMPORTANT EFFECT	AND THAT HAD AN IMPORTANT EFFECT
-PROVIDED BY THE RAILWAYS	PROVIDED BY THE RAILWAYS
-THE GREAT THING ABOUT THE RAILWAYS IS	THE GREAT THING ABOUT THE RAILWAYS I
-EVERYONE ARRIVES AT THE SAME PLACE AT THE SAME TIME	EVERYONE ARRIVES AT THE SAME PLACE AT THE SAME TIME
-THERE IS ONE THING	HERE IS ONE OF THEM
-IT MIGHT BE BONFIRE NIGHT	IT MIGHT BE BOMFINIGHT
-OF COURSE IT WILL	OF COURSE IT WILL
-TODAY'S CONTESTANTS ARE	DE TES CAN JU GO ON
-THANKS FOR WATCHING	THANKS FOR WATCHING
-I FEEL GUILTY WHEN I'M AT HOME	I FEEL GUILTY WHEN I'M AT HOME
-I WILL ALWAYS NEED YOU	I WILL ALWAYS NEED YOU
-THANK YOU VERY MUCH	THANK YOU VERY MUCH
-AS YOU MIGHT SAY	AS YOU MIGHT SAY
-BUT MY GOODNESS	BUT MY GOODNESS
-ALSO KNOWN AS A TANDEM	ALSO KNOWN AS A TANDOM
-SO I THINK IT IS A PIECE OF VERY ONE DIMENSIONAL LEFT WING PROPAGANDA	SO I THINK IT IS A PIECE OF VERY ONE DIMENTIONAL LEFT WING PROPAGANDA
-THERE IS A HUGE CROSSOVER BETWEEN THE TWO	THERE IS A HUGE CROSS OVER BETWEEN THE TWO
-TAX CREDITS ARE BASICALLY BENEFITS	TAX CREDITS ARE BASICALLY BENEFITS
-FORMERLY KNOWN AS SIMON	FORMERLY KNOWN AS SIMON
-I FEEL LIKE THIS	I FEEL LIKE THIS
-BECAUSE THAT'S HOW YOU ARE A PART OF SOCIETY	BECAUSE THAT'S HOW YOU WERE A PART OF SOCIETY
-BEFORE I CAME OUT	BEFORE I CAME OUT
-OR MORE CORRECTLY COUNCILS	OR MORE CORRECTLY COUNCILS
-ESPECIALLY AS IT RELATES TO CHILDREN	ESPECIALLY AS IT RELATES TO CHILDREN
-THEY ARE CHILDREN	THEY ARE CHILDREN
-I DO HOPE YOU'LL JOIN US THEN	I DO HOPE YOUWILL JOIN US THEN
-ISLAM ALLOWS POLYGAMY	ISLAM ALOWS POLIGOMY
-IF YOU HAVEN'T CAUGHT IT YET	IF YOU HAVEN'T CAUGHT IT YET
-HERSELF CURRENTLY LEARNING TO SIGN	HERSELF CURRENTLY LEARNING DESIGN
-SOME PEOPLE HERE TONIGHT PREFER SUBTITLES	SOME PEOPLE HERE TONIGHT PREFER SUB TITLES
-SURELY AS A MATTER OF PRINCIPLE	SURELY AS A MATTER OF PRINCIPLE
-IF YOU'RE WATCHING	IF YOU'RE WATCHING
-STANDARD RATES APPLY	STARDARD RACE AND LINE
-HASN'T TIME FLOWN	HAS TIME FLOWN
-IN THE MEANTIME	BUT THE MEANTIMES
-WHEN MY HUSBAND AND I ARE NOT AROUND	WHEN MY HUSBAND AND I ARE NOT ARO
-ASKING FOR PERMISSION	ASKING FOR PERMISSION
-AND IT WAS TOTALLY NORMAL	AND IT WAS TOTALLY NORMAL
-THAT SOUNDS LIKE A PRETTY CRAZY JOB FOR ANYONE TO BE DOING	THAT SOUNDS LIKE A PRETTY CRAZY JOB FOR ANYONE TO BE DOING
-ALL MY FINGERS WERE HANGING OFF	ALL MY FINGERS WERE HANGING OF
-I WENT TO USE MY RIGHT ARM	I WENT TO USE MY RIGHT ERM
-HE WAS SHOT AND KILLED	HE WAS SHOT AND KILLED
-IF I DIDN'T HAVE HER	IF I DIDN'T HAVE HER
-BUT AT THE SAME TIME	BUT AT THE SAME TIME
-IN THE BASEMENT	IN THE BASEMENT
-THEY HAVEN'T GONE FAR	THEY HAVEN'T GONE FAR
-TIME NOW FOR ONE OF THE GREATEST TV COMEBACKS OF OUR TIME	TIME NOW FOR ONE OF THE GRATEST TV COMEBACKS OF OUR TIME
-HAROLD IN NEIGHBOURS	HARALD AND NEBOURS
-WE NEED TO START LAYERING	WE NEED TO START LARING
-ONE WAS A PILOT	ONE WAS A PIROT
-SURRENDER WAS NOT AN OPTION	SUERRENDER WAS NOT AN OPTION
-MANY WERE TEENAGERS ABOUT TO GET THEIR FIRST TASTE OF WAR	MANY WERE TENAGERS ABOUT TO GET THEIR FIRST TASTE OF WAR
-I'M TERRIBLY SORRY	I'M TOTIBLY SORRY
-HE DIED THAT VERY FIRST DAY	HE DIED THAT VERY FIRST DAY
-THIS IS ONE OF THE QUESTIONS	THIS IS ONE OF THE QUESTIONS
-CELEBRATING <unk><unk><unk> YEARS OF WAR FILMS	CELEBRATING  YEARS OF WAR FILMS
-WHERE I'M GOING	WHERE I'M GOING
-BUT TEN YEARS AGO	BUT TEN YEARS AGO
-IT COULD END TONIGHT	IT COULD END TONIGHT
-SHE NEEDS TO MAKE SURE THAT	SHE NEEDS TO MAKE SURE THAT
-THEY DON'T CALL THEM TEAM POCKET ROCKET FOR NOTHING	THEY DON'T CALL THEM TEM POCKET ROCKET FOR NOTHING
-YOU'VE PROBABLY GOT YOURS	YOU'VE PROBABLY GOT YOURS
-AND THE WEATHER HAS BEEN PERFECT	AND THE WEATHER HAS BEEN PERFECT
-COURAGE UNDER FIRE	COURAGE UNDER FIRE
-MOST OF HIS LIFE	MOST OF HIS LIFE
-THIS IS THE LORD ASHCROFT GALLERY	THIS IS THE LORD ACHCROFT GALLERY
-TRAPPED UNDER HEAVY ARTILLERY FIRE	TRAPED UNDER HEAVY ARTILLARY FIRE
-TEN DAYS BEFOREHAND	TEN DAYS BEFORE HAND
-THE PRESIDENT ELECT HAS MET WITH PRESIDENT OBAMA	THE PRESIDENT ELECT HAS MET WITH PRESIDENT OBAMA
-MR TRUMP TAKES OFFICE IN JANUARY	MR TRUMP TAKES OFFICE IN JANUARY
-TODAY THEY TALKED ABOUT THE PROCESS OF TRANSITION	TODAY THEY TALK ABOUT THE PROCESS OF TRANSITION
-WE HAVE ALL THE USUAL SUSPECTS	WE HAVE ONL THE USUAL SUSPECTS
-ANYWHERE IN THE WORLD	ANYWHERE IN THE WORLD
-DEMONSTRATES THE VALUE OF GREEN SPACE	DEMONSTRATES THE VALUE OF  GREEN SPACE
-SO TEN CUBIC METRES	SO TE CUBIC METORES
-I JUST COLLAPSED	I JUST COLLAPSED
-AS WE APPROACH REMEMBRANCE SUNDAY	AS WE APPROCH REMEMBERANCE SUNDAY
-I'VE BEEN INVOLVED WITH THE MILITARY	I'VE BEEN INVOLVED WITH THE MILITARY
-THE ARMED FORCES	THE ARMED FORCES
-THAT KNOCK ON THE DOOR IS A MOMENT THEY WILL NEVER FORGET	THAT NOCK ON THE DOR IS A MOMENT THEY WILL NEVER FORGET
-WHO WAS KILLED IN AFGHANISTAN	WHO WAS KILLED IN AFGANISTAN
-ON A ROUTINE VISIT TO AN IRAQI POLICE STATION	ON A RUTEN VISIT TO AN IRACKY POLICE STATION
-KILLING HIM AND FIVE FRIENDS	KILLING HIM AND FIVE FRIENDS
-IT WON'T TAKE A MOMENT	IT WON'T TAKE A MOMENT
-SO WHAT IS THE ETIQUETTE	SO WHAT IS THE ETTICET
-WHICH IS A SHAME	WHICH IS A SHAME
-BETWEEN THEM NOW	BETWEEN THEM NOW
-I HAVE HAD MY FITTING NOW	I HAVE HAD MY BITING NOW
-MR KHAN SPEAKING	MR CAN SPEAKING
-IF WE HAVE LEARNED ONE THING OVER THE PAST YEAR	IF WE HAVE LEARND ONE THING OVER THE PAST YEAR
-I DON'T REALLY WANT TO GO	I DON'T REALLY WANT TO GO
-RISING ABOVE IT	RISING ABOVE IT
-THE OLYMPIC SWIMMER	THE OLYMPIC SWIMER
-I WISH I WAS MORE LIKE YOU	I WISH I WAS MORE LIKE YOU
-WHY DON'T WE ALL JUST GET ALONG	WHY DON'T WE ALL JUST GET ALONG
-A TRIBAL NATION	A TRIBALE NATION
-WHICH UPSET SOME OF OUR FEMALE RESIDENTS	WHICH UPSETS SOME OF OUR FEMALE RESIDENTS
-THANKS FOR WATCHING	THANKS FOR WATCHING
-PUERTO RICAN STYLE	PORTORECAN STLE
-IT WAS REALLY NICE	IT WAS REALLY NICE
-YOU WON'T HAVE LONG	WOU WON'T HAVE NON
-ON THIS REMEMBRANCE WEEKEND	ON THIS REMEMBERANCE WEEKEND
-AN OPPORTUNITY TO PAY TRIBUTE TO ALL MEMBERS OF THE ARMED FORCES	AN OPPORTUNITY TO PAY TRIBUTE TO ALL MEMBERS OF THE ARMED FORCES
-IF YOU'VE GOT IT	IF YOU'VE GO IN
-WE WOULD LOVE TO SELL IT	WE WOULD LOVE TO SELL IT
-WE WOULD LOVE TO SEE YOU	WE WOULD LOVE TO SEE YOU
-ONLY SEVEN PLACES REMAIN	ONLY SEVEN PLACES REMAIN
-LIKE MANY OTHERS	LIKE MANY OTHERS
-GREAT LEONARD COHEN	GREATE LENARD COWEN
-I LOVE WEDDINGS	I LOVE WEDDINGS
-I'VE GOT A BETTER IDEA	I'VE GOT A BETTER IDEA
-WHY DON'T WE ALL OBJECT	WHY DON'T WE ALL THERM  CECK
-THAT WAS AMAZING	THAT WAS AMAZING
-IT WAS AN INCREDIBLE PERFORMANCE	IT WAS AN INCREDIBLE PERFORMANCE
-IT WAS INCREDIBLE ENTERTAINMENT	IT WAS INCREDIBLE ENTERTAINMENT
-UP UNTIL LAST WEEK	UP UNTIL LAST WEEK
-THE MAN TAKES THE LEAD	THE MAN TAKES THE LEAD
-IT'S TIME NOW FOR EVERYTHING IN BETWEEN	IT'S TIME NOW FOR EVERYTHING IN BETWEEN
-I REALLY APPRECIATE IT	I REALLY APPRECIATE IT
-IT'S ALL BASED ON THIS <unk><unk> PAGE REPORT PREPARED FOR THE EUROPEAN COMMISSION	IT'S ALL BASED ON THIS <unk> PAGE REPORT PREPARED FOR THE EUROPEAN COMMISSION
-BUT WHEN YOU LOOK INSIDE	BUT WHEN YOU LOOK INSIDE
-THEY GET LOST ON THE WAY HOME	THEY GET LOST ON THE WAY HOME
-AND YOU'VE GOT EVERY RIGHT TO BE	AND YOU'VE GOT EVERY RIGHT TO BE
-HAVING SAID THAT	HAVING SAID THAT
-THAT WAS FAST AND FURIOUS	THAT WAS FAST AND FURIOUS
-DONE AND DUSTED	DONE AND DUSTED
-THAT'S NOT AN ANCIENT ROMAN MASK	THAT'S NOT AN ANCIENT ROMAN MASK
-HE'S JAPANESE MADE	HE'S JAPANESE MADE
-WHICH A LOT OF THEM WERE	WHICH A LOT OF THEM WERE
-OUR JOURNEY ISN'T OVER YET	OUR JOURNEY ISN'T OVER YET
-AND IT'S NOT JUST ANY OLD TUESDAY	AD IT'S NOT JUST ANY OLD TUSDAY
-WHO KNEW THAT ONE MAN	WHO KNEW THAT ONE MAN
-GRAHAM BARON ASH	GREAM BARON ASH
-AND THEY WERE THE FIRST PEOPLE	AND THEY WERE THE FIRST PEOPLE
-EARLIER THIS MONTH	EARLIER THIS MONTH
-IT WAS BRILLIANT	IT WAS BRILIANT
-FURNITURE OR OBJECTS LIKE THAT	FURNITURE O OBJECTS LIKE THAT
-IT WAS MADE IN GERMANY	IT WAS MADE IN GERMANY
-NO ONE WOULD LOOK TWICE	NO ONE WOULD LOOK TWICE
-AND I'M PRETTY SURE HIS PUSH BIKE CAME IN VERY HANDY	AND I'M PRETTY SURE HIS PUSH BIKE CAME IN VERY HANDY
-THEY WERE SO INSPIRED BY IT	THEY WERE SO INSPIRED BY IT
-CHECK THE DETAILS ON OUR WEBSITE	CHECK THE DETAILS ON OUR WEBSITE
-LEARN AS MUCH AS POSSIBLE	LEARN AS MUCH AS POSSIBLE
-KEEP GOING ON ABOUT THIS	KEEP GOING ON ABOUT THIS
-I DO NOTHING WRONG	I DO NOTHING WRONG
-WHAT DO YOU THINK	WHAT DO YOU THINK
-THIS IS WHERE THE SURPRISES HAPPEN	THIS IS WHERE THE SURPRISES HAPPENE
-IT'S TIME TO RETURN TO WOLVERHAMPTON	IT'S TIME TO RETURN TO WART HAMPTIR
-THEY DECIDED TO TIE THE KNOT	THEY DECIDED TO TIY THE NOT
-EVERYWHERE YOU GO AROUND HERE	EVERYWHERE YOU GO AROUND HERE
-WE HAVE SOME UNFINISHED BUSINESS TO DO IN THE AUCTION ROOM	WE HAVE SOME UNFINISHED BUSINESS TO DO IN THE AUCTIONROOM
-WE HAVE GONE DIGITAL	WE HAVE GONE DIGITAL
-AND AFTER REACHING OUT TO HIM ON THE SHOW	AND AFTER REACHING OUT TO HIM ON THE SHOW
-RUN FOR COVER IF YOU CAN	RUN FOR COVER IF YOU CAN
-THEY ARE UNDER A LOT OF STRESS	THEY ARE UNDER A LOT O STRESS
-WITH THAT IN MIND	WE CAN RITE
-WELCOME TO THE TOWER	WELCOME TO THE TOWER
-WAS IT YOUR CHOICE	WAS IT YOUR CHOICE
-YOU REALLY FEEL A PART OF IT	YOU REALLY FEEL A PART OF IT
-SO WONDERFUL TO SEE THAT	SO WONDERFUL TO SEE THAT
-TALKING ABOUT THIS	TALKING ABOUT THIS
-FOR ME IT DOESN'T MAKE SENSE	FOR ME IT DOESN'T MAKE SENSE
-IF WE HAVE A BELIEF IN REINCARNATION	IF WE HAVE A BELIEFE IN REINCARNATION
-EVEN THOUGH HER FATHER AT THAT TIME DISAGREED	EVEN THOUGH HER FATHER AT THAT TIME DIS AGREED
-SO WHEN THE BODY IS BROUGHT BACK	SO WHEN THE BODY IS BROUGHT BACK
-MY FIRST GRANDDAUGHTER	MY FIRST GRANDDAUGHTER
-NON VIOLENT OFFENCES	NON VIOLENT OFFENES
-THERE ARE A LOT OF PEOPLE	THERE ARE LOT OF PEOPLE
-AROUND THE WORLD	AROUND THE WORLD
-BUT I COME ACROSS TRAINING PRISONS NOW	BUT I COME ACROSS TRAINING PRISONS NOW
-THE COST OF THIS FAILURE	AV LOOK AT THE COST OF THIS FAILURE
-THE AVERAGE COST OF KEEPING A PERSON IN PRISON IS <unk><unk>	THE AVERAGE COST OF KEEPING A PERSON IN PRISON IS <unk>
-THE MOST FAMOUS OF THEM ALL HAVE TO BE THE WORKS OF THE BRONTE SISTERS	THE MOST FAMOUS OF THEM ALL HAVE TO BE THE WORKS OF THE BRONTIY SISTERS
-IN TERMS OF FIRE SERVICE RESOURCES	IN TERMS OF FIRE SERVICE RESOURCES
-RATHER THAN USING DRUGS	RATHER THAN USING DRUGS
-THAT'S GOOD NEWS	THAT'S GOOD NEW
-THE BIG QUESTION IS	THE BIG QUESTION IS
-HAVE YOU ORDERED YOURS YET	HAVE YOU ORDERED YOURS YET
-BUT THESE ARE ONE OF THE MOST WARY BIRDS IN THE WORLD	BUT THESE ARE ONE OF THE MOST WARY BIRDS IN THE WORLD
-THAT'S NOT WHAT I WAS EXPECTING AT ALL	THAT'S NOT WHAT I WAS EXPECTING AT ALL
-I LOVE SYLLABLES	I LOVE SIIO
-AND YOU KNOW WHAT THIS MEANS	AND YOU KNOW WHAT THIS MEANS
-WE MIGHT FIND SOME MARITIME MEMORABILIA	WE MIGHT FIND SOME MARIATIME MEMORABILIA
-IT'S A WONDERFUL	IT'S A WONDERFUL
-STOCKS AND SHARES	STOCKS AND SHARES
-AND IN THE PROCESS OF ME NOT OFFENDING GOD	AND IN THE PROCESS OF ME NOT OFFENDING GOD
-I DON'T CARE WHAT THE COST IS	I DON'T CARE WHAT THE COST IS
-BECAUSE THE WHOLE POINT OF <unk> <unk><unk> IS THAT IT'S THE JUSTIFICATION FOR THE POLICE STATE	BECAUSE THE WHOLE POINT OF  IS THAT IT'S THE JUSTIFICATION FOR THE POLICE STATE
-AND I GUESS THAT'S WHAT'S HAPPENING HERE	AND I GUESS THAT' WHAT'S HAPPENING HERE
-AND FROM WHAT I'VE HEARD	AND FROM WHAT I'VE HEARD
-AND IT'S ALL ABOUT THE CONTEXT	AND IT'S ALL ABOUT THE CONTEXT
-GUESS WHAT I'M TALKING ABOUT RIGHT NOW	GUESS WHAT I'M TALKING ABOUT RIGHT NOW
-HERE TO GIVE US A RUNDOWN OF THE GREATEST FACIAL CHOREOGRAPHY EVER SEEN ON THE BOX	HERE TO GIVE US A RUNDOW OF THE GREATEST FACIAL COREOGRAPY EVER SEEN ON THE BOX
-FACE TO REALLY TELL THE STORY	FACE TO REALLY TELL THE STORY
-GET YOURSELF OVER HERE BECAUSE FIRST UP TONIGHT	GET YOURSELF OVER HERE BECAUSE FIRST UP TONIGHT
-IF YOU WANT TO KNOW WHAT THE KIDS ARE LISTENING TO THESE DAYS	IF YOU WANT TO KNOW WHAT THE KIDS ARE LISTENING TO THESE DAYS
-LOUISE AND KEVIN	LEWISE AND KEVEN
-AND IT'S THE ONE THAT	AND IT'S THE ONE THAT
-THAT WAS BEAUTIFUL	THAT WAS BEAUTIFUL
-ON INTERNATIONAL WOMEN'S DAY	ON TH INTERNATIONAL WOMEN'S DAY
-AND WENT ON THE ORDINARY WING	AND WENT ON THE ORDINARY WING
-THE DUKE OF GLOUCESTER	THE DUKE OF GLOSTOR
-AND YOU KNOW THAT	AND YOU KNOW THAT
-WE HAVE THE DELECTABLE NEIL JONES	WE HAD THE DELECTABLE NEL JONES
-BUT DON'T WORRY	BUT DON'T WORRY
-THAT WAS SOME TIME AGO	THAT WAS SOME TIME AGO
-REAL FRIENDS THAT CARE ABOUT ME	REAL FRIENDS THAT CARE ABOUT ME
-CLEARLY THEY DO	CLEARLY THEY DO
-YOU DON'T NEED IT	YOU DON'T NEED IT
-THE REASON BEING	THET RETAM BIITY
-THE PRESIDENT'S CHAIR	THE PRESIDENT'S CHAIR
-NOT TO THINK FOR THEMSELVES	NOT TO THINK FOR THEMSELVS
-THAT IS A FIRST	THAT IS AR FIRST
-WITH MY BLESSING	WITH MY BLESSING
-THAT'S THE MESSAGE FROM INDEPENDENT ECONOMISTS AFTER THE CHANCELLOR'S AUTUMN STATEMENT	THAT'S THE MESSAGE FROM INDEPENDENT ECONOMISTS AFTER THE CHANCELER'S AUTON STATEMENT
-AND WITH THAT IN MIND	AND WITH THAT IN MIND
-HIS FATHER DIED	HIS FATHER DIED
-NOT JUST HERE IN NOTTINGHAMSHIRE	NOT JUST HERE IN NOTIMSHIRE
-BUT IT SEEMS THE PENDANT IS TO EVERYONE'S PERSONAL TASTE	BUT IT SEEMS THEPENDANT IS TO EVERYONE'S PERSONAL TASTE
-IT'S TIME TO FIND OUT IF NIGEL	IT'S TIME TO FIND OUT IF NIGEL
-REMEMBER THAT MAN WITH THE CAMERA	REMEMBER THAT MAN WITH THE CAMERA
-AND YOU CAN FOLLOW US	AND YOU CAN FOLLOW US
-THANKS FOR WATCHING	THANKS FOR WATCHING
-BUT IT'S NOT ALL BAD NEWS	BUT IT'S NOT BA BANS
-I DO KNOW WHAT IT MEANS	I DO KNOW WHAT IT MEANS
-WHEN I FOUND OUT	WHEN I FOUND OUT
-AFTER ALL I'VE BEEN THROUGH	AFTER ALL I'VE BEEN THROUGH
-I WANT TO TALK ABOUT DADDY TOO	I WANT TO TALK ABOUT DADY TO
-EVERYONE WAS BLOWN AWAY	EVERYBODY WAS BLOWN AWAY
-WE STILL HAVE ALL OF THIS TO COME	WE STILL HAVE ALL OF THIS TO COME
-I WANT TO TAKE A SELFIE	I WOULDN'T TAKE A SELFI
-RESCUING A DAMSEL IN DISTRESS	RESCUING A DAMSIL IN DISTRESS
-ALL OF THAT COULD CHANGE	ALL OF THAT CAULD CHANGE
-BUT WHAT EXACTLY IS IT	BUT WHAT EXACTLY IS IT
-HOW DOES IT WORK	HOW DOES IT WORK
-THERE'S ALWAYS HISTORICAL TREASURES TO LOOK AT	THERE'S ALWAYS HISTORICAL TREASURES TO LOOK AT
-FAST AND FURIOUS	FAST AND FURIOUS
-AND LATER IN TURN	AND LATER IN TURNS
-LATER ON IN LIFE	LATER ON IN LIFE
-HE MOVED AROUND A LOT	HE MOVED AROUND A LOT
-AS IS THE TITLE OF THIS POEM	A ID THE TITLE OF THIS POEM
-FOUR KILOMETRES WITHOUT EVEN REALLY THINKING ABOUT IT	<unk> IMETRES WITHOUT EVEN REALLY THINKING ABOUT IT
-IN THE HIGHWAY CODE ITSELF	IN THE HIGHWAY CODE ITSELF
-SO IN THE MEANTIME	SO IN THE MEANTIME
-THROUGH ANTIBODY DIRECTED THERAPY	THROUGH ANTIBODY DIRECTED THEROPY
-AND I FEEL VERY	AND I FEEL VERY
-I'M YOUR SIMON COWELL	I'M YOUR SIIN TOWWALL
-FOR SOME REASON	FOR SOME REASON
-I JUST CAN'T SEEM TO WIN	I JUST CAN'T SEM TO WIN
-IT'LL BE A BRILLIANT SUCCESS	IT COULD BE A BRILLIANT SUCCESS
-HE RETRIEVED THE FLAG	HE RETRIVED THE FLAG
-I'M STRUGGLING WITH THAT ONE	I'M STRUGLING WITH THAT ONE
-HE'S A LATIN SENSATION	HE'S A LATTIN SENSATION
-BORN INTO A FAMILY OF DANCERS	BORN INTO A FAMILY OF DANCERS
-I MADE A FEW CALLS	I MADE A FEW CALLS
-AS WELL AS THE GREEN MAN	AS WELL AS THE GREEN MAN
-THIS IS EXTREMELY RARE AND VALUABLE	THIS IS EXTREMELY RARE AND VALUABLE
-NOT FOR SUBJECT MATTER	NOT FOR SUBJECT MATTER
-I HASTEN TO ADD	BUT EVERYONE GOING
-HERE ON THE DAY	HERE ON THE DAY
-BUT I FELT HE WAS EXPOSED	BUT I FELT HE WAS EXPOSED
-AND YOU AND HIM	A YOU A NAME
-WILL APPEAR IN COURT NEXT MONTH	WILL APPEAR IN COURT NEXT MONTH
-AND THE CHAMPAGNE	AND THE SCHAMPAINE
-BEFORE WE BRING ON OUR NEXT CONTENDER	BEFORE WE BRING ON OUR NEXT CONTENDER
-IF YOU'VE GOT A QUESTION FOR EITHER OF THEM	IF YOU'VE GOT A QUESTION FOR EATHER OF THEM
-SO TO DO BALLROOM	SO TO DO BALLROOM
-I AM THE ULTIMATE POWER	I AM THE ULTIMATE POWER
-IT IS THE QUARTER FINALS	IT I A TE E MO
-WHEN HE RETIRED	WHEN HE RETIRED
-THE FAMILY SEAT	THE FAMILY SEAT
-PLEASE WELCOME JENNY ECLAIR	PLEASE WELCOME JENIY CLAR
-IT'S A MOVIE THEME	IT'S A MOVI THEME
-THEY HAVE NO IDEA WHAT TO EXPECT	THEY HAD NO IDEA WHAT TO EXPECT
-TWO AND A HALF MINUTES FOR THAT ROUND	W AND A HALF MINUTES FOR THAT ROUND
-SO LET'S GET ON WITH IT	SO LET'S GET ON WITH IT
-THANKS FOR WATCHING	THANKS FOR WATCHING
-I'M NOT SATISFIED	I'M NOT SATISFID
-IT'S ON OUR CABLE PACKAGE	IT'S ON OUR CABLE PACKAGE
-WHEN WE SEE HIM	WHEN WE SEE HIM
-YOU WANT ME TO BE HAPPY	YOUWARNT ME TO BE HAPPY
-WHAT SEASON WAS THAT	WHAT SEASON WAS THAT
-NO FOOD LEFT OUT	NO FOOD LEFT OUT
-I'LL MEET YOU AT THE PARTY	I'LL MEET YOU AT THE PARTY
-PROBABLY IN THE WORLD	PROPERLY IN THE WORLD
-I'M REALLY LOOKING FORWARD TO THIS	REALLY LOOKING FORWARD TO THIS
-AND IT'S EVEN RARER TO FIND ONE THAT HASN'T BEEN DUG INTO BY ANTIQUARIANS	AND IT'S EVEN RARER TO FIND ONE THAT HASN'T BEEN DUG INTO BY ANTIQUEARIANS
-WHAT WE'VE GOT HERE IS AN OPPORTUNITY TO UNDERSTAND ONE OF THESE MONUMENTS IN A MODERN	WHAT WE OT HER I AN OPRTY TO UNDERAD ONE O THESE MONMENS INAMOERN
-AND PEOPLE LIVING	AND PEOPLE LIVING
-IT'S ABOUT THE DEAD	IT'S ABOUT THE DAT
-A PURIFICATION CEREMONY	A PURIFICATION CEREMONY
-IT'S ALMOST AN OLD PERSON	IT'S ALMOST AN OLD PERSON
-AND THIS MIGHT BE	AND THIS MIGHT BE
-EVERY SINGLE PERSON	EVERY SINGLE PLEASANT
-THAT'S THE BEST KIND OF TEACHING	THAT'S THE BEST KIND OF TEACHING
-I HAD A GREAT TIME	I HAD A GREAT TIME
-THAT'S WHAT CHILD SUPPORT SERVICES DOES	THAT'S WHAT CHILD SUPPORT SERVICES DOES
-NICOLA IS DEFINITELY THE LOVE OF MY LIFE	NICOLAR IS DEINITELY THE LOVE OF MY LIFE
-SHE'S MY JULIET	SHE'S MY JULIET
-THE ROCHELLE TO MY MARVIN	THERE AS SHELTER O MARVIN
-I GUESS I'M AFRAID	I GUES I'M AFRAID
-I LIKE SPENDING TIME WITH HIM	I LIKE SPENDING TIME WITH HIM
-AND IT IS A SERVICE	AND IT IS A SERVICE
-SHE'S GOT THE BEST TOP LINE IN THE BUSINESS	SHE'S GO THE BEST TOP LINE IN THE BUSINESS
-SO I DON'T KNOW	SO I DON'T KNOW
-THAT'S WHAT YOU SAID	THAT'S WHAT YOU SAID
-IT'S JUST A NAME	IT IS JUST A NAME
-I'VE BEEN WAXED	I'VE BEEN WAXED
-TALK ABOUT SMART	TAS I ET SMART
-MY LITTLE BOY IS	MINUS THE BOYIN
-THAT SEEMS TO ME LIKE A PRETTY IMPRESSIVE PERK OF THE JOB BY ANYBODY'S STANDARDS	THAT SEEMS TO ME LIKE A PRETTY IMPRESSIVE PURK OF THE JOB BY ANYBODY'S STANDARDS
-WE BOUGHT THE FIRM BACK	WE BROUGHT THE FIRM BACK
-ENJOY THE MONEY	ENJOY THE MONEY
-EMBOSSED LEATHER WALLPAPER	IMBOSED LEATHER WALLPAPER
-I'M GETTING OLDER	I'M GETTING OLDER
-I'LL BE POPPING IN EACH EVENING	I BEEN POPPING IN EACH EVENING
-JOIN ME TOMORROW	JOINE ME TOMOROW
-BUT SHE'S NOT CONFUSED	BUT SHE'S NOT CONFUSED
-YOU NEED TO BE STRONG UP HERE	YOU NEED TO BE STRONG UP HERE
-MAKE SURE YOU NEVER GET DEPRESSED AGAIN	MAKE SURE YOU NEVER GET DEPRESSED AGAIN
-WITH BILLY NOT BEING YOURS	WITH BILLY NOT BEING YOURS
-WHEN IT COMES TO DESIGNING FABULOUS COSTUMES	WHEN IT COMES TO DESIGNING FABULOUS COSTUMES
-THEY ARE BATTLING TO BE CROWNED PRO CHALLENGE CHAMPION	THEY ARE BATTLING TO BE CROUWNED PRO CHALLENGE CHAMPION
-THE PRIME MINISTER SLAPS HIM DOWN	THE PRIME MINISTER SLAMPS HIM DOWN
-HOW BIG IS THAT	HOW BIG IS THAT
-SEPARATED FROM THAT	SEPARATED FROM THAT
-COMING IN ON THE OTHER SIDE	COMING IN ON THE OTHER SIDE
-WHAT DID YOU PUT IN THE MULLED WINE	WHA DID YOU PUT IN A OLED WINE
-IT'S A TERRIBLE IDEA	IT'S A TERRIBLE IDEA
-AND THEY DON'T MAKE BIG MONEY	AND THEY DON'T MAKE BIG MONEY
-EVERYWHERE YOU LOOK	EVERYWHERE YOU LOOK
-YOU'VE REALLY MADE MY DAY	YOU'VE REALLY MADE MY DAY
-AND WE HAVE TODAY	AND WE HAVE TODAY
-MEN WANT TO BE HIM	MEN WANT TO BE HIM
-HE ABSOLUTELY INSISTED ON WRITING HIS OWN INTRO	HE ABSOLUTELY INSISTED ON WRITING HIS OWN INTRO
-WITH FAMILY AND FRIENDS	T T
-IT'S ALL ABOUT THE STRICTLY PRO CHALLENGE	IT'S ALL ABOUT THE STRICTLY PRO CHALLENGE
-BEFORE WE GO ANY FURTHER	BUT BEFORE WE CN GO ANY FURTHER
-THE SIX HIGHEST SCORING RUNNERS UP WILL QUALIFY	THE SIX HIGHEST SCOORING RUNERS WILL QUALIFY
-THANKS FOR WATCHING	THANKS FOR WATCHING
-YOU ARE DYNAMIC	YOU ARE DINAMIC
-IT WAS FULL OF CONTENT	IT WAS FULL OF CONTENT
-AS I WAS SAYING	AS LEM WAS SAYING
-IT'S ACTUALLY A SALSA	IT'S ACTUALLY A SALSER
-THE GARDEN OF ENGLAND	THE GARDEN OF ENGLAND
-YOU CAN GET A BETTER STRUCTURE	YOU CAN GET A BETTER STRUCTURE
-EVERY YEAR SINCE CHRISTMAS BEGAN	EVERY YEAR SINCE CHRISTMAS BEGAN
-WAY BACK IN THE EARLY	WAY BACK IN THE EARLY
-I ACTUALLY WANTED TO BE A HORSE	I ACTUALLY WANTED TO BE I TIS
-USUALLY A BICYCLE	USUALLY A BICICLE
-THROUGH THE ACCESSIBILITY TO THOSE CHILDREN	THROUGH THE ACCESSIBILLITY TO THOSE CHILDREN
-LIKE MOST OTHER FORMS OF MODERN WARFARE	LIKE MOST OTHER FORMS OF MODERN WARFAIR
-YOU DO LOVE YOUR DOLL	YOU DO LOVE YOUR DOULL
-THEY WERE INNOCENT AND CHARMING	THEY WERE INOCENT AND CHARMING
-YOU WANT TO LOOK	YOU WANT TO LOOK
-OR IS IT THAT YOU ENJOY THOSE TOYS AND IT MAKES YOU INTO A DIFFERENT PERSON	OR IS IT THAT YOU ENJOY THOSE TOYS AND IT MAKES YOU INTO A DIFFERENT PERSON
-SPACE WAS STILL THE FINAL FRONTIER	SPACE WAS STILL THE FINAL FRONTER
-IT LOOKS REALLY LIKE IT IS	IT LOOKS REALLY LIKE IT IS
-WHEN I GET HOME	WHEN I GET HOME
-THE BALL SHAPED ONE	THE BALL WAS SHAPED WELL
-YOU SEE THAT PRESENT	YOU SEE THAT PRESENT
-SO WHAT HE DID TO GET ROUND THAT	SO WHAT HE DID TO GET ROUND THAT
-BUT IN THOSE DAYS	BUTIN THOSE DAYS
-IT BECOMES A FIRE ENGINE	IT BECOMES A FIRE ENGIN
-FOUR LITTLE TURTLES NAMED AFTER ITALIAN RENAISSANCE ARTISTS	FOUR LITTLE TURTLES NAMED AFTER ITALLIAN RENASANCE ARTISTS
-SOME BURN BRIGHTLY FOR A YEAR OR TWO	SOME BURNE BRIGHTLY FOR A YEAR OR T
-IF YOU DIDN'T HAVE ONE	IF YOU DIDN'T HAVE ONE
-WHAT WAS ALL THAT ABOUT	WHAT WAS ALL THAT ABOUT
-ALREADY IN THE STATES	ALREADY IN THE STATES
-THE RIGHT PLACE	THE RIGHT PLACE
-NOTHING WRONG WITH THAT IDEA IN PRINCIPLE	NOTHING WRONG WITH THAT IDEA IN PRINCIPLE
-SAUSAGES IN BACON	SAUSSAGES IN BACON
-CHRISTMAS PUDDING THAT NOBODY REALLY LIKES	CHRISTMAS PUTDING THAT NOBODY REALLY LIKES
-STICK SOME JAMES BOND ON	STICK SOME JAME'S BOND ON
-THAT SOMEONE WAS GOING TO GET	THAT SOMEONE WAS GOING TO GET
-YOU CAN'T REALLY SAY	SHOU CAN'T REALY SAY
-NOT IN FRONT OF THE WHOLE FAMILY	NOT IN FRONT OF THE WHOLE FAMILY
-YOU UNFOLD THE BOARD	YOU UNFOLD THE BARD
-AT THE SAME TIME	AT THE SAME TIME
-IN VICTORIAN BRITAIN	IN VICTORIAN BRITAIN
-ON THE ORDERS OF QUEEN VICTORIA	ON THE ORDERS OF QUEEN VICTORIA
-I THINK HE'S PERFECT	I THINK HE'S PERFECT
-WHEN IT COMES TO TOYS	WHEN IT COMES TO TOYS
-MAYBE NOT URANIUM	MAYBE NOT YURANIUM
-BUT I LIKE TO SEE IT	BUT I LIKE TO SEE IT
-WE LIKE TO REMINISCE	WE LIKE TO REMONICE
-FOR THAT REASON	FOR THAT REASON
-THIS REALLY MAKES US THINK	THIS REALLY MAKES US THINK
-MAYBE THERE'S AN EXTENSIVE PATTERN	MAYBE THERE'S AN EXTENSIVE PATTERN
-WHEN THE ARCHAEOLOGISTS GOT TO WORK	WHEN THE ARCHOLOGISTS GOT TO WORK
-I'M TRYING NOT TO GET CARRIED AWAY	OF TRYING NOT TO GET CARRIED AWAY
-IT REALLY WAS THAT BAD	IT REALLY WAS THAT BAD
-THEY WILL NOT DO	THEY THEY WILL NOT DO
-LET'S TAKE A LOOK BEHIND THE SCENES AT HOW IT ALL CAME	LET'S TAKE A LOOK BEHIND THE CEMES AT HOW IT ALL CAME
-TIME NOW FOR OUR NEXT GUEST	TIME NOW FOR OUR NEXT GESS
-OVER THE LAST <unk><unk> YEARS	OVER THE LAST <unk> YEARS
-WHY SHOW ME THIS	WHY SHOW ME THIS
-I'M ON THE CASE	MY MOTHER CASE
-EVEN CHRISTMAS DAY	EVEN CHRISTMAS DAY
-BUT TOWARDS THE END	BUT TOWARDS THE END
-HE HAS NOT HELD BACK ANYTHING	HE HAS NOT HELLD BACK ANYTHING
-BUT IT WAS SO DISCONCERTINGLY CALM IN THE STUDIO	BUT IT WAS SO DISCONCERTINGLY CALM IN THE STUDIO
-HERE TO REVEAL THE SECRET TO GETTING YOUR HANDS ON THE TROPHY	HERE TO REVEAL THE SECRET TO GETTING YOUR HANDS ON THE TROFEY
-I SHOULDN'T SAY THOSE THINGS	I SHOULDN'T SAY THOSE THINGS
-WHAT ELSE CAN I BE	WHY OU E ANGRY
-NOT WELL DRESSED	YOU NE NOA TO ODA
-SHE IS MARRIED NOW	SHE IS MARRIED NOW
-BEST AND HAPPIEST OF ALL	BEST AND HAPPIEST OF ALL
-THE TIME BEFORE HIM WAS HIS OWN	THE TIME BEFORE HIM WAS HIS OWN
-THAT'S WHAT I AM	THAT'S WHAT I AM
-IT SOUNDS VERY GOOD	IT SOUNDS VERY GOOD
-SHE'S DEPRESSED ABOUT DADDY	SHE'S A CRISTBOUT DADY
-NOW YOU LISTEN TO ME	YOU LITEN O ME
-I'M STILL SURROUNDED BY HUNDREDS OF PEOPLE	I'M STILL SURROUNDED BY HUNDREDS OF PEOPLE
-ALL THE INFORMATION WILL BE THERE	ALL THE INFORMATION WILL BE THERE
-EVERY WEEK HE COMES OUT	EVERY WEEKHE COMES OUT
-THE RIVALRY AND ALL THAT	THE RIVALY AND ALL THAT
-LEAVE THAT TO ME	LEAVE THAT TO ME
-BUT FOR ALL THAT	BUT FOR ALL THAT
-I'D LIKE TO HELP YOU	O I EED TO HELP YOU
-I DON'T WANT TO RESIGN	I DON'T WANT TO RESIGN
-WHICH IS INCREDIBLE	WHICH IS INCREDIBLE
-I HAD NO IDEA HOW MUCH	I HAD NO IDEA HOW MUCH
-AT THE SAME TIME	BUTAT THE SAME TIME
-SO LET'S FIND OUT WHO THAT WILL BE	SO LET'S FIND OUT WHO THAT WILL BE
-SOME DECENT SCORES	SOME DECENT SCORES
-THANKS FOR WATCHING	THANKS FOR WATCHING
-THE PERFECT HOUSE	A PRIFIT HOUSE
-THE PERFECT FAMILY	THE PERFECT FAMILY
-AND AS A RESULT	AND AS A RESULT
-THE FIRST MUSLIM WOMAN TO SERVE AS A CABINET MINISTER	THE FIRST MUSLIM WOMAN TO SERV AS A CABINETE MINISTER
-IT'S NOT THE MIDDLE AGES	IT'S NOT THE MIDDLE AGES
-HE DOESN'T OWN ME	HE DOESN'T OWN ME
-SO PLEASE WELCOME	SO PLEASE WELCOME
-IT WAS ACTUALLY EXTREMELY WELL PLACED	IT WAS ACTUALLY EXTREMLY WELL PLACED
-PLEASE DON'T TRY TO VOTE IF YOU'RE WATCHING ON DEMAND	PLEASE DON AND TRY TO VOTE IF YOU'RE WATCHING ON DEMAND
-TENSION AND EMOTION	TENTION AND EMOTION
-AND IT'S PERFECT FOR TONIGHT	AND IT'S PERFECT FOR TONIGHT
-CAN THEY IMPROVE ON THAT SCORE AND POSSIBLY RUN AWAY WITH THE TROPHY	CAN THEY IMPROVE ON THAT SCORE AND POSSIBLY RUN AWAY WITH HA TROFEY
-THAT WAS WITHIN BUDGET	THAT WAS WITHIN  BUDGET
-FOR THE AUDIENCE AT HOME	FOR THE AUDIENCE AT HOME
-THE RISE OF MAY	THE RISE OF MAY
-PROPER STREET FOOD IS GREAT	PROERY STREET PROLE IS GREAT
-YOU DON'T HAVE TO BE A CELEBRITY	YOU DON'T HAVE TO BE A CELEBRITY
-AND YOU CAN FOLLOW US ON TWITTER	AND YOU CAN FOLLOW US ON TWITTER
-THANKS FOR WATCHING	THANKS FOR WATCHING
-IF YOU CAN HAVE SEX	IF YOU CAN HAVE SIX
-TICKETS FOR THE MATCH	TICKETS FOR THE MATCH
-IT'S NOT A CAREER	IT'S NOT A COURE
-THANKS FOR WATCHING	THANKS FOR WATCHING
-FAME AND FORTUNE	PAYMENT FORTUNE
-I'M NOT AFRAID OF BEING CHALLENGED	I'M NOT AFRAID OF BEING CHALLENGED
-THERE'S NO WRONG WAY	THERE'S NO WRONG WAY
-AND YOU CAN FOLLOW US ON TWITTER	AND YOU CAN FOLLOW US ON TWITTER
-THANKS FOR WATCHING	THANKS FOR WATCHING
-IN THIS CASE A FLOWER	IN THIS CASE A FLOWER
-AS ANIMALS ARE PREPARING FOR THE WINTER	AS ANIMALS ARE PREPARING FOR THE WINTER
-BUT THERE'S A PROBLEM	BUT THERE'S A PROBLEM
-CHEAT AND STEAL FROM ONE ANOTHER TO GET THEMSELVES A DECENT MEAL	CHEAT AND STEAL FROM ONE ANOTHER TO GET THEMSELVES A DECENT MEAL
-IT SEEMED TO BE	IT SEEMED TO ME
-I DO MISS IT A LITTLE BIT	I DO MISS IT A LITTLE BIT
-THIS IS ALL YOU	THE SIPLO
-BEFORE YOU KNOW IT	BEFORE YOU KNOW IT
-YOU GO TO BED WITH IT	YOU GO TO BED WITH IT
-AND YOUR FAMILY AND YOUR KIDS AND YOUR OTHER JOBS	AND YOUR FAMILY AND YOUR KIDS AND YOUR OTHER JOBS
-THAT WAS AMAZING	THAT WAS AMAZING
-THE LONGER YOU STAY IN	THE LONGER YOU STAY IN
-BECAUSE YOU WORK SO HARD	BECAUSE YOU WORK SO HARD
-IF YOU GO WRONG	IF YOU GO WRONG
-GO ABOUT TELLING HIM THAT	GO ABOUT TELLING HIM THAT
-FOR GOOD REASONS AND BAD REASONS	FOR GOOD REASONS AND BAD REASONS
-IF THEY START FROM HERE	IF THEY START FROM HERE
-OBSESSED WITH THIS SHOW	OBSESSED WITH THIS SHOW
-IF I HAD MY WAY	IF I AN'T MY OWN WAY
-IF WE HAVE A LITTLE ARGUMENT	IF WE HAVE A LITTLE ARGUMENT
-SO WHEN HE GETS GRUMPY IT'S LIKE	SO WHEN HE GETS GRUMPY IT'S LIKE
-LET'S SAY FOR EXAMPLE	LET'S SAY FOR EXAMPLE
-I'M SURE YOU CAN IMAGINE	I'M SURE YOU CAN IMAGINE
-SHE IS HYSTERICAL	SHE IS HISTORICAL
-WHEN I WAS A KID	WHEN I WAS A KID
-VERY HIGH LEVEL	VERY HIGH LEVEL
-GOING ALL OVER THE WORLD	GOING ALL OVER THE WORLD
-PEOPLE ARE HAPPY TO BE THERE AND IT'S A GOOD VIBE	PEOPLE ARE HAPPY TO BE THERE AND IT'S A GOOD VIBE
-EVERYWHERE YOU TURN	EVERYWHERE YOU TURN
-BECAUSE THEY'VE GOT TO	BECAUSE THEY'VE GOT TO
-JUST WORKING WITH HIM EVERY WEEK IS SUCH A TREAT	JUST WORKING WITH HIM EVERY WEEK IS SUCH A TREAT
-WHICH WAS QUITE AMUSING	WHICH WAS QUITE AMUSING
-THAT'S A PICKLED WALNUT	THATS TO PICK A WALLNUT
-THEY ALL CAME AND WENT	THEY ALL CAME AND WENT
-IT DIDN'T SURVIVE	IT DIDN'T SURVIVE
-SO YOU SHOULD BE	SO I COULD BE ON
-RIGHT ON THE FRONT	AGE ON THE FRONT
-IN THIS COUNTRY	IN HIS COUNTRY
-TWICE DURING THE FIRST WORLD WAR	TWICE DURING THE FIRST WORLD WAR
-SHE NEVER LET ON	BI NEVER LED ON
-SO YOU KNOW WHO HE REALLY IS	SO YOU KNOW WHO HE REALLY IS
-SO PLEASE WELCOME	SO PLEASE WELCOME
-THIS COULD BE A FIRST CLASS ROUTINE	THIT COULD BE A FIRST CLAS RUTIME
-EVERYONE ON THE SHOW REALLY	EVERYONE ON THE SHOW REALY
-WITH WHITE CHRISTMAS	WITH A WHITE CHRISTMAS
-BEING ON MY OWN	BEING ON MY OWN
-ALTHOUGH I CAN'T IMAGINE WHY	THOUGH I CAN'T IMAGINE WHY
-BECAUSE I JUST WANT TO HELP	BECAUSE I JUST WANT TO HELP
-AND LET'S FACE IT	ON THET SPACE
-PROJECT MANAGEMENT IS REALLY MY SPECIALIST AREA	PROJECT MANAGEMENT IS REALLY MY SPECIALIST AREA
-TO BE COMPLETELY HONEST	TO BE COMPLETELY HONEST
-THE SHEER SIZE AND POWER CAN BE INTIMIDATING	THE SHER SIZE AND POWER CAN BE INTIMIDATING
-BUT THERE WAS EVEN BETTER NEWS	BUT THERE WAS EVEN BETTER NEWS
-REPRESENTED BY THIS BUNCH OF BANANAS	REPRESENTED BY THIS BUNCH OF BANANAS
-IT'S DOWN TO OUR BRAIN GETTING THINGS WRONG	IT'S DOWN TO OUR BRAIN GETTING THINGS WRONG
-HE WAS ABOUT TO FIND OUT	HE WAS ABOUT TO FIND OUT
-THE FORCES OF NATURE SEPARATE OUT	THE FORCES OF NATURE SEPARATE OUT
-NEUTRONS AND ELECTRONS	NUTRONS AND ELECTRONS
-BUT WHEN YOU OPEN THE BOX	BUT WHEN YOU OPEN THE BOX
-THAT'S NOT RIGHT	THAT'S NOT RIGHT
-IN THIS UNIVERSE	IN THIS UNIVERSE
-AND IT MIGHT SEEM RIDICULOUS	AND IT MIGHT SEEM REDICULOUS
-<unk><unk> MILES IN DIAMETER	<unk> MILES IN DIAMITER
-STRETCHING BACK <unk>	STRETCHING BACK
-STAGGERING ON THE EDGE OF SPACE	STAGERING ON THE EDGE OF SPACE
-PONDERING THE IMMENSITY	PONDERING THE IMMENITY
-WE LIVE IN A TINY	WE LIVE IN A TINY
-THANKS FOR WATCHING	THANKS FOR WATCHING
-YOU THINK I DID THIS	YOU THINK I DID THIS
-IT'S ALL ABOUT RARITY	IT'S ALL ABOUT RARITY
-AS OPPOSED TO CHINESE	AS APPOSED TO CHINESE
-BUT I COULDN'T BELIEVE IT WOULD BE TRUE	BUT I COLNT BELIEVE IT WOULD BE TRUE
-IF YOU'VE GOT A GOOD STORY	IF YOU'VE GOT A GOOD STORNY
-AND THE MAN WHO MADE THE DISCOVERY	AND THE MAN WHO MADE THE DISCOVERY
-BUT EVERYONE GOING INTO THE DEN GETS A FRESH CHANCE TO TURN THINGS ROUND	BUT EVERYONE GOING INTO THE DEN GETS A FRESH CHANCE TO TURN THINGS ROUND
-YOU JUST HAVE TO GRAB AN OPPORTUNITY WHEN IT PRESENTS ITSELF	YOU JUST HAVE TO GRAB AN OPPORTUNITY WHEN IT PRESENTS ITSELF
-BUT SLIGHTLY REBELLIOUS SOCKS	BUT SLIGHTLY REBELLIOUS SOCKS
-DON'T FORGET THAT SCARECROW	DON'T FORGET THAT SCAIRCROW
-MAYBE TO SOMEWHERE NICE AND SAFE	MAYBE TO SOMETHIN NICE AND SAFE
-I'M NOT SURE WHAT'S THE MOST DIFFICULT THING TO GET RIGHT	I'M NOT SURE WHANCE THE MOST DIFFICULT THINGS GET RIGHT
-GARDENS NEVER FINISH	GARDENS NEVER FINISH
-YOU SHOULD NEVER BE PUT OFF	SHE' NEVER BE PUT O
-PEOPLE GETTING IN TOUCH AND WANTING TO RECTIFY WRONGS	PEOPLE GETTING IN TOUCH AND WANTING TO RECTIFY WRONGS
-THERE ARE TIMES I LIKE TO LISTEN TO BANANARAMA	THERE ARE TIMES I LIKE TO LISTEN TO BANANA AMA
-AND YET THAT AND FISH AND CHIPS	AND YET THAT IN FISHINT SHIPS
-LET'S JUST CALM DOWN	LET'S JUST CALM DOWN
-THE DAY JUST GOT WEIRDER AND WEIRDER	THE DAY JUST GOT WEIRDER AND WEIRDER
-BACK TO THE HISTORY BOOKS	BACK TO THE HISTORY BOOKS
-IT'S PRACTICALLY A VEGETARIAN	IT'S PRACTICALLY A VEGETARIAN
-HOW DOES THE PLANT ATTRACT THE BAT	HOW DOES THE PLANT ATTRACT THE BAT
-THE BAT BENEFITS	THE BAT BENEFITS
-IT'S ALSO COME UP WITH A STRUCTURE THAT ACTS AS AN ADVERTISEMENT WHICH SAYS	IT'S ALSO COME UP WITH A STRUCTURE THAT ACTS AS AN ADVERTICEMENT WHICH SAYS
-THIS IS THE BEST BAT HOTEL IN TOWN	THIS IS THE BEST BAT HOTELL IN TOWN
-THAT'S WHY I GET UP IN THE MORNING	THAT'S WHY I GET UP IN THE MORNING
-TWO MINUTES ON GENERAL KNOWLEDGE	TWO MINUTES ON GENERAL KNOWLEDGE
-ALL IN THE GLARE OF THE SPOTLIGHT	ALL IN THE GLAIR OF A SPOTLIGHT
-SO WHAT DID YOU DO BEFORE	SO WHAT DID YOU DO BEFORE
-BUT YOU HAVE TO GO	BUT YOU HAVE TO GO
-AND SHE WAS BEING INTERVIEWED BY THE AMERICAN JOURNALISTS	AND SHE WAS BEING INTERVIEWED BY THE AMERICAN JOURNALISTS
-IN ALL SERIOUSNESS	IN ALL SERIOUSNESS
-WE DID A DIFFERENT VERSION OF THINGS AND THEN	WE DID A DIFFERENT VERSION OF THINGS AND THEN
-AND THEN TURNED TO ME AND SAID	AND THEN TURNED TO ME AND SAID
-I HADN'T THOUGHT THAT	I HADN'T THOUGHT THAT
-THAT WOULD BE FANTASTIC	THAT WOULD BE FANTASTIC
-PLAYED BY JIM BROADBENT	PLAY BELGIM BRO BEND
-EVERY TWO WEEKS	EVERY TWO WEEKS
-THAT'S WHAT THEY DO	THAT'S WHAT THEY DO
-BEFORE WE BEGIN	BEFORE WE BEGIN
-AND ON THIS FATEFUL EVENING	AND ON THIS FATEFUL EVENING
-WHAT'S YOUR NAME	WHAT'S YOUR NAME
-I DON'T BELIEVE IN FAIRIES	I DON'T BELIEVE IN FAIRIES
-THEN WE MUST RESCUE HER	THEN WE MUST RESCU HER
-AND WITH STEALTH	AND WITH STELTH
-HE MADE A MOVE ON ME	HE MADE A MOVE ON ME
-WE'VE NOT DISCUSSED IT	WE'VE NOT DISCUSSED IT
-AND WE RUN LOVE	AND WE RUN  LOVE
-HOW DO I CHOOSE THIS	HOW DO I CHOSE THIS
-WE'VE GOT <unk><unk> CHARACTERS	WE'VE GOT <unk> CHARACTERS
-FOLLOWING THOSE WORDS	FOLLOWING THOSE WORDS
-I THINK YOU DESERVE	I THINK YOU DESERVE
-A STRIKING CONTRAST	A STRIKING CONTRAST
-VERY SIMILAR TO FISHING	VERY SIMILAR TO FISHING
-IT'S LIKE LOOKING AT ART	IT'S LIKE LOOKING AT ART
-IT MIGHT BE CONCEPTUAL	IT MIGHT BE CONCEPTUAL
-THANKS FOR WATCHING	THANKS FOR WATCHING
-HERE'S SOME IDEAS	HERE AE SOME IDEAS
-A PLACE WHICH IS HARD TO LIVE	A PLACE WHICH IS HARD TO LIVE
-AND THE FARMERS OPENING IT UP	AND THE FARMERS OPENING IT UP
-SO WHEN THE FARMERS COME	SO WHEN THE FARMERS COME
-THERE'S MORE WOODLAND	THERE'S MORE WOODLAND
-DON'T TELL ANYONE	DON'T TELL ANYONE
-WE HAVE NO MORE MONEY	WE HAVE NO MORE MONEY
-WE ARE THE CRIMINALS	WE ARE THE CRIMINALS
-NO MORE SUICIDE BOMBERS	NO MORE SUICIDE BOMBERS
-THAT'S ACCORDING TO THE POLICE WATCHDOG	THAT'S ACCORDING TO THE POLICE WATCH DOG
-THE QUEEN MARY AND THE QUEEN ELIZABETH	THE QUEEN MARY AND THE QUEEN ELISABETH
-ITS DESIGN VALUES	ITS DESIGNE VALUES
-THEY WERE IN THE MINORITY	THEY WERE IN THE MINORITY
-<unk><unk><unk> TONS OF OCEAN LINER	TONS OF OTION LINER
-ONE OF THE ARTICLES HERE IS ABOUT THE QUEEN ELIZABETH	ONE OF THE ARTICALES HERE IS ABOUT THE QUEEN ELISABETH
-THE JOB WAS DONE	THE JOB WAS DONE
-THANKS FOR WATCHING	THANKS FOR WATCHING
-FLOWERS AND EVEN VEGETABLES	FLOWERS AND EVEN VEGETABLES
-FOR SOMETHING COMPLETELY DIFFERENT	FOR SOMETHING COMPLETELY DIFFERENT
-WHEN IT COMES TO PUBLICITY	WHEN IT COMES TO PUBLICITY
-HOW GREAT IS THIS	HOW GREAT IS THIS
-I JUST LOVE THAT	I JUST LOVE THAT
-THEY WERE FRIENDS	THEY WERE FRIENDS
-TELL ME ABOUT IT	TELL ME ABOUT FITMA
-UNTIL NEXT TIME	UNTIL THEY' SON
-TO BE A SUCCESSFUL ENTREPRENEUR	TO BE A SUCCESSFUL ENTREPRENEUR
-I JUST DON'T GET IT	I JUST DON'T GET IT
-AND I THINK THIS IS ONE	AND I THINK THIS IS RO
-SOMETHING LIKE THAT	SOMTHING LIKE THAT
-WITH CORRUPT GOVERNMENTS	WITH CORUPT GOVERNMENTS
-BECAUSE OF THE SMALL SIZE	BECAUSE OF THE SMALL SIZE
-IT'LL MEAN MORE MATCHES	IT'LL MEAN MORE MATCHES
-AND MORE MONEY FOR FIFA	AND MORE MONEY FOR TEA
-PLEASED WITH HIMSELF	PLEASED WITH HIMSELF
-SERBIA IS PANDEMONIUM LET LOOSE	SERVIA IS PANDAMONIAM LET LOSE
-THERE ARE NO RECORDINGS OF LLOYD GEORGE AT THE PEAK OF HIS POWERS	THERE ARE NO RECORDINGS OF LOY GEORGE AT THE PEAEK OF HIS POWERS
-WHICH WAS THE MASS NEWSPAPER	WHICH WAS THE MASS NEWSPAPER
-AND HE WAS VERY DEVOTED TO HIS CHILDREN	AND HE WAS VERY DEVOTED TO HIS CHILDREN
-AND WOULD EVENTUALLY MARRY HER AFTER HIS WIFE	AND WOULD EVENTUALLY MARRY HER AFTER HIS WIFE
-WITH THAT FLOURISH	WITH THAT FLURISH
-WHAT YOU NEED TO DO IS GET THE VERY BEST BRAINS	WHAT YOU NEED TO DO IS GET THE VERY BEST BRAINS
-THE VERY BEST TALENTS	THE VERY BEST TALENTS
-THE MOST ENERGETIC PEOPLE IN	THE MOST ENERGETIC PEOPLE
-BECAUSE THE EMPIRE	BECAUSE THE EMPIRE
-IT'S OFTEN FORGOTTEN	IT'S OFTEN FORGOTEN
-WHICH IS ABSOLUTELY UNDERSTANDABLE	WHICH IS ABSOLUTELY UNDERSTANDABLE
-HE HOPED TO RETURN TO POWER	HE HOPED TO RETURN TO POWER
-WOULD NOT BE A HAPPY PLACE	WOULD NOT BE A HAPPY PLACE
-DEPENDED ON TRADE	DEPENDENT ON TRADE
-MY GREAT GREAT GRANDFATHER	MY GREAT GREAT GRANDFATHER
-MUCH MORE DRIVEN	MUCH  MOE DRIVEN
-IF IT GIVES ME SOME SORT OF CONTROL BACK	IF IT GIVES ME SOME SORT OF CONTROL BACK
-WITH STRONG WINDS	WITH STRONG WINDS
-I DON'T REMEMBER THAT HAPPENING BEFORE	I DON'T REMEMBER THAT HAPPENING BEFORE
-BY SOME MIRACLE	BY SOME MIRACLE
-THAT'S VERY GOOD	THAT'S VERY GOOD
-COMES FROM ONE OF THE MOST BEAUTIFUL PARTS OF THE WORLD	COMES FROM ONE OF THE MOST BEAUTIFUL PARTS OF THE WORLD
-IT'S NOT A MASSIVE SUM OF MONEY	IT'S NOT A MASSIVE SUME OF MONEY
-THEY LOVE ARCHITECTURE	THEY LOVE ARCHITECTURE
-RIGHTLY OR WRONGLY	RIGHTLY OR WRONGLY
-I WOULDN'T SAY I'M A STAR	I WOULDN'T SAY I'M A STAR
-MANCHESTER UNITED FANS	MACHREST NITED FANS
-THANKS FOR WATCHING	THANKS FOR WATCHING
-SET UP BY THE GOVERNMENT	SET UP BY THE GOVERNMENT
-IT WAS A BRUTAL EXPERIENCE	IT WAS A BRUTAL EXPERIENCE
-MANY PEOPLE DID SLIP AND FALL AND BREAK A LEG	MANY PEOPLE DIDN'T SLIP AND FOLL AND BREAK A LEG
-THEY KEPT LIVING	THEY KEPT LEAVING
-AND IN THE MORNING	AND IN THE MORNING
-IN EXACT DETAIL	AN EXACT DETAIL
-AND THE SECOND GENERATION	AND THE SECOND GENERATION
-BEEN INTENSELY SAD	BEEN INTENSELY SAD
-AND ALL THE SURVIVORS OF THE HOLOCAUST	AND ALL THE SURVIVERS OF THE HOLECAST
-WITH THEIR DATABASE	WITH THEIR DATABACE
-GET A NEW LOYAL CUSTOMER AND DEBENHAMS	GET A NE LOAL CUSTOER AND DEBENEM
-AS LONG AS THEY SEE THE SPARK OF SUCCESS	AS LONG AS THEY SEE THE SPARK OF SUCCESS
-THERE WAS A STONE CIRCLE HERE	THERE WAS A STONE CIRCLE HERE
-DURING THE SUMMER MONTHS	DURING THE SUMMER MONTHS
-THAT IS A SOLD SOUND	THAT IS A SOLD SOUND
-THERE'S PLENTY TO INDULGE IN	THERE'S PLENTY TO ENDULGE IN
-SHE WAS STRUGGLING	SHE WAS STRUGLING
-WHEN HE WENT TO LOOK FOR HER	WHEN HE WENT TO LOOK FOR HER
-WHATEVER IT WAS	WHATEVER IT WAS
-<unk><unk> YEARS TO COMPLETE	<unk> YEARS TO COMPLETE
-SHE WILL BE VERY PLEASED	SHE WILL BE VERY PLEASED
-BECAUSE THERE WAS NO ROLE MODEL	BECAUSE THERE WAS NO ROL MODEL
-ONE MALE OFFICIAL COMMENTED	ONE MALE OFFICIAL COMMENTED
-BUT DESPITE ALL THIS	BUT DESPITE ALL THIS
-THEY CARRIED ON COMPETING	THEY CARRIED ON COMPETING
-BUT DESPITE ALL THIS	BUT DESPITE ALL THIS
-IF YOU WANT TO EXPERIENCE SOME OF THAT	IF YOU WANT TO EXPERIENCE SOME OF THAT
-YOU'RE WASTING YOUR TIME	YOU'RE WASTING YOUR TIL
-INCLUDING A BABY	INCLUDING A BABY
-THIS IS A SEMIFINAL	THIS IS A SEMIFINAL
-I'M SORRY THAT DOESN'T MEET WITH YOUR APPROVAL	I'M SORRY THAT DOESN'T MEAT WITH YOUR APPROVAL
-I'M NOT HAVING A GO AT YOU	I'M NOT HAVING A GO AT YOU
-I'M JUST SAYING THAT DENISE BROUGHT ME UP	I'M JUST SAYING THAT DENISE BROUGHT ME UP
-WE HAD NO MONEY	WE HAD NO MONEY
-WHEN YOU CAME BACK	WHEN YOU CAME BACK
-THAT'S WHY I'M LOSING MY VOICE	THAT'S WHY I'M LOSING MY VOICE
-IS IN THE DRYING	IS IN THE DRYING
-RIGHT IN FRONT OF ME	RIGHT IN FRONT OF ME
-WE TALKED ABOUT IT	N WE TALKED ABOUT IT
-I HONESTLY DON'T KNOW WHAT TO DO	I HONESTLY DON'T KNOW WHAT TO DO
-AND I DO MEAN HUNDREDS	AND I DO MEAN HUNDREDS
-I DON'T MIND THIS ONE	I DON'T MIND THIS ONE
-JUST BETWEEN YOU AND ME	JUST BETWEEN YOU AND ME
-JUDGING BY WHAT I SAW TODAY	JUDGING BY WHAT I SAW TODAY
-SOME GOT WHAT THEY WANT	SOME GOT WHAT THEY WANT
-GET DOWN TO YOUR LOCAL ONE	GET DOWN TO YOUR LOCAL ONE
-HAVE YOU GOT IT	HAVE YOU GOT HEM
-BUT I PROMISE YOU	BUT I PROMISE YOU
-YOU BETTER STAY WELL AWAY FROM ME	YOU' BETTER STAY WELL AWAY FROM ME
-THAT I'LL BE OK	THEN I'LL BE OK
-THOUSANDS OF POUNDS	THOUSANDS OF THINGS
-WE NEED TO DO SOMETHING BIGGER	WE NEED TO DO SOMETHING BIGER
-TRYING TO BRING THEM DOWN OVER THE CENTURIES	TRYING TO BRING THEM DOWN OVER THE CENTURIES
-BUT YOU DON'T NEED TO WORRY	BUT YOU DON'T WANT TO WARRY
-THE EXPERTS DON'T KNOW WHAT CAUSED IT	THE EXPERTS DON'T KNOW WHAT CAUSED IT
-THE FATHER DIED FIVE YEARS AGO	MHY FATHER DIED FIVE YEARS AGO
-AND THINGS LIKE THAT	AND THINGS LIKE THAT
-IT'S ALL ABOUT MYTH MAKING	IT'S ALL ABOUT MITH MAKING
-COME TO MY ROOM	COME TO MY ROOM
-AS THE MORNING SPREAD UPON THE MOUNTAINS	AS THE MORNING SPREAD APON THE MOUNTAINS
-WITH PEOPLE WITHOUT CREATING	WITH PEOPLE WITHOUT CREATING
-WITH OTHER PEOPLE	WITH OTHER PEOPLE
-AND THE INITIALS STAND FOR THE INTERNATIONAL MARXIST GROUP	AND THE INITIAL STAND FOR THE INTERNATIONAL MARSIST GROUP
-AS YOU MAY KNOW	AS YOU MAY KNOW
-THIS CAME FROM THE BIG	THIS CAME FROM THE BIG
-I PROBABLY WOULD	I PROBABLY WOULD
-THAT'S REALLY SAD	GODTHAT'S REALLY SAD
-I NEED TO GET TO WORK	I NEED TO GET TO WORK
-BEFORE I ANNOUNCE THE WINNER	BEFORE I ANNOUNCE THE WINNER
-WE NEED TO FIND OUT IS THERE A PROBLEM	WE NEED TO FIND OUT IS THERE A PROBLEM
-WE DON'T HAVE BROWN BEAR	WE DON'T HAVE BROWN BEAR
-IF THE ANSWER IS NO	IF THE ANSWERIS NO
-WE MAY ENJOY THE THRILL OF MORE REGULAR SIGHTINGS	WE MAY ENJOY THE THRILL OF MORE REGULAR SITINGS
-WHAT THEIR ASPIRATIONS ARE	WHAT THEIR ASPIRATIONS ARE
-WITHOUT THE DIALOGUE	I LAKE THE DIALOG
-VERY HEAVILY TAXED	VERY HEAVILY TAXED
-AND THE SCOTTISH CUSTOMERS TO BUY	AND THE SCOTTISH CUSTOMERS TO BUY
-AND IT WAS BUILT TOTALLY BY PUBLIC SUBSCRIPTION	AND IT WAS BUILT TOTALLY BY PUBLIC SUBSCRIPTION
-TODAY ALMOST <unk><unk>	TODAY ALMOST <unk>
-THE GOVERNMENT LOOKS SET TO WIN	THE GOVERNMENT LOOKS SET TO WIN
-WHICH THE NORWEGIAN GOVERNMENT WAS SUPPORTING	WHICH THE NORWEGIAN GOVERNMENT WAS SUPPORTING
-A RATHER SPECIAL	A RATHER SPECIAL
-YOU SHOULD THINK ABOUT IT	YOU SHOULD THINK ABOUT IT
-GOOD LUCK WITH THAT	GOOD LUCK WITH THAT
-WE FOUND OUT ABOUT THE SUFFOLK PUNCH HORSES	WE FOUND OUT ABOUT THE SUFFOC PUNCH HORSES
-BUT IT'S A DIFFERENT TYPE OF ANIMAL I WANT TO SHOW YOU RIGHT NOW	BUT IT'S A DIFFERENT TYPE OF ANIMAL I WANT TO SHOW YOU RIGHT NOW
-THINGS LIKE THIS BECAME VERY	THINGS LIKE THIS BECAME VERY
-THE QUALITY OF THAT SLIDING ACROSS	THE QUALITY OF THAT SLIDING ACROSS
-AND THAT'S WHAT IT'S ALL ABOUT	AND THAT'S WHAT IT'S ALL ABOUT
-JOIN US NEXT TIME FOR MANY MORE SURPRISES	JOIN US NEXT TIME FOR MANY MORE SURPRISES
-GOES OUT THE OTHER	GOS UP THE OTHER
-WE DON'T CLIP IT FOR THE MONEY	WE DON'T CLIP IT FOR THE MONEY
-I DON'T REALLY MIND	I DON'T REALLY MIND
-A NEW CHANCE AT LIFE	A NEW CHANCE AT LIFE
-IT'S HIGHER THAN BEFORE	IT'S HIGHER THAN BEFORE
-BUT ANOTHER STRIKING UNION	BUT ANOTHER STRIKING UNION
-THERE WAS A GLIMMER OF HOPE	THERE WAS A GLIMOR OF HOPE
-MORE OPEN MINDED PERHAPS	NOVAL LIST OPEN MINDED PERHAPS
-AND MORE OPEN TO THE PARLIAMENT	AND MORE OPEN TO THE PARLIAMENT
-TO DIVIDE THE ROOM INTO TWO PARTS	TO PEVIE WE GO OO TO PATS
-THEN THE INVITATION	THEN THE INVITATION
-HE WAS HALFWAY THERE	HE WAS HALFWAY THERE
-PART TWO IS THE DECLARATION OF RIGHTS	PART TWO IS THE DECLARATION OF RIGHTS
-THEY SAY THAT THE KING MAY NOT RAISE TAXATION WITHOUT THE CONSENT OF PARLIAMENT	THEY SAY THERE THAT THE KING MAY NOT RASE TAXATION WITHOUT THE CONCENT OF PARLIAMENT
-IT WAS THE BATTLE OF THE BOYNE	IT WAS THE BATTALE OF THE BON
-I LOVE THIS NAME	I LOVE THIS SANE
-IT MAKES THEM SOUND LIKE AN ACTION FILM	IT MADES THEM SOUND LIKE AN ACTION FILM
-WHICH OF COURSE	BUT OF COURSE
-THE SHOT OF MUSKET	THE SHOT OF MUSCET
-IT'S HERE TO STAY	IT'S HERE TO STAY
-YOU'VE HAD A TOUGH DAY	YOU'VE HAD A TOUGH DAY
-I THINK IT WILL	I THINK IT WILL
-VERY HAPPY INDEED	VERY HAPPY INDEED
-SO AT ONE POINT	SOAT ONE POINT
-WE KNEW NOTHING ABOUT MAKING CHEESE	WE KNEW NOTHING ABOUT MAKING CHEESE
-AND I SUPPOSE THE BOTTOM LINE IS IF YOU WANT A THRIVING	AND I SUPPOSE THE BOTTOM LINE IS IF YOU WANT A THRIVING
-PUT IT THAT WAY	PUT IT THAT WAY
-COSTING NEARLY <unk> MILLION	COSTING NEARLY N MILLION
-AND GETTING RID OF IT	AND GET THEM RID OF IT
-THANKS FOR WATCHING	THANKS FOR WATCHING
-AND THE TOP END OF <unk><unk> TO <unk><unk>	AND THE TOP END OF <unk> TO <unk>
-ONCE THOSE LIFT DOORS OPEN	ONCE THOSE LIFT DOORS OPEN
-TO THE POTENTIAL INVESTOR	TO THE POTENTIAL INVESTOR
-JUST LIKE MY PERSONALITY	JUST LIKE MY PERSONALITY
-I KNOW IT QUITE WELL	I KNOW IT QUITE WELL
-AND FOR THAT REASON	AND FOR THAT REASON
-I WANT TO BE IN THE HOLDING COMPANY	I WANT TO BE IN THE HOLDING COMPANY
-I'M REALLY SORRY	I'M REALLY SORRY
-GOOD LUCK TO HIM AND THE ELUSIVE MICHAEL BECKETT IN THEIR NEW DRAGON PARTNERSHIP	GOOD LUCK TO HIM AND THE ELUSIIVE MICHELE BECKET IN THEIR NEW DRAGON PARTNERSHIP
-WHATEVER THEY DECIDE TO CALL THE COMPANY	WHATEVER THEY DECIDE TO CALL THE COMPANY
-THAT'S THE HOLY GRAIL	THAT'S THE HOLY GRAL
-IF YOU BUILD IT	IF YOU BUILD IT
-VERY FINE INDEED	VERY FINE AND DEEP
-IT SEPARATES YORKSHIRE FROM LINCOLNSHIRE	IT SEPARATES YORKSHIRE FROM LINCONSHIRE
-HOPING TO MAKE A FORTUNE AT AUCTION	HOPING TO MAKE A FORTUNE AT AUCTION
-AFTER HAVING SPENT TEN YEARS HIMSELF IN EXILE	AFTER HAVING SPENT TEN YEARS HIMSELF IN EXILE
-SHE INFORMED ME	SHE INFORMED ME
-YOU'RE AN IDIOT	YOU  O E
-IT'S JUST A WEE VILLAGE	IT'S JUST A WE VILLAGE
-THE FISHING VILLAGES ON THE NORTHEAST COAST	THE FISHING VILLAGES ON THE NORTH EAST COST
-SOME YOU HAVE TO BOOK	SOME YOU HAVE TO BOOK
-I WOULD SAY PROBABLY ABOUT <unk><unk>	I WOULD SAY PROBABLY ABOUT <unk>
-IT'S STILL GOING UP	IT'S STILL GOING UP
-WITH THE PRICE OF GOLD	WITH THE PMRICE OF GOLD
-AND IT'S A BEAUTIFUL PLACE AS WELL	AND IT'S A BEAUTIFUL PLACE AS WELL
-DOESN'T MEAN TO SAY THAT WE GET ON WITH EVERYBODY	DOESN'T MEAN TO SAY THAT WE GET ON WITH EVERYBODY
-FROM TIME TO TIME	FROM TIME TO TIME
-HE STILL WANTED	HE STILL WANTED
-WE BOTH WANT TO BE HERE	WE BOTH WANT TO BE HERE
-I REALLY MISS THE ISLAND	I REALLY MISS THE ISLAND
-REGARDLESS OF WHAT HAPPENS	REGARDLES WHAT HAPPENS
-I JUST GOT BACK	I'VE JUST GOT BACK
-FINDING THE RIGHT PATH IS NOT ALWAYS EASY	FINDING THE RIGHT PATH IS NOT ALWAYS EASY
-THERE IS SO MUCH ON OVER THE WEEKEND	THERE IS SO MUCH ON OVER THE WEEKEND
-AND ON SUNDAY AT <unk><unk>	AND ON SUNDAY AT <unk>
-WHAT'S THE BEST THING ABOUT THE ROYAL HIGHLAND SHOW	WHAT'S THE BEST THING ABOUT THE ROYAL HIGHLANDS SHOW
-WE WANT TO KNOW WHAT YOU THINK	WE WANT TO KNOW WHAT YOU THINK
-I CAN'T BELIEVE	A SOME BELIEVER
-GEORGE SKINNER IS WITH ME	GEORGE SKINER IS WITH ME
-WHERE'S THE HORNS	WELS AR HORNS
-WE NEED SOME ANTIQUES	WE NEED SOME ANTIQUES
-DON'T YOU THINK	DON'T YOU THINK
-THE WONDERFUL DISCOVERY OF WITCHES	THE WONDERFUL DISCOVERY OF WHICHES
-AND OUR EXPERTS	AND OUR EXPERTS
-WHILE WE MAKE OUR WAY DOWN THE COASTLINE	WHIE WE MAKE OUR WAY DOWN THE COSTLINE
-THE MAIN CONCERN	THE MAIN CONCERN
-THERE WAS A BOY	THERE WAS A BOY
-HUMAN REPRESENTATIONS CAN BE OFFENSIVE TO MUSLIMS	HUMAN REPRESENTATIONS CAN BE OFFENSIVE TO MUSLIMS
-I WOULD LIKE TO HELP	I WOULD LIKE TO HELP
-THANKS FOR WATCHING	THANKS FOR WATCHING
-IN THE LONG TERM	IN THE LONG TERM
-THE GUILT WOULD GO	THE GUILT WOULD GO
-BUT HE WOULDN'T LISTEN	BUT HE WOULDN'T LISTEN
-I DON'T THINK SO	I DONT FIST
-THE WORK WAS HARD	THE WORK WAS HARD
-NOT PART OF OUR GLORY	NOT PART OF OUR GLORY
-THE OPERATION WOULD GO AHEAD	THE OPERATION WOULD GO AHEAD
-OR WHATEVER IT WAS	OR WHATEVER IT WAS
-I KNOW HOW HARD YOU WORK	I KNOW HOW HARD YOU WORKED
-I CAN'T TAKE MUCH MORE OF THIS	I CAN'T TAKE MUCH MORE OF THIS
-AND THIS IS VERY IMPORTANT	THIS IS  VERY MORANT
-WE NEED TO BE A TEAM	WE NEED TO BE A TEAM
-TO SEE THESE ANIMALS	TO FEED THESE ANIMALS
-TO SPEED THINGS UP	TO SPEED THINGS UP
-YOU'RE ALL THE SAME	YOU'RE ALL THE SAME
-WHILE WE'VE BEEN AWAY	WHIE WE BEEN AWAY
-CAME UP WITH THE PERFECT NAME	CAME UP WITH THE PERFECT NAME
-IT'S AN AMAZING PLACE	IT'S AN AMAZING PLACE
-BUT THAT'S ALL CHANGING	BUT THAT'S ALL CHANGING
-GOING UNDER THE HAMMER RIGHT NOW	GOING UNDER THE HAMMER RIGHT NOW
-I FEEL RATHER EMBARRASSED	I FEEL RATHER EMBARRASED
-IF WE DON'T LIKE IT	IF WE DON'T LIKE IT
-HESTON IS HERE TO HELP YOU	HESTON IS HERE TO HELP YOU
-SOMETHING IS GOING TO WORK OUT FOR ME	SOMETHING IS GOING TO WORK OUT FOR ME
-WITH CLIMATE CHANGE	WITH CLIMAT CHANGE
-THAT'S A BIG ATTRACTION	THAT'S A BIG ATTRACTION
-VERY SOON AFTER TAKING OFF	VERY SOON AFTER TAKING OFF
-ANYTHING CAN HAPPEN	ANYTHING CAN HAPPEN
-LET'S GO INSIDE	LET'S GO INSIDE
-THAT WAS EXCITING	THAT WAS EXCITING
-MOST OF THE RECOVERED PIECES WERE LOST	MOST OF THE RECOVERED PIECES WERE LOST
-I'M ABSOLUTELY IN LOVE WITH THIS	I'M ABSOLUTELY IN LOVE WITH THIS
-I DON'T THINK SO	I DON'T THINK SO
-THAT WAS GOING TO BE MY NEXT ASSUMPTION	THAT WAS GOING TO BE MY NEXT ASSUMTION
-AND IT'S A STRANGE	AND IT'S A STRANGE
-SO IT'S AN INSPIRATION	SO IT'S AN INSPIRATION
-WHERE ARE THE MALDIVES	WHERE THEM ALL DIED
-ON THE SAME PROPORTION	ON THE SAME PROPORTION
-IT'S BECOME SO FRAGMENTED	IT AVE BECOME SO FRAGMENTED
-LET'S PUT THOSE VALUATIONS TO THE TEST	LET'S PUT THOSE VALUATIONS TO THE TEST
-HE MADE THE SUPERSTRUCTURE	HE MADE THE SUPERSTRUCTURE
-WE WOULD LOVE TO SEE YOU	WE WOULD LOVE TO SEE YOU
-WE STILL HAVE HUNDREDS OF PEOPLE WAITING TO SEE OUR EXPERTS	WE STILL HAVE HUNDREDS OF PEOPLE WAITING TO SEE OUR EXPERTS
-BUT I THOUGHT IT WAS A BIT DEPRESSING	BUT I THOUGHT IT WAS A BIT DEPRESING
-WOULD YOU BE HAPPY	WOULD YOU BE HAPPY
-AND I WENT TO THE MUSEUM IN ISLINGTON	AND I WENT TO THE MUSEUM IN ESLINGTON
-I NEED TO CLOSE THE RESTAURANT	I NEED TO CLOSE THE NET DA
-THE PRICE OF PROPERTY	THE PRICE OF PROPERTY
-I CAN'T PUT IT ANY PLAINER THAN THAT	I CAN'T PUT IT ANY PLAINER THAN THAT
-FOR THE MOST PART	FOR THE MOST PART
-ON THE OTHER HAND	ON THE OTHER END
-WHICH IS RELATIVELY SMALL BY SCOTTISH STANDARDS	WHICH IS RELATIVELY SMALL BY SCOTISH STANDARDS
-AND I REALLY HOPE	AND I REALLY HOPE
-YOU ARE OUT OF IT	YOU ARE OUT OF IT
-WE WORKED TOGETHER WHEN WE WERE STARTING OUT	WE WORKED TOGETHER WHEN WE WARS STARTING OUT
-I DON'T WANT TO	I DON'T WANT TO
-IT IS A BATTLE THAT NEEDS TO BE FOUGHT	IT IS A BATTLE THAT NEEDS TO BE FOUGHT
-WE WERE FLABBERGASTED	WE WERE FLABERGASTED
-THE DAY TO DAY LIVES OF TENANTS	THE DAY TO BHE WAVES OF TENENTS
-IT'S A TREMENDOUS RESPONSIBILITY	IT'S A TREMENDOUS RESPONSIBILITY
-WHEN YOU'RE AWAY FROM IT	WHEN YOU 'RE AWAY FROM I
-THE JOB DESCRIPTION OF A FARMER'S WIFE	THE JOB DESCRIPTION OF A FARMER'S WIFE
-A VERY POPULAR TOURIST DESTINATION	A VERY POPULAR TOURIST DESTINATION
-ALSO VERY GOOD FOR ANY STRAINS	ALSO VERY GOOD FOR ANY STRAT
-READY TO GO RACING	YO READY TO GO RACING
-WHAT DO YOU THINK	WHAT DO YOU THINK
-WHICH EXPLAINS IT	WHICH EXPLAINS HIM
-SOME <unk><unk><unk> YEARS LATER	SOME <unk> YEARS LATER
-THIS WHOLE AREA WILL STILL BE IN SAFE HANDS	THIS WHOLE AREA WILL STILL BE IN SAFE HANSN
-EVERYONE HAS GONE HOME HAPPY AND THAT'S WHAT IT'S ALL ABOUT	EVERYONE HAS GONE HOME HAPPY AND THAT'S WHAT IT'S ALL ABOUT
-AND HE'D BE LIKE	AND HE'LD BE LIKE
-THIS IS MY REVENGE	THIS IS MY REVENGE
-AND IT MAY WELL BE	AND IT MAY WELL BE
-THERE AREN'T ANY BISCUITS IN THAT BARREL	THERE AREN'T ANY BISCETS IN THEIR BARAL
-I DIDN'T MEAN YOU	I DIDN'T MEAN YOU
-THAT WOULD JUST MAKE THINGS WORSE	THAT WOULD JUST MAKE THINGS WORSE
-WHEN MY FATHER DIED	WHEN MY FATHER DIED
-FOR THE NEXT TWO MINUTES	FOR THE NEXT TWO MINUTES
-THE WAY THE MARKET IS	THE WAY THE MARKET IS
-THE RINGLEADER OF THE GUNPOWDER PLOT	THE RING LEADER OF THE GUNPOUDER PLOT
-ALL HOPING THE KING WOULD FALL	ALL HOPING THE KING WOULD FALL
-THESE LAWS WOULD REMAIN IN PLACE FOR OVER <unk><unk><unk> YEARS	THESE LAS WOU REMAIN IN PA FOR OVER  YEARS
-AS A RESULT OF THE GUNPOWDER PLOT	AS A RESULT OF THE GUNPOUDER PLOT
-IT MAY TAKE SOME TIME	IT MAY MAKE SOME TIMES
-YOU KNOW MOST OF IT	YOU KNOW  UST OF IT
-SO I'LL ASK YOU AGAIN	SO I'L ASK YOU AGAIN
-Test WER: 0.119497830
-wer: 0.11949783013019219
-substitutions: 649
-deletions: 58
-insertions: 64
