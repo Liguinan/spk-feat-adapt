@@ -127,142 +127,141 @@ def print_figure(name):
 # data_mixture = "clean"
 # name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
-#
+
 # data_mixture = "rvb-only"
 # name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 #
 # data_mixture = "mixture"
 # name1 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"mixture_clean/dev/{data_type}/{data_mixture}/LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 
 # name1 = f"Enrolment-free/{data_type}/dev/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"Enrolment-free/{data_type}/dev/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"Enrolment-free/{data_type}/dev/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"Enrolment-free/{data_type}/dev/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"Enrolment-free/{data_type}/dev/rev4-LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 #
 # data_quantity = "1utt"
 # name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev4-LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 #
-# data_quantity = "10%"
+# data_quantity = "10"
 # name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev4-LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 #
-# data_quantity = "25%"
+# data_quantity = "25"
 # name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev4-LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 #
-# data_quantity = "50%"
+# data_quantity = "50"
 # name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev4-LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 #
-# data_quantity = "75%"
+# data_quantity = "75"
 # name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev4-LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 #
-# data_quantity = "100%"
+# data_quantity = "100"
 # name1 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"Enrolment-based/{data_type}/dev/{data_quantity}/rev4-LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 
 # name1 = f"SI/dev/{data_type}/rev1-LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
 # print_figure(name1)
-# name2 = f"SI/dev/{data_type}/rev2-LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
+# name2 = f"SI/dev/{data_type}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
 # print_figure(name2)
-# name3 = f"SI/dev/{data_type}/rev1-LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# name3 = f"SI/dev/{data_type}/rev4-LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 # print_figure(name3)
 
 
 #################### Replay #################
-# clean xvector
 data_type = "eval"
 data_mixture = "clean"
-name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
-print_figure(name1)
-name2 = f"mixture_clean/{data_type}/{data_mixture}/6354369755148493407-00048"
+# name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
+# print_figure(name1)
+name2 = f"mixture_clean/{data_type}/{data_mixture}/6364327207327548190-00036"
 print_figure(name2)
-name3 = f"mixture_clean/{data_type}/{data_mixture}/6343252661930009508-00020"
+name3 = f"mixture_clean/{data_type}/{data_mixture}/6368177216011755289-00003"
 print_figure(name3)
-
+#
 data_mixture = "rvb-only"
-name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
-print_figure(name1)
-name2 = f"mixture_clean/{data_type}/{data_mixture}/6354369755148493407-00048"
+# name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
+# print_figure(name1)
+name2 = f"mixture_clean/{data_type}/{data_mixture}/6364327207327548190-00036"
 print_figure(name2)
-name3 = f"mixture_clean/{data_type}/{data_mixture}/6343252661930009508-00020"
+name3 = f"mixture_clean/{data_type}/{data_mixture}/6368177216011755289-00003"
 print_figure(name3)
-
+#
 data_mixture = "mixture"
-name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
-print_figure(name1)
-name2 = f"mixture_clean/{data_type}/{data_mixture}/6354369755148493407-00048"
+# name1 = f"mixture_clean/{data_type}/{data_mixture}/6367813861908922495-00004"
+# print_figure(name1)
+name2 = f"mixture_clean/{data_type}/{data_mixture}/6364327207327548190-00036"
 print_figure(name2)
-name3 = f"mixture_clean/{data_type}/{data_mixture}/6343252661930009508-00020"
+name3 = f"mixture_clean/{data_type}/{data_mixture}/6368177216011755289-00003"
 print_figure(name3)
-
-name1 = f"SI/{data_type}/rev1-6367813861908922495-00004"
-print_figure(name1)
-name2 = f"SI/{data_type}/rev1-6354369755148493407-00048"
+#
+# name1 = f"SI/{data_type}/rev1-6367813861908922495-00004"
+# print_figure(name1)
+name2 = f"SI/{data_type}/rev1-6364327207327548190-00036"
 print_figure(name2)
-name3 = f"SI/{data_type}/rev1-6343252661930009508-00020"
+name3 = f"SI/{data_type}/rev1-6368177216011755289-00003"
 print_figure(name3)
-
-name1 = f"SI/av-{data_type}/rev1-6367813861908922495-00004"
-print_figure(name1)
-name2 = f"SI/av-{data_type}/rev1-6354369755148493407-00048"
+#
+# name1 = f"SI/av-{data_type}/rev1-6367813861908922495-00004"
+# print_figure(name1)
+name2 = f"SI/av-{data_type}/rev1-6364327207327548190-00036"
 print_figure(name2)
-name3 = f"SI/av-{data_type}/rev1-6343252661930009508-00020"
+name3 = f"SI/av-{data_type}/rev1-6368177216011755289-00003"
 print_figure(name3)
-
-name1 = f"Enrolment-free/ECAPA/{data_type}/rev1-6367813861908922495-00004"
-print_figure(name1)
-name2 = f"Enrolment-free/ECAPA/{data_type}/rev1-6354369755148493407-00048"
+#
+# name1 = f"Enrolment-free/ECAPA/{data_type}/rev1-6367813861908922495-00004"
+# print_figure(name1)
+name2 = f"Enrolment-free/ECAPA/{data_type}/rev1-6364327207327548190-00036"
 print_figure(name2)
-name3 = f"Enrolment-free/ECAPA/{data_type}/rev1-6343252661930009508-00020"
+name3 = f"Enrolment-free/ECAPA/{data_type}/rev1-6368177216011755289-00003"
 print_figure(name3)
-
-
-name1 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6367813861908922495-00004"
-print_figure(name1)
-name2 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6354369755148493407-00048"
+#
+#
+# name1 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6367813861908922495-00004"
+# print_figure(name1)
+name2 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6364327207327548190-00036"
 print_figure(name2)
-name3 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6343252661930009508-00020"
+name3 = f"Enrolment-free/ECAPA/av-{data_type}/rev1-6368177216011755289-00003"
 print_figure(name3)

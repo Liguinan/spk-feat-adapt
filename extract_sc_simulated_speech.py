@@ -32,17 +32,17 @@ def extract_single_channel_wav(fpath, fname):
 # extract_single_channel_wav(path, name)
 
 
-dataset = "xvector"
-path = f"mixture_clean/dev/{dataset}"
-name = "LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
-extract_single_channel_wav(path, name)
+# dataset = "xvector"
+# path = f"mixture_clean/dev/{dataset}"
+# name = "LRS3XX-00203-TEDXXXXX-XXXXXX-ih_10000018_0000001_0000349"
+# extract_single_channel_wav(path, name)
+#
+# dataset = "xvector"
+# path = f"mixture_clean/dev/{dataset}"
+# name = "LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+# extract_single_channel_wav(path, name)
 
 dataset = "xvector"
 path = f"mixture_clean/dev/{dataset}"
-name = "LRS3XX-01903-TEDXXXXX-XXXXXX-ih_10000015_0000002_0000605"
-extract_single_channel_wav(path, name)
-
-dataset = "xvector"
-path = f"mixture_clean/dev/{dataset}"
-name = "LRS3XX-01060-TEDXXXXX-XXXXXX-ih_10000002_0000466_0000861"
+name = "LRS3XX-05072-TEDXXXXX-XXXXXX-ih_00050009_0000000_0000592"
 extract_single_channel_wav(path, name)
